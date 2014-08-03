@@ -1,7 +1,7 @@
 @extends('_master')
 
 @section('title')
-    Welcome!
+    Pledge Now!
 @stop
 
 @section('content')

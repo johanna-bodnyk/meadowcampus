@@ -8,6 +8,10 @@ body {
     height: 100%
 }
 
+body.logged-in {
+    padding-top: 30px;
+}
+
 .container {
     background-color: white;
     padding-left: 40px;
