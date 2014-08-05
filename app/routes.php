@@ -213,47 +213,6 @@ Route::get('/trigger-error',function() {
 
 Route::get('add_admin_user', function() {
 
-    // $user = new User();
-
-    // $user->first_name = "Catherine";
-    // $user->last_name = "Bodnyk";
-    // $user->email = "cbodnyk@gmail.com";
-    // $user->password = Hash::make('password');
-
-    // try {
-    //     $user->save();
-    // }
-    // catch (Exception $e) {
-    //     return "Whoops, I think that user already exists";
-    // }
-
-    // $user = new User();
-
-    // $user->first_name = "Johanna";
-    // $user->last_name = "Bodnyk";
-    // $user->email = "bodnyk@gmail.com";
-    // $user->password = Hash::make('password');
-
-    // try {
-    //     $user->save();
-    // }
-    // catch (Exception $e) {
-    //     return "Whoops, I think that user already exists";
-    // }
-
-    // $user_two = new User();
-
-    // $user_two->first_name = "Julia";
-    // $user_two->last_name = "James";
-    // $user_two->email = "julia@circleschool.org";
-    // $user_two->password = Hash::make('password');
-
-    // try {
-    //     $user_two->save();
-    // }
-    // catch (Exception $e)  {
-    //     return "Whoops, I think that user already exists";
-    // }
-
+    return "This is in a seeder now.";
 
 });
