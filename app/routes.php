@@ -28,6 +28,10 @@ Route::get('plans', function()
 
 Route::get('donors', function() 
 {
+    $donors = Donor::all();
+
+    return View::make('donors')
+        ->with('donors', $donors);
 
 });
 
@@ -75,15 +79,39 @@ Route::post('progress/edit', function()
 
 });
 
-Route::get('donors/add', function() 
-{
+Route::get('donors/add', 
+    array(
+        'before' => 'auth',
+        function() {
+            $types = Type::all();
+            return View::make('add-donor')
+                ->with('types', $types);
+        }
+    )
+);
 
-});
+Route::post('donors/add', 
+    
+    array(
+        'before' => 'auth|csrf',
+        function() {
 
-Route::post('donors/add', function() 
-{
+            $donor = new Donor();
 
-});
+            $donor->first_name = Input::get('first_name');
+            $donor->last_name = Input::get('last_name');
+            $donor->amount = Input::get('amount');
+            $donor->user()->associate(Auth::user());
+
+            $donor->save();
+
+            Session::flash('success_message', 'Donor '.$donor->first_name.' '.$donor->last_name.' has been added.');
+
+            return Redirect::to('donors');
+
+        }
+    )
+);
 
 Route::get('donors/edit/{id}', function($id) 
 {
@@ -121,16 +149,18 @@ Route::post('updates/edit', function()
 
 // TEST ROUTES
 
-Route::get('add_donor', function() {
-    $donor = new Donor();
+// Route::get('add_donor', function() {
+//     $donor = new Donor();
 
-    $donor->first_name  =   "Johanna";
-    $donor->last_name   =   "Bodnyk";
-    $donor->save();
+//     $donor->first_name  =   "Johanna";
+//     $donor->last_name   =   "Bodnyk";
+//     $donor->save();
 
-    return "Great you added a donor!";
+//     MISSING USER ID
 
-});
+//     return "Great you added a donor!";
+
+// });
 
 Route::get('read_donors', function() {
     $donors = Donor::all();

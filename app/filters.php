@@ -43,6 +43,7 @@ Route::filter('auth', function()
 		}
 		else
 		{
+			Session::flash('error_message', 'Please login to access the requested page.');
 			return Redirect::guest('login');
 		}
 	}
