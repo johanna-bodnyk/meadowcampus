@@ -20,4 +20,13 @@ class HomeController extends BaseController {
 		return View::make('hello');
 	}
 
+	public function functionTest()
+	{
+    $test = imAFunction();
+    return $test;
+	}
+
+	public function imAFunction() {
+    	return "hi!";
+	}	
 }

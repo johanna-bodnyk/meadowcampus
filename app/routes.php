@@ -11,6 +11,14 @@
 |
 */
 
+// Route::get('function-test', function() {
+//     $test = imAFunction();
+//     return $test;
+// });
+
+Route::get('function-test', 'HomeController@functionTest');
+
+
 Route::get('/', function()
 {
 	return View::make('index');
