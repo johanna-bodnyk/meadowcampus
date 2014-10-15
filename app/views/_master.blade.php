@@ -52,14 +52,16 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                           </button>
-                          <a class="navbar-brand" href="#">Admin</a>
+                          <a class="navbar-brand" href="#">Hi {{ Auth::user()->first_name }}!</a>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                           <ul class="nav navbar-nav">
-                            <li><a href="progress/edit">Progress</a></li>
-                            <li><a href="donors/add ">Donors</a></li>
-                            <li><a href="updates/add">Updates</a></li>
+                            <li><a href="/progress/edit">Manage Progress</a></li>
+                            <li><a href="/donors/create ">Manage Donors</a></li>
+                            <li><a href="/updates/add">Manage Updates</a></li>
+                            <li><a href="/updates/add">Manage Admin Users</a></li>
+                            <li><a href="/updates/add">Manage Your Account</a></li>
                           </ul>
                         </div><!-- /.navbar-collapse -->
                       </div><!-- /.container-fluid -->
@@ -82,9 +84,9 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                       <ul class="nav navbar-nav">
                         <li class="active"><a href="pledge">Pledge Now</a></li>
-                        <li><a href="plans">Plans &amp; Calculators</a></li>
-                        <li><a href="donors">Donor List</a></li>
-                        <li><a href="updates">Updates from the Meadow</a></li>
+                        <li><a href="/plans">Plans &amp; Calculators</a></li>
+                        <li><a href="/donors">Donor List</a></li>
+                        <li><a href="/updates">Updates from the Meadow</a></li>
                         
                       </ul>
                     </div><!-- /.navbar-collapse -->

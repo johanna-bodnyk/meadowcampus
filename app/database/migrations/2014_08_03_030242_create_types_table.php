@@ -23,11 +23,6 @@ class CreateTypesTable extends Migration {
 			$table->foreign('donor_id')->references('id')->on('donors');
 			$table->foreign('type_id')->references('id')->on('types');
 		});
-
-		// Did not work -- did manually instead
-		// Schema::table('donors', function($table) {
-		// 	$table->dropColumn(array('student, alum, parent, alum_parent, staff, alum_staff'));
-		// });
 	}
 
 	/**

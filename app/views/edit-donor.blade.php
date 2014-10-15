@@ -6,12 +6,13 @@
 
 @section('content')
 
-
-    {{ Form::open(array('url' => 'donors', 'role' => 'form')) }}
+    {{ Form::model($donor, array('method' => 'PUT', 'url' => 'donors/'.$donor->id, 'role' => 'form')) }}
+        
+        {{ Form::hidden('id') }}
 
         <div class="form-group">
             {{ Form::label('first_name', 'First Name') }}
-            {{ Form::text('first_name', null, array('class' => 'form-control')) }}        
+            {{ Form::text('first_name', null, array('class' => 'form-control')) }}          
         </div>
 
         <div class="form-group">
@@ -25,15 +26,19 @@
         </div>
 
         <label>Type</label>
-        @foreach ($types as $index => $type)
+        @foreach ($types as $type)
             <div class="checkbox">
                 <label>
-                  {{ Form::checkbox('type[]', $type->id) }}
-                  {{ $type->display_name }}
-                  {{ $index+1 }}
+                    @if (in_array($type->id, $set_types))
+                        {{ Form::checkbox('type[]', $type->id, array('checked' => 'checked')) }}
+                    @else
+                        {{ Form::checkbox('type[]', $type->id) }}
+                    @endif
+                    {{ $type->display_name }}
                 </label>
             </div>
         @endforeach
+
 
         {{ Form::submit('Submit', array('class' => 'btn btn-default')) }}
 

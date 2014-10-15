@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDonorsTable extends Migration {
+class AddNameFieldToTypes extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,8 @@ class CreateDonorsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('donors', function($table) {
-
-			$table->increments('id');
-			$table->timestamps();
-			$table->string('first_name');
-			$table->string('last_name');
-			$table->integer('amount');
+		Schema::table('types', function($table) {
+			$table->string('display_name');
 		});
 	}
 
@@ -29,7 +24,9 @@ class CreateDonorsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('donors');
+		Schema::table('types', function($table) {
+			$table->dropColumn('display_name');
+		});
 	}
 
 }
