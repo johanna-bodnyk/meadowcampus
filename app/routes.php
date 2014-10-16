@@ -34,9 +34,10 @@ Route::get('scenarios', function()
 
 Route::get('donors', function() 
 {
-    $donors = Donor::with('types','user')->orderBy('last_name','asc')->get();
-    return View::make('donors')
-        ->with('donors', $donors);
+    // $donors = Donor::with('types','user')->orderBy('last_name','asc')->get();
+    // return View::make('donors')
+    //     ->with('donors', $donors);
+    return View::make('donors');
 });
 
 Route::get('updates', function() 
