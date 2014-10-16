@@ -53,7 +53,7 @@
     <a class="btn btn-success" href="/donors/create" role="button">Add a new donor</a>
 
  
-                </div>
+
 
 
 
