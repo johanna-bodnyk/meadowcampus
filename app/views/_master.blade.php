@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>The Circle School Meadow Campus Fund | @yield('title','Welcome!')</title>
+        <title>The Circle School Meadow Campus | @yield('title','Welcome!')</title>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -23,9 +23,12 @@
 
     </head>
     <body
+        class='
         @if(Auth::check())
-        class="logged-in"
+            {{ "logged-in" }}
         @endif
+        @yield("body-class")
+        '
     >
         <div class="container">
             <!-- TODO: Try to get this working: http://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap -->
@@ -34,10 +37,12 @@
                 <!-- Logo and site name -->
                 <div class="page-header row">
                     <div class="col-md-3">
-                        <img src="{{ URL::asset('images/websitelogo.png') }}">
+                        <a href="/">
+                            <img src="{{ URL::asset('images/websitelogo.png') }}">  
+                        </a>
                     </div>
                     <div class="col-md-9">
-                        <h1><span class="sr-only">The Circle School </span>Meadow Campus Development Fund</h1>
+                        <h1><span class="sr-only">The Circle School </span>Meadow Campus Fundraising</h1>
                     </div>
                 </div>
                 
@@ -83,11 +88,12 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                       <ul class="nav navbar-nav">
-                        <li class="active"><a href="pledge">Pledge Now</a></li>
-                        <li><a href="/plans">Plans &amp; Calculators</a></li>
-                        <li><a href="/donors">Donor List</a></li>
-                        <li><a href="/updates">Updates from the Meadow</a></li>
-                        
+                        {{ HTML::nav_link('/', 'Home') }}
+                        {{ HTML::nav_link('pledge', 'Pledge Now') }}
+                        {{ HTML::nav_link('scenarios', 'Scenarios &amp; Calculators') }}
+                        {{ HTML::nav_link('donors', 'Donors') }}
+                        {{ HTML::nav_link('updates', 'Building Updates') }}
+                        {{ HTML::nav_link('faqs', 'FAQs') }}                      
                       </ul>
                     </div><!-- /.navbar-collapse -->
                   </div><!-- /.container-fluid -->
@@ -106,7 +112,7 @@
                     </div>
                 @endif
 
-                <div class-"content">
+                <div class="content">
                     @yield('content') 
                 </div>
 

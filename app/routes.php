@@ -17,10 +17,6 @@
 // });
 
 
-Route::get('parameter_test/{foo}', function($foo) {
-    return "Parameter 1: ".$foo."<br>Parameter 2: ".$_GET['bar'];
-});
-
 Route::get('/', function()
 {
 	return View::make('index');
@@ -31,14 +27,19 @@ Route::get('pledge', function()
     return View::make('pledge');
 });
 
-Route::get('plans', function() 
+Route::get('scenarios', function() 
 {
-
+    return View::make('scenarios');
 });
 
 Route::get('updates', function() 
 {
+    return View::make('updates');
+});
 
+Route::get('faqs', function() 
+{
+    return View::make('faqs');
 });
 
 Route::get('login', 
@@ -348,15 +349,5 @@ Route::get('databases', function() {
     // print_($table);
 
     return View::make('describe');
-
-});
-
-
-
-// Add admin user route -- uncomment and change values to add an admin user
-
-Route::get('add_admin_user', function() {
-
-    return "This is in a seeder now.";
 
 });

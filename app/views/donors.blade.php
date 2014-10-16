@@ -7,6 +7,8 @@
 @section('content')
 
     <h2>Donors</h2>
+
+    <p class="lead">This page will be simpler, just names and "types" (student, parent, alum) -- this is more of the "admin" view.</p>
     
     <table class="table">
         <tr>
@@ -37,6 +39,7 @@
         </tr>
         @endforeach
     </table>
+    <a class="btn btn-success" href="/donors/create" role="button">Add a new donor</a>
 
 @stop
 
