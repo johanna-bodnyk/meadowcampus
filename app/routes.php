@@ -32,6 +32,13 @@ Route::get('scenarios', function()
     return View::make('scenarios');
 });
 
+Route::get('donors', function() 
+{
+    $donors = Donor::with('types','user')->orderBy('last_name','asc')->get();
+    return View::make('donors')
+        ->with('donors', $donors);
+});
+
 Route::get('updates', function() 
 {
     return View::make('updates');
@@ -76,7 +83,7 @@ Route::get('logout', function() {
     return Redirect::to('/');
 });
 
-Route::resource('donors', 'DonorController');
+// Route::resource('donors', 'DonorController');
 
 // Route::get('donors', function() 
 // {
