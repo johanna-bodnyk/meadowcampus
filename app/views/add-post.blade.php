@@ -5,15 +5,25 @@
 @stop
 
 @section('head')
-    <script src="/packages/ckeditor/ckeditor.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+    <script src="/packages/ckeditor-widgetonly/ckeditor.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <script> 
+        $(document).ready(function() { 
+            var options = {
+                target: '#imageDiv',
+                success: function() {
+                    alert('Great!');
+                } 
+            }
+            $('#imageform').ajaxForm(options); 
+        }); 
+    </script> 
 @stop
 
 @section('content')
 
     <h2>Add an Update</h2>
-
     {{ Form::open(array('url' => 'updates', 'role' => 'form')) }}
 
         <div class="form-group">
@@ -32,27 +42,23 @@
 
     <h3>Add an Image</h3>
 
-    {{ Form::open(array('url' => 'process-addimage', 'role' => 'form', 'files' => true, 'id' => 'imageform')); }}
+    <div id="imageDiv">
+        {{ Form::open(array('url' => 'process-addimage', 'role' => 'form', 'files' => true, 'id' => 'imageform')); }}
 
-        <div class="form-group">
-            {{ Form::label('file', 'Select an image to upload') }}
-            {{ Form::file('file', null, array('class' => 'form-control')) }}        
-        </div>
+            <div class="form-group">
+                {{ Form::label('file', 'Select an image to upload') }}
+                {{ Form::file('file', null, array('class' => 'form-control')) }}        
+            </div>
 
-        {{ Form::submit('Upload', array('class' => 'btn btn-default')) }}
+            {{ Form::submit('Upload', array('class' => 'btn btn-default')) }}
 
-    {{ Form::close() }}
+        {{ Form::close() }}
+    </div>
 
+@stop
+
+@section('body')
     <script>
         CKEDITOR.replace('body');
-
-        // Malsup jQuery Form Plugin http://malsup.com/jquery/form/
-        $(document).ready(function() { 
-            // bind 'myForm' and provide a simple callback function 
-            $('#imageform').ajaxForm(function() { 
-                alert("Your image has been uploaded!"); 
-            }); 
-        }); 
-
-    </script> 
+    </script>
 @stop

@@ -85,7 +85,7 @@ Route::post('process-addimage', function () {
     $image->post_id = 2;
     $image->save();
 
-    echo '<img src="'.$image->getFullPath().'">';
+    return '<img src="'.$image->getFullPath().'" height="100px" width="100px"><p>Image path: '.$image->getFullPath().'</p>';
 
 });
 
