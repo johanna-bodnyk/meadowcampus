@@ -118,7 +118,7 @@ class DonorController extends \BaseController {
             $donor = Donor::findOrFail($id);
         }
         catch (Exception $e) {
-            Session::flash('error_message', 'A donor with the id '.Input::get('id').' does not exist.');
+            Session::flash('error_message', 'A donor with the id '.$id.' does not exist.');
             return Redirect::to('donors');
         }
 

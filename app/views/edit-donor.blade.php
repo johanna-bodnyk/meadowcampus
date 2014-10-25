@@ -8,8 +8,6 @@
 
     {{ Form::model($donor, array('method' => 'PUT', 'url' => 'donors/'.$donor->id, 'role' => 'form')) }}
         
-        {{ Form::hidden('id') }}
-
         <div class="form-group">
             {{ Form::label('first_name', 'First Name') }}
             {{ Form::text('first_name', null, array('class' => 'form-control')) }}          

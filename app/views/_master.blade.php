@@ -21,6 +21,8 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        @yield('head')
+
     </head>
     <body
         class='
@@ -142,5 +144,6 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
         @yield('body')
+
     </body>
 </html>

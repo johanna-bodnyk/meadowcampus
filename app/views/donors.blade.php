@@ -18,44 +18,29 @@
             <th>Added</th>
             <th>Manage</th>
         </tr>
-                <tr>
-            <td> Johanna Bodnyk </td>
-            <td> 10000 </td>
+        @foreach($donors as $donor)
+        <tr>
+            <td> {{ $donor->first_name }} {{ $donor->last_name }} </td>
+            <td> {{ $donor->amount }} </td>
             <td> 
-                                    alum 
-                                    alum_staff 
-                            </td>
-            <td>Added by Johanna on 2014-10-16 01:07:46</td>
+                @foreach ($donor->types as $type )
+                    {{ $type->type." " }}
+                @endforeach
+            </td>
+            <td>Added by {{ $donor->user->first_name }} on {{ $donor->created_at }}</td>
             <td>
-                <a href="/donors/3/edit">Edit</a> | 
+                <a href="/donors/{{ $donor->id }}/edit">Edit</a> | 
 
-                                <form method="POST" action="http://localhost/donors/3" accept-charset="UTF-8"><input name="_method" type="hidden" value="DELETE"><input name="_token" type="hidden" value="XxJGV0pswJphEfHAi0h0gaNPdT4OVrNMeIXMUDfz">
+                {{-- TODO: Move JS to footer, add delete confirmation page into process --}}
+                {{ Form::open(['method' => 'DELETE', 'url' => 'donors/'.$donor->id]) }}
                 <a href='javascript:void(0)' onClick='parentNode.submit();return false;'>Delete</a>
-                </form>
+                {{ Form::close() }}
             </td>
         </tr>
-                <tr>
-            <td> Connor Tyrrell </td>
-            <td> 15000 </td>
-            <td> 
-                                    alum 
-                            </td>
-            <td>Added by Johanna on 2014-10-16 01:08:04</td>
-            <td>
-                <a href="/donors/4/edit">Edit</a> | 
+        @endforeach
+    </table>
 
-                                <form method="POST" action="http://localhost/donors/4" accept-charset="UTF-8"><input name="_method" type="hidden" value="DELETE"><input name="_token" type="hidden" value="XxJGV0pswJphEfHAi0h0gaNPdT4OVrNMeIXMUDfz">
-                <a href='javascript:void(0)' onClick='parentNode.submit();return false;'>Delete</a>
-                </form>
-            </td>
-        </tr>
-            </table>
     <a class="btn btn-success" href="/donors/create" role="button">Add a new donor</a>
-
- 
-
-
-
 
 @stop
 

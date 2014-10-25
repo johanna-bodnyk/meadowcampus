@@ -47,13 +47,30 @@ h1 {
     padding-bottom: 15px;
 }
 
+.clear-both {
+    clear: both;
+}
 
-/* Caption */
-.img-wrapper p {
+/* Images and Captions 
+
+See http://docs.ckeditor.com/#!/guide/dev_captionedimage-section-image-alignment-and-classes
+for more configuration options
+
+*/
+
+figcaption {
     font-style: italic;
     font-size: .8em;
 }
 
+figure {
+    display: table;
+    width: 1px;
+    margin-bottom: 10px;
+}
+img, figcaption {
+    display: table-row;
+}
 
 
 /* Updates section */
@@ -66,10 +83,15 @@ h1 {
 
 .updates .content img {
     border: 1px solid #999;
+    margin-bottom: 5px;
 }
 
 .updates *.pull-left {
-    margin-right: 20px;
+    margin-right: 15px;
+}
+
+.updates *.pull-right {
+    margin-left: 15px;
 }
 
 /* Scenarios section */
