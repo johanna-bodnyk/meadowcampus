@@ -31,7 +31,7 @@ class PostsController extends \BaseController {
 	 */
 	public function create()
 	{
-        return View::make('add-post');
+        return View::make('post-form');
 	}
 
 
@@ -47,6 +47,16 @@ class PostsController extends \BaseController {
         $post->body = Input::get('body');
         $post->user()->associate(Auth::user());
         $post->save();
+
+        $images = Input::get('images');
+
+        if($images) {
+            foreach ($images as $filename) {
+                    $image = new Image();
+                    $image->filename = $filename;
+                    $post->images()->save($image);
+            }
+        }
 
         Session::flash('success_message', 'Post successfully added!');
         return Redirect::to('updates');
@@ -77,14 +87,14 @@ class PostsController extends \BaseController {
 	public function edit($id)
 	{
 	    try {
-	        $post = Post::findOrFail($id);
+	        $post = Post::with('images')->findOrFail($id);
 	    }
 	    catch (Exception $e) {
 	        Session::flash('error_message', 'An update with the id '.$id.' does not exist.');
 	        return Redirect::to('updates');
 	    }
 
-	    return View::make('edit-post')
+	    return View::make('post-form')
 	        ->with('post', $post);
 	}
 
@@ -108,6 +118,16 @@ class PostsController extends \BaseController {
         $post->title = Input::get('title');
         $post->body = Input::get('body');
         $post->save();
+
+        $images = Input::get('images');
+
+        if($images) {
+            foreach ($images as $filename) {
+                    $image = new Image();
+                    $image->filename = $filename;
+                    $post->images()->save($image);
+            }
+        }
 
         Session::flash('success_message', 'Your post has been updated.');
         return Redirect::to('updates');	
@@ -137,11 +157,18 @@ class PostsController extends \BaseController {
 	public function destroy($id)
 	{
         try {
-            $post = Post::findOrFail($id);
+            $post = Post::with('images')->findOrFail($id);
         }
         catch (Exception $e) {
             Session::flash('error_message', 'An update with the id '.$id.' does not exist.');
             return Redirect::to('updates');
+        }
+
+        if($post->images->count()) {
+            foreach ($post->images as $image) {
+                File::delete(public_path().'/images/posts/'.$image->filename);
+                $image->delete();
+            }
         }
 
         Session::flash('success_message', "Your update has been successfully deleted.");

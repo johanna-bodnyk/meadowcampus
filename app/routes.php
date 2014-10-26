@@ -46,6 +46,10 @@ Route::get('login',
         })
 );
 
+//
+// Login and logout
+//
+
 Route::post('login',
     array(
         'before' => 'csrf|guest', 
@@ -71,22 +75,28 @@ Route::get('logout', function() {
     return Redirect::to('/');
 });
 
-Route::get('addimage', function () {
-    return View::make('addimage');
-});
 
-Route::post('process-addimage', function () {
 
+
+//
+// Image uploading and deletion used by AJAX calls
+//
+
+
+// Saves image to disk, does not add to database 
+// (handled by post saving controller)
+Route::post('image-upload', function() {
     $filename = Input::file('file')->getClientOriginalName();
     Input::file('file')->move(public_path().'/images/posts', $filename);
+    return $filename;
+});
 
-    $image = new Image();
-    $image->filename = $filename;
-    $image->post_id = 2;
-    $image->save();
-
-    return '<img src="'.$image->getFullPath().'" height="100px" width="100px"><p>Image path: '.$image->getFullPath().'</p>';
-
+// Removes file from disk, deletes from database
+Route::post('image-delete', function() {
+    $filename = Input::get('filename');
+    File::delete(public_path().'/images/posts/'.$filename);
+    Image::where('filename', "=", $filename)->delete();
+    return $filename;
 });
 
 
