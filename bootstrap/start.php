@@ -33,7 +33,7 @@ $env = $app->detectEnvironment(function() {
     }
     # If not found, assume Pagoda
     else {
-        return 'pagoda';
+        return 'production';
     }
 
 });
