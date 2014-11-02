@@ -26,7 +26,6 @@
                 }
             }
             $('.imageDeletionForm').ajaxForm(deletionOptions);
-
         }); 
     </script> 
 @stop
@@ -65,34 +64,31 @@
 
     <h3>Images</h3>
 
-    {{-- TODO: Display existing images --}}
-
     <div id="imagePreview"> 
-
-    @if($post->images->count())
-        @foreach($post->images as $image)
-            <div>
-                <img src="/images/posts/{{$image->filename}}" height="75px" width="75px">
-                <p>Image path: /images/posts/{{$image->filename}}</p>
-                <form method="POST" action="/image-delete" role="form" class="imageDeletionForm">
-                    <input name="filename" type="hidden" value="{{$image->filename}}">
-                    <input class="btn btn-danger" type="submit" value="Delete">
-                </form>
-            </div>
-        @endforeach
-    @endif
-
+        @if(isset($post) && $post->images->count())
+            @foreach($post->images as $image)
+                <div>
+                    <img src="/images/posts/{{$image->filename}}" height="75px" width="75px">
+                    <p>Image path: /images/posts/{{$image->filename}}</p>
+                    <form method="POST" action="/image-delete" role="form" class="imageDeletionForm">
+                        <input name="filename" type="hidden" value="{{$image->filename}}">
+                        <input class="btn btn-danger" type="submit" value="Delete">
+                    </form>
+                </div>
+            @endforeach
+        @endif
     </div>
-        {{ Form::open(array('url' => 'image-upload', 'role' => 'form', 'files' => true, 'id' => 'imageform')); }}
+    
+    {{ Form::open(array('url' => 'image-upload', 'role' => 'form', 'files' => true, 'id' => 'imageform')); }}
 
-            <div class="form-group">
-                {{ Form::label('file', 'Select an image to upload') }}
-                {{ Form::file('file', null, array('class' => 'form-control')) }}        
-            </div>
+        <div class="form-group">
+            {{ Form::label('file', 'Select an image to upload') }}
+            {{ Form::file('file', null, array('class' => 'form-control')) }}        
+        </div>
 
-            {{ Form::submit('Upload', array('class' => 'btn btn-default')) }}
+        {{ Form::submit('Upload', array('class' => 'btn btn-default')) }}
 
-        {{ Form::close() }}
+    {{ Form::close() }}
    
 
 @stop
