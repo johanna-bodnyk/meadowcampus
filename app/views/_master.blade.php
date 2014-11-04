@@ -8,15 +8,14 @@
         
         <!-- BOOTSTRAP -->
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
+        <link rel="stylesheet" href="{{ URL::asset('packages/bootstrap/css/bootstrap.min.css') }}">
         <!-- Optional theme -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{{ URL::asset('packages/bootstrap/css/bootstrap-theme.min.css') }}">
      
         <link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}">
 
         <!-- JQUERY -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="{{ URL::asset('packages/jquery/jquery-1.11.1.min.js') }}"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

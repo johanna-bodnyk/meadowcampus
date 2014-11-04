@@ -4,6 +4,10 @@
     Scenarios &amp; Calculators
 @stop
 
+@section('head')
+    <script src="/js/scenarios.js"></script>
+@stop
+
 @section('body-class')
     scenarios
 @stop
@@ -108,23 +112,23 @@
         </div>
         <div class="col-md-6">
             <h3>Monthly Gift Based on Target</h3>
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" id="form1">
                 <div class="form-group">
-                    <label for="years" class="col-sm-6 control-label">Years</label>
+                    <label for="years1" class="col-sm-6 control-label">Years</label>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" value="10">
+                        <input type="number" class="form-control" value="10" id="years1">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="target" class="col-sm-6 control-label">Target</label>
+                    <label for="total1" class="col-sm-6 control-label">Target</label>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" value="7500">
+                        <input type="number" class="form-control" value="7500" id="total1">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="monthly" class="col-sm-6 control-label">Monthly Amount</label>
+                    <label for="monthly1" class="col-sm-6 control-label">Monthly Amount</label>
                     <div class="col-sm-4">
-                         <p class="form-control-static">$48.30</p>
+                         <p class="form-control-static" id="monthly1">$48.30</p>
                     </div>
                 </div>
 
@@ -133,23 +137,23 @@
             <hr>
 
             <h3>Total Based on Monthly Amount</h3>
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" id="form2">
                 <div class="form-group">
-                    <label for="years" class="col-sm-6 control-label">Years</label>
+                    <label for="years2" class="col-sm-6 control-label">Years</label>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" value="10">
+                        <input type="number" class="form-control" value="10" id="years2">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="monthly" class="col-sm-6 control-label">Monthly Amount</label>
+                    <label for="monthly2" class="col-sm-6 control-label">Monthly Amount</label>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" value="20">
+                        <input type="number" class="form-control" value="20" id="monthly2">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="monthly" class="col-sm-6 control-label">Total for School</label>
+                    <label for="total2" class="col-sm-6 control-label">Total for School</label>
                     <div class="col-sm-4">
-                         <p class="form-control-static">$3,106</p>
+                         <p class="form-control-static" id="total2">$3,106</p>
                     </div>
                 </div>
 
@@ -158,23 +162,23 @@
             <hr>
     
             <h3>Number of Years Based on Target</h3>
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" id="form3">
                 <div class="form-group">
-                    <label for="years" class="col-sm-6 control-label">Total Target</label>
+                    <label for="years3" class="col-sm-6 control-label">Total Target</label>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" value="10000">
+                        <input type="number" class="form-control" value="10000" id="years3">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="target" class="col-sm-6 control-label">Monthly Amount</label>
+                    <label for="total3" class="col-sm-6 control-label">Monthly Amount</label>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" value="50">
+                        <input type="number" class="form-control" value="50" id="total3">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="monthly" class="col-sm-6 control-label">Number of Years</label>
+                    <label for="monthly3" class="col-sm-6 control-label">Number of Years</label>
                     <div class="col-sm-4">
-                         <p class="form-control-static">12.15</p>
+                         <p class="form-control-static" id="monthly3">12.15</p>
                     </div>
                 </div>
 
@@ -183,29 +187,29 @@
             <hr>
     
             <h3>Monthly Gift with Up Front Cash</h3>
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" id="form4">
                 <div class="form-group">
-                    <label for="years" class="col-sm-6 control-label">Years</label>
+                    <label for="years4" class="col-sm-6 control-label">Years</label>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" value="10">
+                        <input type="number" class="form-control" value="10" id="years4">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="target" class="col-sm-6 control-label">Up Front Cash</label>
+                    <label for="upfront4" class="col-sm-6 control-label">Up Front Cash</label>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" value="2500">
+                        <input type="number" class="form-control" value="2500" id="upfront4">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="target" class="col-sm-6 control-label">Target</label>
+                    <label for="total4" class="col-sm-6 control-label">Target</label>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" value="10000">
+                        <input type="number" class="form-control" value="10000" id="total4">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="monthly" class="col-sm-6 control-label">Monthly Payments</label>
+                    <label for="monthly4" class="col-sm-6 control-label">Monthly Payments</label>
                     <div class="col-sm-4">
-                         <p class="form-control-static">37.88</p>
+                         <p class="form-control-static" id="monthly4">37.88</p>
                     </div>
                 </div>
 

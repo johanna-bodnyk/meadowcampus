@@ -5,8 +5,8 @@
 @stop
 
 @section('head')
-    <script src="/packages/ckeditor-widgetonly/ckeditor.js"></script>
-    <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <script src="{{ URL::asset('packages/ckeditor-widgetonly/ckeditor.js') }}"></script>
+    <script src="{{ URL::asset('packages/malsup/jquery.form.min.js') }}"></script>
     <script> 
         $(document).ready(function() { 
             var options = {
