@@ -41,14 +41,64 @@
 
                 <!-- Logo and site name -->
                 <div class="page-header row">
-                    <div class="col-md-3">
+                     <div class="col-md-3">
                         <a href="/">
                             <img src="{{ URL::asset('images/websitelogo.png') }}">  
                         </a>
                     </div>
                     <div class="col-md-9">
-                        <h1><span class="sr-only">The Circle School </span>Meadow Campus Fundraising</h1>
-                    </div>
+                        <h1><span class="sr-only">The Circle School </span>Meadow Campus Project</h1>
+                        <!-- Nav bar -->
+                    <nav class="navbar navbar-default nav-justified" role="navigation">
+                      <div class="container-fluid">
+                                                <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+<!--                           <a class="navbar-brand" href="/">
+                            <img alt="The Circle School" src="{{ URL::asset('images/websitelogo.png') }}">
+                            <span class="sr-only">The Circle School </span>Meadow Campus Project
+                          </a> -->
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                          <ul class="nav nav-pills nav-justified" role="tablist">
+<!--                             <li class="active"><a href="http://localhost/about">About the <br>Project</a></li>
+                            <li><a href="http://localhost/help">How You <br>Can Help</a></li>
+                            <li class="pledge-button"><a href="http://localhost/pledge">Pledge <br>Now!</a></li>-->
+                            
+                            <li class="dropdown" role="presentation">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                About the <br>Project <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="plans">Plans and Drawings</a></li>
+                                    <li><a href="updates">Updates from the Meadow</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" role="presentation">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Fundraising <br>Campaign <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="build">Let's Build A School</a></li>
+                                    <li><a href="scenarios">Scenarios &amp; Calculators</a></li>
+                                    <li><a href="donors">Donor List</a></li>
+                                </ul>
+                            </li>
+                            <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" class="btn btn-lg btn-success navbar-btn" role="button">Pledge <br>Now</a><!--<a href="http://localhost/pledge">Pledge <br>Now!</a>--></li>
+                        </ul>
+                        </div><!-- /.navbar-collapse -->
+                      </div><!-- /.container-fluid -->
+                    </nav>
+                    </div> 
+
+                    
+
                 </div>
                 
                 <!-- Admin nav bar -->
@@ -78,31 +128,7 @@
                     </nav>
                 @endif
 
-                <!-- Nav bar -->
-                <nav class="navbar navbar-default nav-justified" role="navigation">
-                  <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                      <ul class="nav navbar-nav">
-                        {{ HTML::nav_link('/', 'Home') }}
-                        {{ HTML::nav_link('pledge', 'Pledge Now') }}
-                        {{ HTML::nav_link('scenarios', 'Scenarios &amp; Calculators') }}
-                        {{ HTML::nav_link('donors', 'Donors') }}
-                        {{ HTML::nav_link('updates', 'Building Updates') }}
-                        {{ HTML::nav_link('faqs', 'FAQs') }}                      
-                      </ul>
-                    </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-fluid -->
-                </nav>
+                
 
                 <!-- Alert messages - success and error -->
                 @if(Session::get('success_message'))

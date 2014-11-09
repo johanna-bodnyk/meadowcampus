@@ -106,16 +106,16 @@ Route::resource('donors', 'DonorController');
 
 Route::resource('updates', 'PostsController');
 
-
-Route::get('progress/edit', function() 
-{
-
+Route::get('plans', function() {
+    echo 'Page coming soon. <a href="/">Return to homepage</a>';
 });
 
-Route::post('progress/edit', function() 
-{
-
+Route::get('build', function() {
+    echo 'Page coming soon. <a href="/">Return to homepage</a>';
 });
+
+
+
 
 Route::get('/debug', function() {
 

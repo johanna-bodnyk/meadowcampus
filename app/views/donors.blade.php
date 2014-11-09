@@ -8,7 +8,7 @@
 
  <h2>Donors</h2>
 
-    <p class="lead">This page will be simpler, just names and "types" (student, parent, alum) -- this is more of the "admin" view.</p>
+    <p class="lead">This page will be simpler, just names and "types" (student, parent, alum) and total $ amounts per type -- this is more of the "admin" view.</p>
     
     <table class="table">
         <tr>

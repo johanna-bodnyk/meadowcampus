@@ -13,9 +13,8 @@
 @stop
 
 @section('content')
-
-    <div class="table-row">
-        <h2>Monthly Donation Scenarios &amp; Calculators</h2>
+    <h2>Monthly Donation Scenarios &amp; Calculators</h2>
+    <div class="row">
         <div class="col-md-6">
             <h3>Monthly Amounts by Target Gift</h3>
             <table class="table table-bordered table-condensed">
