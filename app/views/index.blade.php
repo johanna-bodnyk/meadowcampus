@@ -5,18 +5,22 @@
 @stop
 
 @section('content')
-    <h2>Welcome! <small>This is the online home of The Circle School's Meadow Campus Fundraising Campaign!</small></h2>
-
+    <h2>Fundraising Campaign Progress</h2>
+    <br>
     <div class="row">
+        <img src="images/thermometer-mockup.png">
+        <br>
+        <br>
         <div class="col-md-6">
-            <h2>Our Progress So Far</h2>
-            <img src="images/thermometer-placeholder.jpg" class="pull-left">
+            <h3>Let's Build a School!</h3>
+            <p>We need <em>your</em> to make turn The Circle School's dream home into a reality.</p>
+            <p><a href="build">How can I help?</a></p>
         </div>
         <div class="col-md-6">
-            <h2>Join the Campaign</h2>
-            <br>
-            <a class="btn btn-lg btn-success" href="pledge" role="button">Pledge Now!</a>
-            <a class="btn btn-lg btn-default" href="scenarios" role="button">Learn More</a>
+            <h3>Updates from The Meadow</h3>
+            <h4>The Evolution of Our Design</h4>
+            <p><img class="pull-left" style="margin-right:15px"width="150px" src="images/posts/PROGRAMMING-STUDIES-4.jpg">Wondering how you go from an idea of a new school to making it a reality?  Here's everything you ever wanted to know about our design process.</p>
+            <p><a href="updates">Read more...</a></p>
         </div>
     </div>
 @stop

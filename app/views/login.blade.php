@@ -16,7 +16,7 @@
 
         <div class="form-group">
             {{ Form::label('password', 'Password') }}
-            {{ Form::password('password', array('class' => 'form-control', 'placeholder'=>'password')) }}
+            {{ Form::password('password', array('class' => 'form-control')) }}
         </div>
 
         {{ Form::submit('Log In', array('class' => 'btn btn-default')) }}
