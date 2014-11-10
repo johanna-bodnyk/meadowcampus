@@ -41,6 +41,10 @@ h1, h2, h3 {
     color: #0c7344;
 }
 
+h3 {
+    text-align: center;
+}
+
 .main {
     min-height: 100%;
     padding-bottom: 100px;
@@ -156,4 +160,12 @@ img, figcaption {
 
 .scenarios p.form-control-static {
     font-weight: bold;
+}
+
+.gift-table {
+    text-align: center;
+}
+
+th {
+    text-align: center;
 }

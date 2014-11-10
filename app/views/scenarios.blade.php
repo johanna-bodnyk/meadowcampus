@@ -17,95 +17,113 @@
     <div class="row">
         <div class="col-md-6">
             <h3>Monthly Amounts by Target Gift</h3>
-            <table class="table table-bordered table-condensed">
+            <table class="table table-condensed table-striped gift-table">
               <tr>
                 <th>Total Amount</th>
                 <th>Monthly Gift</th>
                 <th>Out of Pocket (Total)</th>
+                <th>Pledge this Amount</th>
               </tr>
               <tr>
                 <td>$1,000</td>
                 <td>$6.44</td>
                 <td>$773</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=6.44" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$2,015</td>
                 <td>$12.98</td>
                 <td>$1,557</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=12.98" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$5,000</td>
                 <td>$32.20</td>
                 <td>$3,864</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=32.30" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$10,000</td>
                 <td>$64.40</td>
                 <td>$7,728</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=64.40" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$25,000</td>
                 <td>$161.00</td>
                 <td>$19,320</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=161.00" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$50,000</td>
                 <td>$321.99</td>
                 <td>$38,639</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=321.99" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$100,000</td>
                 <td>$643.99</td>
                 <td>$77,279</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=643.99" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+
               </tr>
             </table>
 
             <h3>Gifts Based on Monthly Amounts</h3>
-            <table class="table table-bordered table-condensed">
+            <table class="table table-striped table-condensed gift-table">
               <tr>
                 <th>Monthly Gift</th>
                 <th>Total for School</th>
                 <th>Out of Pocket (Total)</th>
+                <th>Pledge this Amount</th>
               </tr>
               <tr>
                 <td>$5</td>
                 <td>$776</td>
                 <td>$600</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=5" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$10</td>
                 <td>$1,553</td>
                 <td>$1,200</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=10" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$25</td>
                 <td>$3,882</td>
                 <td>$3,000</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=25" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$50</td>
                 <td>$7,764</td>
                 <td>$6,000</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=50" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$100</td>
                 <td>$15,528</td>
                 <td>$12,000</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=100" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$150</td>
                 <td>$23,292</td>
                 <td>$18,000</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=150" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$200</td>
                 <td>$31,056</td>
                 <td>$24,000</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=200" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$300</td>
                 <td>$46,585</td>
                 <td>$36,000</td>
+                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=300" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
             </table>
         </div>
@@ -115,7 +133,7 @@
                 <div class="form-group">
                     <label for="total1" class="col-sm-6 control-label">Target</label>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" value="10000" id="total1">
+                        <input type="number" class="form-control" value="10000" id="total1" step="100">
                     </div>
                 </div>
                 <div class="form-group">
@@ -135,6 +153,9 @@
                     <div class="col-sm-4">
                          <p class="form-control-static" id="pocket1">$7,728</p>
                     </div>
+                </div>
+                <div class="text-center">
+                    <a id="calc-button1" href="https://secure.jotform.us/form/42086602993157?inThe=64.40" class="btn btn-success" role="button">Pledge $<span id="button-label1">64.40</span>/month</a>
                 </div>
 
             </form>
@@ -166,6 +187,9 @@
                     <div class="col-sm-4">
                          <p class="form-control-static" id="pocket2">$6,000</p>
                     </div>
+                </div>
+                <div class="text-center">
+                    <a id="calc-button2" href="https://secure.jotform.us/form/42086602993157?inThe=50.00" class="btn btn-success" role="button">Pledge $<span id="button-label2">50.00</span>/month</a>
                 </div>
 
             </form>
