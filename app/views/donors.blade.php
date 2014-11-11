@@ -13,7 +13,7 @@
 
 
     <div class="row donor-lists">
-        <div class="col-md-4">
+        <div class="col-sm-4">
             <h3>Current Families</h3>
             <ul>
                 <li>Jonathan Doe</li>
@@ -26,7 +26,7 @@
                 <li>Janet &amp; Jane Doe</li>
             </ul>           
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-4">
             <h3>Alumni</h3>
             <ul>
                 <li>Jonathan Doe</li>
@@ -43,7 +43,7 @@
                 <li>Jonathan Doe</li>
             </ul>
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-4">
             <h3>Alumni Families</h3>
             <ul>
                 <li>Jane Doe</li>

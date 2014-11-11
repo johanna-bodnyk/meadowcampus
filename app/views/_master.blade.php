@@ -35,6 +35,7 @@
         @yield("body-class")
         '
     >
+    <div id="background">
         <div class="container">
             <!-- TODO: Try to get this working: http://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap -->
             <div class="main">
@@ -43,7 +44,7 @@
                 <div class="page-header row">
                      <div class="col-md-3">
                         <a href="/">
-                            <img src="{{ URL::asset('images/websitelogo.png') }}">  
+                            <img id="logo" src="{{ URL::asset('images/websitelogo.png') }}">  
                         </a>
                     </div>
                     <div class="col-md-9">
@@ -150,26 +151,33 @@
             </div>
 
             <!-- Footer -->
-            <div class="footer">
-                <hr>
-                <!-- Footer -->
-                <address class="text-center small">
-                    The Circle School &nbsp;|&nbsp; 210 Oakleigh Avenue, Harrisburg, PA 17111<br>
-                    717-564-6700 &nbsp;|&nbsp; <a href="mailto:hello@circleschool.org">hello@circleschool.org</a> &nbsp;|&nbsp; <a href="http://circleschool.org/">http://circleschool.org</a>
-                </address>
-                <p class="small">
-
-                    @if(Auth::check())
-                        <a href="logout">Logout</a>
-                    @else
-                        <a href="login">Admin login</a>
-                    @endif
-                </p>
+            <div>
+                <div class="row footer">
+                    <div class="col-md-3"></div>
+                    <!-- Contact info -->
+                    <div class="col-md-6">
+                        <address class="text-center small">
+                            The Circle School &nbsp;|&nbsp; 210 Oakleigh Avenue, Harrisburg, PA 17111<br>
+                            717-564-6700 &nbsp;|&nbsp; <a href="mailto:hello@circleschool.org">hello@circleschool.org</a> &nbsp;|&nbsp; <a href="http://circleschool.org/">http://circleschool.org</a>
+                        </address>
+                    </div>
+                    <!-- Admin login -->
+                    <div class="col-md-3">
+                        <p class="small" id="login">
+                            <br>
+                            @if(Auth::check())
+                                <a href="logout">Log out</a>
+                            @else
+                                <a href="login">Log in</a>
+                            @endif
+                        </p>
+                    </div>
+                <div>
             </div>
             
         <!-- Bootstrap's Latest compiled and minified JavaScript -->
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         @yield('body')
-
+    </div>
     </body>
 </html>
