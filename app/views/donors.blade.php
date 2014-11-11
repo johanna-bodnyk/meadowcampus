@@ -6,41 +6,54 @@
 
 @section('content')
 
- <h2>Donors</h2>
+    <h2>Our Donors</h2>
 
-    <p class="lead">This page will be simpler, just names and "types" (student, parent, alum) and total $ amounts per type -- this is more of the "admin" view.</p>
+    <p class="lead">So far, <span class="callout-number">19</span> generous donors have made pledges totaling <span class="callout-number">$180,156</span> (that's <span class="callout-number">$1,160</span> per month!)</p>
     
-    <table class="table">
-        <tr>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Type</th>
-            <th>Added</th>
-            <th>Manage</th>
-        </tr>
-        @foreach($donors as $donor)
-        <tr>
-            <td> {{ $donor->first_name }} {{ $donor->last_name }} </td>
-            <td> {{ $donor->amount }} </td>
-            <td> 
-                @foreach ($donor->types as $type )
-                    {{ $type->type." " }}
-                @endforeach
-            </td>
-            <td>Added by {{ $donor->user->first_name }} on {{ $donor->created_at }}</td>
-            <td>
-                <a href="/donors/{{ $donor->id }}/edit">Edit</a> | 
 
-                {{-- TODO: Move JS to footer, add delete confirmation page into process --}}
-                {{ Form::open(['method' => 'DELETE', 'url' => 'donors/'.$donor->id]) }}
-                <a href='javascript:void(0)' onClick='parentNode.submit();return false;'>Delete</a>
-                {{ Form::close() }}
-            </td>
-        </tr>
-        @endforeach
-    </table>
 
-    <a class="btn btn-success" href="/donors/create" role="button">Add a new donor</a>
+    <div class="row donor-lists">
+        <div class="col-md-4">
+            <h3>Current Families</h3>
+            <ul>
+                <li>Jonathan Doe</li>
+                <li>Janet &amp; Jonathan Doe</li>
+            </ul>
+            <h3>Staff</h3>
+            <ul>
+                <li>Jane Doe</li>
+                <li>Jonathan Doe</li>
+                <li>Janet &amp; Jane Doe</li>
+            </ul>           
+        </div>
+        <div class="col-md-4">
+            <h3>Alumni</h3>
+            <ul>
+                <li>Jonathan Doe</li>
+                <li>John Doe</li>
+                <li>Janet Doe</li>
+                <li>John Doe</li>
+                <li>Jane Doe</li>
+                <li>Jonathan Doe</li>
+                <li>Jane Doe</li>
+                <li>John Doe</li>
+                <li>Janet Doe</li>
+                <li>John Doe</li>
+                <li>Jane Doe</li>
+                <li>Jonathan Doe</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>Alumni Families</h3>
+            <ul>
+                <li>Jane Doe</li>
+            </ul>
+            <h3>Other Friends</h3>
+            <ul>
+                <li>Jonathan Doe</li>
+            </ul>
+        </div>
 
+    </div>
 @stop
 

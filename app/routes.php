@@ -99,10 +99,13 @@ Route::post('image-delete', function() {
     return $filename;
 });
 
+Route::get('donors', function() {
+    return View::make('donors');
+});
 
 // Database-driven sections use RESTful routing
 
-Route::resource('donors', 'DonorController');
+ //Route::resource('donors', 'DonorController');
 
 Route::resource('updates', 'PostsController');
 

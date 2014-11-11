@@ -90,7 +90,7 @@
                                     <li><a href="donors">Donor List</a></li>
                                 </ul>
                             </li>
-                            <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" class="btn btn-lg btn-success navbar-btn" role="button">Pledge <br>Now</a><!--<a href="http://localhost/pledge">Pledge <br>Now!</a>--></li>
+                            <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a><!--<a href="http://localhost/pledge">Pledge <br>Now!</a>--></li>
                         </ul>
                         </div><!-- /.navbar-collapse -->
                       </div><!-- /.container-fluid -->
