@@ -8,12 +8,23 @@
     <h2>Fundraising Campaign Progress</h2>
     <br>
     <div class="row">
-        <img src="images/thermometer-mockup.png">
-        <br>
+        <div class="col-md-12">
+            <div id="therm-img">
+                <img src="images/thermometer-mockup-imgonly.png">
+            </div>
+            <div id="therm">
+                <div id="therm-fill"></div>
+                <div id="therm-values">
+                    <span id="start-value">$0</span>
+                    <span id="end-value">$750,000</span>
+                    <span id="current-value">$176,156</span>
+                </div>
+            </div>
+        </div>
         <br>
         <div class="col-md-6">
             <h3>Let's Build a School!</h3>
-            <p>We need <em>your</em> to make turn The Circle School's dream home into a reality.</p>
+            <p>We need <em>your</em> help to turn The Circle School's dream home into a reality.</p>
             <p><a href="build">How can I help?</a></p>
         </div>
         <div class="col-md-6">

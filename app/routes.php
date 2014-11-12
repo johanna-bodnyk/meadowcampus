@@ -165,3 +165,7 @@ Route::get('/debug', function() {
 
 });
 
+Route::get('thermometer', function() {
+    return View::make('thermometer');
+});
+
