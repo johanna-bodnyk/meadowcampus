@@ -19,7 +19,11 @@
 
 Route::get('/', function()
 {
-	return View::make('index');
+    $percent = 25;
+    $total = "176,156";
+	return View::make('index')
+        ->with('percent', $percent)
+        ->with('total', $total);
 });
 
 Route::get('pledge', function() 

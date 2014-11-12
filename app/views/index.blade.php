@@ -4,6 +4,25 @@
     Welcome!
 @stop
 
+@section('head')
+    <style>
+        @keyframes thermometer {
+            from {width: 0%;}
+            to {width: {{$percent}}%;}
+        }
+
+        @-webkit-keyframes thermometer {
+            from {width: 0%;}
+            to {width: {{$percent}}%;}
+        }
+
+        #current-value {
+            padding-left: {{$percent}}%;
+        }
+    </style>
+
+@stop
+
 @section('content')
     <h2>Fundraising Campaign Progress</h2>
     <br>
@@ -17,7 +36,7 @@
                 <div id="therm-values">
                     <span id="start-value">$0</span>
                     <span id="end-value">$750,000</span>
-                    <span id="current-value">$176,156</span>
+                    <span id="current-value">${{$total}}</span>
                 </div>
             </div>
         </div>

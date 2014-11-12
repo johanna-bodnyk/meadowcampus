@@ -169,7 +169,9 @@ address {
     border: solid 3px #0c7344;
 }
 
-@keyframes thermometer {
+/* In head of index.blade.php so % can be dynamic */
+
+/*@keyframes thermometer {
     from {width: 0%;}
     to {width: 25%;}
 }
@@ -178,6 +180,7 @@ address {
     from {width: 0%;}
     to {width: 25%;}
 }
+*/
 
 #therm-fill {
     height: 15px;
@@ -219,7 +222,7 @@ address {
     color: #0c7344;
     font-size: 22px;
     font-weight: bold;
-    padding-left: 25%;
+/*    padding-left: 25%;  In head of index.blade.php so % can be dynamic */
     margin-left: -71px;
     opacity: 0;
     -webkit-animation: current ease-in .5s;

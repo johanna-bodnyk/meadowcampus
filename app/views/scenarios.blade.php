@@ -14,14 +14,15 @@
 
 @section('content')
     <h2>Monthly Donation Scenarios &amp; Calculators</h2>
+    <p class="lead">This will be a general sentence about how the monthly ten-year pledges work, and there will also be <a href="build">a link to the section that explains the campaign in more detail.</a></p>
     <div class="row">
         <div class="col-md-6">
             <h3>Monthly Amounts by Target Gift</h3>
             <table class="table table-condensed table-striped gift-table">
               <tr>
-                <th>Total Amount</th>
+                <th>Total Amount*</th>
                 <th>Monthly Gift</th>
-                <th>Out of Pocket (Total)</th>
+                <th>Out of Pocket (Total)*</th>
                 <th>Pledge this Amount</th>
               </tr>
               <tr>
@@ -73,8 +74,8 @@
             <table class="table table-striped table-condensed gift-table">
               <tr>
                 <th>Monthly Gift</th>
-                <th>Total for School</th>
-                <th>Out of Pocket (Total)</th>
+                <th>Total for School*</th>
+                <th>Out of Pocket (Total)*</th>
                 <th>Pledge this Amount</th>
               </tr>
               <tr>
@@ -126,6 +127,7 @@
                 <td><a href="https://secure.jotform.us/form/42086602993157?inThe=300" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
             </table>
+            <p>*Totals and out of pocket totals based on a monthly pledge continuing for 10 years.</p>
         </div>
         <div class="col-md-6">
             <h3>Monthly Gift Based on Target</h3>
