@@ -31,7 +31,7 @@ $env = $app->detectEnvironment(function() {
     if(file_exists(__DIR__.'/../environment.php')) {
         return require __DIR__.'/../environment.php';
     }
-    # If not found, assume Pagoda
+    # If not found, assume production
     else {
         return 'production';
     }

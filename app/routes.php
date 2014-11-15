@@ -21,6 +21,10 @@ Route::get('/', function()
         ->with('total', $total);
 });
 
+Route::get('envtest', function() {
+    echo $_ENV['CONNECTIONS'];
+});
+
 Route::get('plans', function() {
     echo 'Page coming soon. <a href="/">Return to homepage</a>';
 });
