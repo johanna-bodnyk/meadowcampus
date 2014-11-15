@@ -6,30 +6,7 @@
 
 @section('head')
     <style>
-        @keyframes thermometer {
-            from {width: 0%;}
-            to {width: {{$percent}}%;}
-        }
-
-        @-webkit-keyframes thermometer {
-            from {width: 0%;}
-            to {width: {{$percent}}%;}
-        }
-
-        #current-value {
-            padding-left: {{$percent}}%;
-        }
-
-        @keyframes therm-image {
-            from {clip-path: inset(0 99% 0 0);}
-            to {clip-path: inset(0 {{100-$percent}}% 0 0);}
-        }
-
-        @-webkit-keyframes therm-image {
-            from {-webkit-clip-path: inset(0 99% 0 0);}
-            to {-webkit-clip-path: inset(0 {{100-$percent}}% 0 0);}
-        }
-
+        @include('fragments.thermometer-head', array('percent' => $percent))
     </style>
 
 @stop
@@ -39,18 +16,7 @@
     <br>
     <div class="row">
         <div class="col-md-12">
-            <div id="therm-img">
-                <img src="images/rendering-1-outline-800px.png">
-                <img id="color-img" src="images/rendering-1-cropped-800px.png">
-            </div>
-            <div id="therm">
-                <div id="therm-fill"></div>
-                <div id="therm-values">
-                    <span id="start-value">$0</span>
-                    <span id="end-value">$750,000</span>
-                    <span id="current-value">${{$total}}</span>
-                </div>
-            </div>
+            @include('fragments.thermometer', array('total' => $total))
         </div>
         <br>
         <div class="col-md-6">

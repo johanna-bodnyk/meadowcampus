@@ -254,7 +254,6 @@ class DashboardController extends \BaseController {
         $percent = intval(($total['amount']/750000)*100);
         $total['amount'] = number_format($total['amount']);
 
-
         return View::make('dashboard')
             ->with('graph1_data', $graph1_data)
             ->with('graph2_data', $graph2_data)

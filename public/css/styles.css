@@ -96,6 +96,7 @@ address {
     padding: 20px 30px;
     border-radius: 10px;
     opacity:0; 
+
     -webkit-animation:fadeIn ease-in 1; 
     -moz-animation:fadeIn ease-in 1;
     animation:fadeIn ease-in 1;
@@ -161,16 +162,15 @@ address {
 
 #therm-img>img#color-img {
     margin-top: -139px;
-    clip-path: inset(0 99% 0 0);
-    -webkit-clip-path: inset(0 99% 0 0);
-    -webkit-animation: therm-image ease-in 1.5s;
-    animation: therm-image ease-in 1.5s;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    -webkit-animation: thermometer-image ease-in 1.5s;
+    animation: thermometer-image ease-in 1.5s;
     -webkit-animation-fill-mode:forwards;  
     animation-fill-mode:forwards;
     -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s;
 }
-
 
 #therm {
     box-sizing: content-box;

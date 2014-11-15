@@ -6,19 +6,7 @@
 
 @section('head')
     <style>
-        @keyframes thermometer {
-            from {width: 0%;}
-            to {width: {{$percent}}%;}
-        }
-
-        @-webkit-keyframes thermometer {
-            from {width: 0%;}
-            to {width: {{$percent}}%;}
-        }
-
-        #current-value {
-            padding-left: {{$percent}}%;
-        }
+        @include('fragments.thermometer-head', array('percent' => $percent))
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -162,20 +150,10 @@
 @stop
 
 @section('content')
-
+    <h2>Fundraising Campaign Dashboard</h2>
     <div class="row">
         <div class="col-lg-12">
-            <div id="therm-img">
-                <img src="images/thermometer-mockup-imgonly.png">
-            </div>
-            <div id="therm">
-                <div id="therm-fill"></div>
-                <div id="therm-values">
-                    <span id="start-value">$0</span>
-                    <span id="end-value">$750,000</span>
-                    <span id="current-value">${{$total['amount']}}</span>
-                </div>
-            </div>
+            @include('fragments.thermometer', array('total' => $total['amount']))
         </div>
     </div>
     <div class="row">
