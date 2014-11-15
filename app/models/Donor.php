@@ -1,15 +1,11 @@
 <?php
 
     class Donor extends Eloquent {
-
-        public function user() {
-            return $this->belongsTo('User');
+       
+        public function scopeGroup($query, $group) {
+            return $query->where('donor_group', '=', $group)
+                ->where('pledge_amount', '>', 0);
         }
-
-        public function types() {
-            return $this->belongsToMany('Type');
-        }
-        
     }
 
 ?>

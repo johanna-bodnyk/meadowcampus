@@ -129,7 +129,7 @@ address {
 }
 
 .nav-pills>li>a {
-    background-color: #a0e4a0;
+    background-color: #C7F4B1;
     border-radius: 8px;
     margin-right:20px;
     color: #316431;
@@ -138,7 +138,7 @@ address {
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
-    background-color: #a0e4a0;
+    background-color: #C7F4B1;
 }
 
 .nav-pills>li.pledge-button>a {
@@ -157,6 +157,8 @@ address {
 #therm-img>img {
     display: block;
     margin: 0px auto 13px;
+    clip-path: inset(0 77% 0 0);
+    -webkit-clip-path: inset(0 77% 0 0);
 }
 
 #therm {
@@ -196,7 +198,6 @@ address {
 
 #therm-values {
     padding-top: 5px;
-    font-family: "Trebuchet MS", sans-serif;
     font-size: 16px;
 }
 
@@ -223,7 +224,7 @@ address {
     font-size: 22px;
     font-weight: bold;
 /*    padding-left: 25%;  In head of index.blade.php so % can be dynamic */
-    margin-left: -71px;
+    margin-left: -71px; /* Width of $0 + half of current value */
     opacity: 0;
     -webkit-animation: current ease-in .5s;
     animation: current ease-in .5s;
@@ -279,10 +280,6 @@ img, figcaption {
 
 /* Scenarios section */
 
-/*.scenarios form {
-    border: 1px solid #DDD;
-}*/
-
 .scenarios p.form-control-static {
     font-weight: bold;
 }
@@ -291,7 +288,7 @@ img, figcaption {
     text-align: center;
 }
 
-th {
+.gift-table th {
     text-align: center;
 }
 
@@ -308,5 +305,30 @@ div.donor-lists h3 {
 
 div.donor-lists li {
     padding-bottom: 10px;
+}
+
+
+/* Dashboard */
+
+.google-chart>div {
+    margin: 0px auto;
+}
+
+.dashboard-table {
+    font-size: .85em;
+    max-width: 700px;
+    margin: 0px auto;
+}
+
+.count-column {
+    text-align: center;
+}
+
+.total-column {
+    text-align: center;
+}
+
+.total-row {
+    font-weight: bold;
 }
 

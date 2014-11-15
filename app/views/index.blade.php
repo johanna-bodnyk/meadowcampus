@@ -29,7 +29,7 @@
     <div class="row">
         <div class="col-md-12">
             <div id="therm-img">
-                <img src="images/thermometer-mockup-imgonly.png">
+                <img src="images/rendering-1-outline-800px.png">
             </div>
             <div id="therm">
                 <div id="therm-fill"></div>

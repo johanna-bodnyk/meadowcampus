@@ -218,11 +218,51 @@ class DashboardController extends \BaseController {
             $i += 1;
         }    
 
+        ////
+        // Data for table of number and total of pledges by group
+        ////
+
+        $groups = array(
+            'Alumni' => array(),
+            'Alumni Families' => array(),
+            'Current Families' => array(),
+            'Current Students' => array(),
+            'Staff' => array(),
+            'Friends' => array()
+            );
+
+        $total = array(
+            'count' => 0,
+            'amount' => 0
+            );
+
+        foreach ($groups as $group_name => $group_values) {
+            $group = Donor::group($group_name)->get();
+            $count = $group->count();
+            $amount = $group->sum('pledge_amount');
+            $groups[$group_name]['count'] = $count;
+            $groups[$group_name]['amount'] = number_format($amount);
+            $total['count'] += $count;
+            $total['amount'] += $amount;
+        }
+
+
+        ////
+        // Data for thermometer
+        ////
+
+        $percent = intval(($total['amount']/750000)*100);
+        $total['amount'] = number_format($total['amount']);
+
+
         return View::make('dashboard')
             ->with('graph1_data', $graph1_data)
             ->with('graph2_data', $graph2_data)
             ->with('graph3_data', $graph3_data)
-            ->with('graph4_data', $graph4_data);
+            ->with('graph4_data', $graph4_data)
+            ->with('percent', $percent)
+            ->with('total', $total)
+            ->with('groups', $groups);
     }
 
 

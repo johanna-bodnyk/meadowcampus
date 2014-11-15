@@ -13,8 +13,9 @@
 
 Route::get('/', function()
 {
-    $percent = 25;
-    $total = "176,156";
+    $total = Donor::sum('pledge_amount');
+    $percent = intval(($total/750000)*100);
+    $total = number_format($total);
 	return View::make('index')
         ->with('percent', $percent)
         ->with('total', $total);
