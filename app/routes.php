@@ -11,12 +11,6 @@
 |
 */
 
-// Route::get('function-test', function() {
-//     $test = imAFunction();
-//     return $test;
-// });
-
-
 Route::get('/', function()
 {
     $percent = 25;
@@ -26,9 +20,12 @@ Route::get('/', function()
         ->with('total', $total);
 });
 
-Route::get('pledge', function() 
-{
-    return View::make('pledge');
+Route::get('plans', function() {
+    echo 'Page coming soon. <a href="/">Return to homepage</a>';
+});
+
+Route::get('build', function() {
+    echo 'Page coming soon. <a href="/">Return to homepage</a>';
 });
 
 Route::get('scenarios', function() 
@@ -36,11 +33,14 @@ Route::get('scenarios', function()
     return View::make('scenarios');
 });
 
-
-Route::get('faqs', function() 
-{
-    return View::make('faqs');
+Route::get('donors', function() {
+    return View::make('donors');
 });
+
+
+//
+// Login and logout
+//
 
 Route::get('login', 
     array(
@@ -49,10 +49,6 @@ Route::get('login',
             return View::make('login');
         })
 );
-
-//
-// Login and logout
-//
 
 Route::post('login',
     array(
@@ -67,10 +63,8 @@ Route::post('login',
             else {
                 Session::flash('error_message', 'Log in failed, please try again.');
                 return Redirect::to('/login');
-
             }
-        }
-    )
+        })
 );
 
 Route::get('logout', function() {
@@ -80,12 +74,16 @@ Route::get('logout', function() {
 });
 
 
+//
+// Admin pages
+//
+
+Route::get('dashboard', 'DashboardController@dashboard');
 
 
 //
 // Image uploading and deletion used by AJAX calls
 //
-
 
 // Saves image to disk, does not add to database 
 // (handled by post saving controller)
@@ -103,24 +101,10 @@ Route::post('image-delete', function() {
     return $filename;
 });
 
-Route::get('donors', function() {
-    return View::make('donors');
-});
-
-// Database-driven sections use RESTful routing
 
  //Route::resource('donors', 'DonorController');
 
 Route::resource('updates', 'PostsController');
-
-Route::get('plans', function() {
-    echo 'Page coming soon. <a href="/">Return to homepage</a>';
-});
-
-Route::get('build', function() {
-    echo 'Page coming soon. <a href="/">Return to homepage</a>';
-});
-
 
 
 
@@ -168,8 +152,3 @@ Route::get('/debug', function() {
     echo '</pre>';
 
 });
-
-Route::get('thermometer', function() {
-    return View::make('thermometer');
-});
-
