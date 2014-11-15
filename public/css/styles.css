@@ -156,10 +156,21 @@ address {
 
 #therm-img>img {
     display: block;
-    margin: 0px auto 13px;
-    clip-path: inset(0 77% 0 0);
-    -webkit-clip-path: inset(0 77% 0 0);
+    margin: 0px auto 0px;
 }
+
+#therm-img>img#color-img {
+    margin-top: -139px;
+    clip-path: inset(0 99% 0 0);
+    -webkit-clip-path: inset(0 99% 0 0);
+    -webkit-animation: therm-image ease-in 1.5s;
+    animation: therm-image ease-in 1.5s;
+    -webkit-animation-fill-mode:forwards;  
+    animation-fill-mode:forwards;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
 
 #therm {
     box-sizing: content-box;

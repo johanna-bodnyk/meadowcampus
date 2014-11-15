@@ -19,6 +19,17 @@
         #current-value {
             padding-left: {{$percent}}%;
         }
+
+        @keyframes therm-image {
+            from {clip-path: inset(0 99% 0 0);}
+            to {clip-path: inset(0 {{100-$percent}}% 0 0);}
+        }
+
+        @-webkit-keyframes therm-image {
+            from {-webkit-clip-path: inset(0 99% 0 0);}
+            to {-webkit-clip-path: inset(0 {{100-$percent}}% 0 0);}
+        }
+
     </style>
 
 @stop
@@ -30,6 +41,7 @@
         <div class="col-md-12">
             <div id="therm-img">
                 <img src="images/rendering-1-outline-800px.png">
+                <img id="color-img" src="images/rendering-1-cropped-800px.png">
             </div>
             <div id="therm">
                 <div id="therm-fill"></div>
