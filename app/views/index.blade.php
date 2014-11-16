@@ -20,9 +20,9 @@
         </div>
         <br>
         <div class="col-md-6">
-            <h3>Let's Build a School!</h3>
+            <h3>The Circle School Needs Your Help!</h3>
             <p>We need <em>your</em> help to turn The Circle School's dream home into a reality.</p>
-            <p><a href="build">How can I help?</a></p>
+            <p><a href="help">How can I help?</a></p>
         </div>
         <div class="col-md-6">
             <h3>Updates from The Meadow</h3>

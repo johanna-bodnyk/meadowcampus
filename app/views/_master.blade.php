@@ -86,7 +86,7 @@
                                 Fundraising <br>Campaign <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="build">Let's Build A School</a></li>
+                                    <li><a href="help">We Need Your Help!</a></li>
                                     <li><a href="scenarios">Scenarios &amp; Calculators</a></li>
                                     <li><a href="donors">Donor List</a></li>
                                 </ul>

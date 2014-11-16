@@ -25,9 +25,8 @@ Route::get('plans', function() {
     echo 'Page coming soon. <a href="/">Return to homepage</a>';
 });
 
-Route::get('build', function() {
-    echo 'Page coming soon. <a href="/">Return to homepage</a>';
-});
+Route::get('help', function() {
+    return View::make('help');});
 
 Route::get('scenarios', function() 
 {

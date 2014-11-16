@@ -343,3 +343,14 @@ div.donor-lists li {
     font-weight: bold;
 }
 
+/* Ask Section */
+
+div.next {
+    margin-top: 20px;
+}
+
+.next>a {
+    display: block;
+    float: right;
+    font-weight: bold;
+}
