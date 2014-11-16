@@ -30,15 +30,16 @@ body.logged-in {
 
 h1 {
     text-align: center;
-    font-size: 56px;
-    padding-bottom: 10px;
+    font-size: 75px;
     margin-top: 0px;
+    margin-bottom: 5px;
+    font-family: 'Reenie Beanie', cursive;
+    font-weight: bold;
 }
 
 .page-header {
-    padding-top: 10px;
-    padding-bottom: 10px;
     border:none;
+    margin: 30px 0 0;
 }
 
 img#logo {
@@ -47,23 +48,26 @@ img#logo {
     margin-left: auto;
 }
 
-
-h1, h2, h3 {
+h1, h2 {
     color: #0c7344;
 }
 
 h2 {
-    font-size: 34px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Reenie Beanie', cursive;
+    margin-top: 5px;
 }
 
 h3 {
     text-align: center;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .main {
     min-height: 100%;
     padding-bottom: 40px;
-
 }
 
 .footer {
@@ -87,17 +91,17 @@ address {
 
 
 /* Animation code from: https://graphicfusiondesign.com/design/creating-fancy-css3-fade-in-animations-on-page-load/ */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:.95; } }
+/*@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:.95; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:.95; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:.95; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:.95; } }*/
  
 .content {
-    background-color: white;
+    background-color: #FCFCF8;
     padding: 20px 30px;
     border-radius: 10px;
-    opacity:0; 
+    opacity:.96; 
 
-    -webkit-animation:fadeIn ease-in 1; 
+    /*-webkit-animation:fadeIn ease-in 1; 
     -moz-animation:fadeIn ease-in 1;
     animation:fadeIn ease-in 1;
      
@@ -110,12 +114,17 @@ address {
 
     -webkit-animation-delay: 1s;
     -moz-animation-delay: 1s;
-    animation-delay: 1s;
+    animation-delay: 1s;*/
 }
 
 .content li {
     padding-bottom: 15px;
 }
+
+/*.content a {
+    color: #865E16;
+    font-weight: bold;
+}*/
 
 .clear-both {
     clear: both;
@@ -132,18 +141,26 @@ address {
 .nav-pills>li>a {
     background-color: #C7F4B1;
     border-radius: 8px;
-    margin-right:20px;
+    margin: 0 15px 0 15px;
     color: #316431;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1.15;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
-    background-color: #C7F4B1;
+.nav-pills>li>a:hover {
+    background-color: #E0DDB7;
 }
+
+.nav-pills>li.open>a, .nav-pills>li.open>a:hover, .nav-pills>li.open>a:focus {
+    background-color: #E0DDB7;
+}
+
+/*.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    background-color: #C7F4B1;
+}*/
 
 .nav-pills>li.pledge-button>a {
-    background-color: green;
     color: white;
 }
 
@@ -153,12 +170,36 @@ address {
     border-top: 6px inherit #fff;
 }
 
+.dropdown-menu {
+    margin: 0 15px;
+    background-color: #F0EEDB;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: none;
+}
+
+.dropdown-menu>li>a {
+    color: #316431;
+    font-weight: bold;
+    padding: 3px 10px;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    color: #316431;
+    font-weight: bold;
+    padding: 3px 10px;
+    background-color: #E0DDB7;
+    background-image: none;
+}
+
 /* Homepage Thermometer */
 
 #therm-img>img {
     display: block;
     margin: 0px auto 0px;
 }
+
+/* @keyframe rules are in thermometer-head.blade.php so % can be dynamic */
 
 #therm-img>img#color-img {
     margin-top: -139px;
@@ -168,8 +209,8 @@ address {
     animation: thermometer-image ease-in 1.5s;
     -webkit-animation-fill-mode:forwards;  
     animation-fill-mode:forwards;
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
 }
 
 #therm {
@@ -182,18 +223,7 @@ address {
     border: solid 3px #0c7344;
 }
 
-/* In head of index.blade.php so % can be dynamic */
-
-/*@keyframes thermometer {
-    from {width: 0%;}
-    to {width: 25%;}
-}
-
-@-webkit-keyframes thermometer {
-    from {width: 0%;}
-    to {width: 25%;}
-}
-*/
+/* @keyframe rules are in thermometer-head.blade.php so % can be dynamic */
 
 #therm-fill {
     height: 15px;
@@ -203,8 +233,8 @@ address {
     animation: thermometer ease-in 1.5s;
     -webkit-animation-fill-mode:forwards;  
     animation-fill-mode:forwards;
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
 }
 
 #therm-values {
@@ -234,15 +264,15 @@ address {
     color: #0c7344;
     font-size: 22px;
     font-weight: bold;
-/*    padding-left: 25%;  In head of index.blade.php so % can be dynamic */
+/*    padding-left: 25%;  Set in thermometer-head.blade.php so % can be dynamic */
     margin-left: -71px; /* Width of $0 + half of current value */
     opacity: 0;
     -webkit-animation: current ease-in .5s;
     animation: current ease-in .5s;
     -webkit-animation-fill-mode:forwards;  
     animation-fill-mode:forwards;
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
 }
 
 

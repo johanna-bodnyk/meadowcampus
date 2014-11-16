@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="{{ URL::asset('packages/bootstrap/css/bootstrap-theme.min.css') }}">
      
         <link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}">
-
+        <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
         <!-- JQUERY -->
         <script src="{{ URL::asset('packages/jquery/jquery-1.11.1.min.js') }}"></script>
 
@@ -42,12 +42,12 @@
 
                 <!-- Logo and site name -->
                 <div class="page-header row">
-                     <div class="col-md-3">
+                     <div class="col-md-2">
                         <a href="/">
-                            <img id="logo" src="{{ URL::asset('images/websitelogo.png') }}">  
+                            <img id="logo" src="{{ URL::asset('images/websitelogo-170px.png') }}">  
                         </a>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-10">
                         <h1><span class="sr-only">The Circle School </span>Meadow Campus Project</h1>
                         <!-- Nav bar -->
                     <nav class="navbar navbar-default nav-justified" role="navigation">
