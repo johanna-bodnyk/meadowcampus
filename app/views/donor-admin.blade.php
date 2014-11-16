@@ -6,41 +6,35 @@
 
 @section('content')
 
- <h2>Donors</h2>
+<h2>Donors</h2>
 
-    <p class="lead">This page will be simpler, just names and "types" (student, parent, alum) and total $ amounts per type -- this is more of the "admin" view.</p>
-    
-    <table class="table">
-        <tr>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Type</th>
-            <th>Added</th>
-            <th>Manage</th>
-        </tr>
-        @foreach($donors as $donor)
-        <tr>
-            <td> {{ $donor->first_name }} {{ $donor->last_name }} </td>
-            <td> {{ $donor->amount }} </td>
-            <td> 
-                @foreach ($donor->types as $type )
-                    {{ $type->type." " }}
-                @endforeach
-            </td>
-            <td>Added by {{ $donor->user->first_name }} on {{ $donor->created_at }}</td>
-            <td>
-                <a href="/donors/{{ $donor->id }}/edit">Edit</a> | 
-
-                {{-- TODO: Move JS to footer, add delete confirmation page into process --}}
-                {{ Form::open(['method' => 'DELETE', 'url' => 'donors/'.$donor->id]) }}
-                <a href='javascript:void(0)' onClick='parentNode.submit();return false;'>Delete</a>
-                {{ Form::close() }}
-            </td>
-        </tr>
-        @endforeach
-    </table>
-
-    <a class="btn btn-success" href="/donors/create" role="button">Add a new donor</a>
-
+<table class="table table-condensed table-bordered" id="donor-table">
+    <tr>
+        <th>ID</th>
+        <th>Group</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Target</th>
+        <th>Pledge</th>
+        <th>Pledge Made?</th>
+        <th class="date-col">Pledge Date</th>
+        <th>Display Permission</th>
+        <th>Edit</th>
+    </tr>
+    @foreach($donors as $donor)
+    <tr>
+        <td>{{ $donor->id }}</td>
+        <td>{{ $donor->donor_group }}</td>
+        <td>{{ $donor->first_name }}</td>
+        <td>{{ $donor->last_name }}</td>
+        <td>${{ number_format($donor->target_donation) }}</td>
+        <td>${{ number_format($donor->pledge_amount) }}</td>
+        <td>{{ $donor->pledge_made_flag }}</td>
+        <td>@if($donor->pledge_made_flag){{ date("Y-m-d",strtotime($donor->pledge_date)) }}@endif</td>
+        <td>@if($donor->pledge_made_flag){{ $donor->display }}@endif</td>
+        <td><a href="donor-admin/edit/{{$donor->id}}">Edit</a>
+    </tr>
+    @endforeach
+</table>
 @stop
 

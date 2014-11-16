@@ -319,7 +319,7 @@ div.donor-lists li {
 }
 
 
-/* Dashboard */
+/* Dashboard and Donor Admin*/
 
 .google-chart>div {
     margin: 0px auto;
@@ -341,6 +341,14 @@ div.donor-lists li {
 
 .total-row {
     font-weight: bold;
+}
+
+#donor-table {
+    font-size: .85em;
+}
+
+th.date-col {
+    min-width: 80px;
 }
 
 /* Ask Section */

@@ -80,6 +80,13 @@ Route::get('logout', function() {
 
 Route::get('dashboard', 'DashboardController@dashboard');
 
+Route::get ('donor-admin', function() {
+        $donors = Donor::get();
+
+        return View::make('donor-admin')
+            ->with('donors', $donors);
+});
+
 
 //
 // Image uploading and deletion used by AJAX calls
