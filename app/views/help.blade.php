@@ -12,7 +12,7 @@
     <p>The dream is nearly <strong>8 acres and only a mile away.</strong> The property owner will donate the land as soon as the school community raises the funds to build.</p>
     <p>Alumni are leading the charge, inviting you and all to participate, aiming for a hundred percent. Read on to hear the story, see the plans, and find out how <strong>everybody, even our youngest students at school, will be part of it.</strong></p>
     <div class="next">
-        <a href="build/2">Next: Why build a school?</a>
+        <a href="help/2">Next: Why build a school?</a>
     </div>
     <div class="clear-both"></div>
 
