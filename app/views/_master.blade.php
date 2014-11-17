@@ -34,12 +34,8 @@
         @yield("body-class")
         '
     >
-    <div id="background">
+    <div id="header">
         <div class="container">
-            <!-- TODO: Try to get this working: http://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap -->
-            <div class="main">
-
-                <!-- Logo and site name -->
                 <div class="page-header row">
                      <div class="col-md-2">
                         <a href="/">
@@ -97,9 +93,14 @@
                     </nav>
                     </div> 
 
-                    
+                  </div>  
 
                 </div>
+    </div>
+    <div id="background">
+        <div class="container">
+            <!-- TODO: Try to get this working: http://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap -->
+            <div class="main">
                 
                 <!-- Admin nav bar -->
                 @if(Auth::check())
@@ -165,9 +166,9 @@
                         <p class="small" id="login">
                             <br>
                             @if(Auth::check())
-                                <a href="logout">Log out</a>
+                                <a href="/logout">Log out</a>
                             @else
-                                <a href="login">Log in</a>
+                                <a href="/login">Log in</a>
                             @endif
                         </p>
                     </div>

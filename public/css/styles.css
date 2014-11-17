@@ -9,10 +9,11 @@ body {
 }
 
 div#background {
-    background-image: url("../images/background_4.jpg");
+    background-image: url("../images/background_5.jpg");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 100% auto;
+    /*background-size: cover;*/
     box-shadow: inset 0 0 0 1000px rgba(126, 231, 126, .21);
     min-height: 100%;
 }
@@ -28,6 +29,14 @@ body.logged-in {
 }
 
 /* Header */
+
+div#header {
+    box-shadow: inset 0 0 0 1000px rgba(126, 231, 126, .21);
+}
+
+div#header>div.container {
+    min-height: 0;
+}
 
 h1 {
     text-align: center;
