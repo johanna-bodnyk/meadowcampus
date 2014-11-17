@@ -8,7 +8,6 @@
     <style>
         @include('fragments.thermometer-head', array('percent' => $percent))
     </style>
-
 @stop
 
 @section('content')

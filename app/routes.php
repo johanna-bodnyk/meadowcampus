@@ -25,8 +25,16 @@ Route::get('plans', function() {
     echo 'Page coming soon. <a href="/">Return to homepage</a>';
 });
 
-Route::get('help', function() {
-    return View::make('help');});
+Route::get('help/{page?}', function($page = 1) {
+    $total = Donor::sum('pledge_amount');
+    $percent = intval(($total/750000)*100);
+    $remainder = number_format(750000-$total);
+    $total = number_format($total);
+    return View::make('help'.$page)
+        ->with('percent', $percent)
+        ->with('total', $total)
+        ->with('remainder', $remainder);
+});
 
 Route::get('scenarios', function() 
 {

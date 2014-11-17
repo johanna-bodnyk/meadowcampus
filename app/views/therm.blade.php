@@ -32,8 +32,8 @@
 
 
             <div id="therm-img">
-                <img src="images/rendering-1-outline-800px.png">
-                <img id="color-img" src="images/rendering-1-cropped-800px.png">
+                <img src="/images/rendering-1-outline-800px.png">
+                <img id="color-img" src="/images/rendering-1-cropped-800px.png">
             </div>
 
         <script src="js/main.js"></script>

@@ -48,7 +48,7 @@
                         </a>
                     </div>
                     <div class="col-md-10">
-                        <h1><span class="sr-only">The Circle School </span>Meadow Campus Project</h1>
+                        <h1><a href="/"><span class="sr-only">The Circle School </span>Meadow Campus Project</a></h1>
                         <!-- Nav bar -->
                     <nav class="navbar navbar-default nav-justified" role="navigation">
                       <div class="container-fluid">
@@ -77,8 +77,8 @@
                                 About the <br>Project <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="plans">Plans and Drawings</a></li>
-                                    <li><a href="updates">Updates from the Meadow</a></li>
+                                    <li><a href="/plans">Plans and Drawings</a></li>
+                                    <li><a href="/updates">Updates from the Meadow</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown" role="presentation">
@@ -86,9 +86,9 @@
                                 Fundraising <br>Campaign <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="help">We Need Your Help!</a></li>
-                                    <li><a href="scenarios">Scenarios &amp; Calculators</a></li>
-                                    <li><a href="donors">Donor List</a></li>
+                                    <li><a href="/help">We Need Your Help!</a></li>
+                                    <li><a href="/scenarios">Scenarios &amp; Calculators</a></li>
+                                    <li><a href="/donors">Donor List</a></li>
                                 </ul>
                             </li>
                             <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a><!--<a href="http://localhost/pledge">Pledge <br>Now!</a>--></li>
