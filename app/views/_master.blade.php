@@ -49,7 +49,7 @@
                         <!-- Nav bar -->
                     <nav class="navbar navbar-default nav-justified" role="navigation">
                       <div class="container-fluid">
-                                                <!-- Brand and toggle get grouped for better mobile display -->
+                        <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
@@ -57,18 +57,10 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                           </button>
-<!--                           <a class="navbar-brand" href="/">
-                            <img alt="The Circle School" src="{{ URL::asset('images/websitelogo.png') }}">
-                            <span class="sr-only">The Circle School </span>Meadow Campus Project
-                          </a> -->
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                           <ul class="nav nav-pills nav-justified" role="tablist">
-<!--                             <li class="active"><a href="http://localhost/about">About the <br>Project</a></li>
-                            <li><a href="http://localhost/help">How You <br>Can Help</a></li>
-                            <li class="pledge-button"><a href="http://localhost/pledge">Pledge <br>Now!</a></li>-->
-                            
                             <li class="dropdown" role="presentation">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 About the <br>Project <span class="caret"></span>
@@ -88,7 +80,7 @@
                                     <li><a href="/donors">Donor List</a></li>
                                 </ul>
                             </li>
-                            <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" target="_blank" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a><!--<a href="http://localhost/pledge">Pledge <br>Now!</a>--></li>
+                            <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" target="_blank" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a></li>
                         </ul>
                         </div><!-- /.navbar-collapse -->
                       </div><!-- /.container-fluid -->

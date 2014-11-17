@@ -227,6 +227,40 @@ address {
     background-image: none;
 }
 
+.navbar-default button.navbar-toggle {
+    background-color: #0c7344;
+    border-color: #FCFCF8;
+}
+
+.navbar-default button.navbar-toggle:hover,
+.navbar-default button.navbar-toggle:focus {
+    background-color: #C7F4B1;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FCFCF8;
+}
+
+@media (max-width: 768px) {
+    .nav-pills>li>a,
+    .nav-pills>li>a:hover,
+    .nav-pills>li>a:focus {
+        margin-bottom: 10px;
+    }
+
+    .dropdown-menu {
+        margin-top: -10px;
+    }
+}
+
+.navbar-collapse.in {
+  overflow-y: visible;
+}
+
+.navbar-collapse {
+    border: none;
+}
+
 /* Homepage Thermometer */
 
 div#therm-img {
