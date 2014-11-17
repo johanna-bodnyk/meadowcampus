@@ -8,7 +8,7 @@
 
     <h2>Thank You to Our Donors!</h2>
 
-    <p class="lead">So far, <span class="callout-number">19</span> generous donors have made pledges totaling <span class="callout-number">$170,156</span> (that's <span class="callout-number">$1,096</span> per month)!</p>
+    <p class="lead">So far, <span class="callout-number">18</span> generous donors have made pledges totaling <span class="callout-number">$170,156</span> (that's <span class="callout-number">$1,096</span> per month)!</p>
     
 
 

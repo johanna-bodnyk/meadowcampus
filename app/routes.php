@@ -30,10 +30,12 @@ Route::get('help/{page?}', function($page = 1) {
     $percent = intval(($total/750000)*100);
     $remainder = number_format(750000-$total);
     $total = number_format($total);
+    $number = Donor::where('pledge_made_flag', '=', true)->count();
     return View::make('help'.$page)
         ->with('percent', $percent)
         ->with('total', $total)
-        ->with('remainder', $remainder);
+        ->with('remainder', $remainder)
+        ->with('number', $number);
 });
 
 Route::get('scenarios', function() 

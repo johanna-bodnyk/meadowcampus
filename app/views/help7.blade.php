@@ -26,7 +26,7 @@
             <p>Here's what we've got so far:</p>
             @include('fragments.thermometer', array('total' => $total))
            
-            <p><a href="/donors">The alumni, staff, and trustees who have launched this fundraising campaign</a> and built this website (about a dozen of us) have already pledged <strong>${{$total}} to be paid over 10 years,</strong> leaving <strong>${{$remainder}}</strong> yet to raise in the next couple of months.
+            <p><a href="/donors" target="_blank">The alumni, staff, and trustees who have launched this fundraising campaign</a> and built this website (about a dozen of us) have already pledged <strong>${{$total}} to be paid over 10 years,</strong> leaving <strong>${{$remainder}}</strong> yet to raise in the next couple of months.
             <p>Wait! <strong>How can our community do that?</strong> Well...</p>
         </div>
         <div class="col-xs-1" id="right-arrow"><a href="/help/8"></a></div>

@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="{{ URL::asset('packages/bootstrap/css/bootstrap-theme.min.css') }}">
      
         <link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}">
-        <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
         <!-- JQUERY -->
         <script src="{{ URL::asset('packages/jquery/jquery-1.11.1.min.js') }}"></script>
 
@@ -91,7 +90,7 @@
                                     <li><a href="/donors">Donor List</a></li>
                                 </ul>
                             </li>
-                            <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a><!--<a href="http://localhost/pledge">Pledge <br>Now!</a>--></li>
+                            <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" target="_blank" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a><!--<a href="http://localhost/pledge">Pledge <br>Now!</a>--></li>
                         </ul>
                         </div><!-- /.navbar-collapse -->
                       </div><!-- /.container-fluid -->
