@@ -11,7 +11,7 @@
 @stop
 
 @section('content')
-    <h2>Join the Meadow Campus Fundraising Campaign!</h2>
+    <h2><a class="no-link-style" href="/help">Join the Meadow Campus Fundraising Campaign!</a></h2>
     <br>
     <div class="row">
         <div class="col-md-12">

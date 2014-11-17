@@ -48,7 +48,7 @@
                         </a>
                     </div>
                     <div class="col-md-10">
-                        <h1><a href="/"><span class="sr-only">The Circle School </span>Meadow Campus Project</a></h1>
+                        <h1><a href="/" class="no-link-style"><span class="sr-only">The Circle School </span>Meadow Campus Project</a></h1>
                         <!-- Nav bar -->
                     <nav class="navbar navbar-default nav-justified" role="navigation">
                       <div class="container-fluid">
