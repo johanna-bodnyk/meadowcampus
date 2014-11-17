@@ -11,7 +11,7 @@
 @stop
 
 @section('content')
-    <h2>Fundraising Campaign Progress</h2>
+    <h2>Join the Meadow Campus Fundraising Campaign!</h2>
     <br>
     <div class="row">
         <div class="col-md-12">
@@ -19,14 +19,14 @@
         </div>
         <br>
         <div class="col-md-6">
-            <h3>The Circle School Needs Your Help!</h3>
-            <p>We need <em>your</em> help to turn The Circle School's dream home into a reality.</p>
-            <p><a href="help">How can I help?</a></p>
+            <h3>The Circle School Needs Your Help</h3>
+            <p><img class="pull-left" style="margin-right:15px" width="300px" src="images/help/rendering-2-500px.png">We need <em>your</em> help to turn The Circle School's dream home into a reality.</p>
+            <p><a href="help">Learn more...</a></p>
         </div>
         <div class="col-md-6">
             <h3>Updates from The Meadow</h3>
             <h4>The Evolution of Our Design</h4>
-            <p><img class="pull-left" style="margin-right:15px"width="150px" src="images/posts/PROGRAMMING-STUDIES-4.jpg">Wondering how you go from an idea of a new school to making it a reality?  Here's everything you ever wanted to know about our design process.</p>
+            <p><img class="pull-left" style="margin-right:15px" width="150px" src="images/posts/PROGRAMMING-STUDIES-4.jpg">Wondering how you go from an idea of a new school to making it a reality?  Here's everything you ever wanted to know about our design process.</p>
             <p><a href="updates">Read more...</a></p>
         </div>
     </div>

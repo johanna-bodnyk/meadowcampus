@@ -350,6 +350,8 @@ img, figcaption {
 span.callout-number {
     font-weight: bold;
     font-size: 1.3em;
+    color: #0c7344;
+    letter-spacing: -1px;
 }
 
 div.donor-lists h3 {
