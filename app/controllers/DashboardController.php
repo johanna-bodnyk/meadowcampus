@@ -247,10 +247,16 @@ class DashboardController extends \BaseController {
         }
 
 
+        // Get monthly amount based on total
+        $i = .05/12;
+        $n = 120;
+        $fv = $total['amount'];
+        $pmt = (($fv*$i) / (1-pow(1+$i, $n))) * -1;
+        $total['monthly'] = number_format($pmt);
+
         ////
         // Data for thermometer
         ////
-
         $percent = intval(($total['amount']/750000)*100);
         $total['amount'] = number_format($total['amount']);
 
