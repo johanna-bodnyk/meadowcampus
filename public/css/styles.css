@@ -547,3 +547,31 @@ p.next {
     font-size: 24px;
     margin-top: 30px;
 }
+
+.ask #therm {
+    margin-bottom: 50px;
+}
+
+.ask button.btn {
+    background: none;
+    color: #0c7344;
+    font-weight: bold;
+}
+
+.ask .btn-group {
+    float: right;
+    margin-top: 20px;
+}
+
+.ask .btn-group ul {
+    margin: 0px;
+}
+
+.ask .btn-group li {
+    padding-bottom: 0px;
+}
+
+.ask .btn-group .dropdown-menu>li>a {
+    font-weight: normal;
+    font-size: 14px;
+}

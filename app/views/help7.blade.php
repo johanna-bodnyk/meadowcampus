@@ -15,6 +15,7 @@
     <div class="ask row">
         <div class="col-xs-1" id="left-arrow"><a href="/help/6"></a></div>
         <div class="col-xs-10">
+            @include('fragments.ask-dropdown')
             <h2>What's the budget?</h2>
             <p class="lead">I'm so glad you asked! The budget is $2.6 million. Can you cover that?</p>
             <p>Just kidding (or half kidding). The total budget breaks down as follows:</p>
@@ -25,7 +26,6 @@
             </ul>
             <p>Here's what we've got so far:</p>
             @include('fragments.thermometer', array('total' => $total))
-           
             <p><a href="/donors" target="_blank">The alumni, staff, and trustees who have launched this fundraising campaign</a> and built this website (about a dozen of us) have already pledged <strong>${{$total}} to be paid over 10 years,</strong> leaving <strong>${{$remainder}}</strong> yet to raise in the next couple of months.
             <p>Wait! <strong>How can our community do that?</strong> Well...</p>
         </div>

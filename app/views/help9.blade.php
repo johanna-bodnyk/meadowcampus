@@ -9,6 +9,7 @@
     <div class="ask row">
         <div class="col-xs-1" id="left-arrow"><a href="/help/8"></a></div>
         <div class="col-xs-10">
+            @include('fragments.ask-dropdown')
             <h2>Being part of this is more important than the amount you give</h2>
             <p class="lead"><img src="/images/help/sophia-building-fund-400px.jpg" class="pull-right img-responsive">Your gift, at any level, is meaningful.</p>
             <ul>

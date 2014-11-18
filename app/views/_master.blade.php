@@ -169,9 +169,12 @@
                 <div>
             </div>
             
-        <!-- Bootstrap's Latest compiled and minified JavaScript -->
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
         @yield('body')
     </div>
+    <!-- Bootstrap's Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    @yield('foot')
+
     </body>
 </html>

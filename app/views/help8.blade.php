@@ -9,6 +9,7 @@
     <div class="ask row">
         <div class="col-xs-1" id="left-arrow"><a href="/help/7"></a></div>
         <div class="col-xs-10">
+            @include('fragments.ask-dropdown')
             <h2>Ramen noodles, parents, and half a million dollars</h2>
             <p class="lead">We still need ${{$remainder}}. Can you pledge $64.40 per month? Yes? Okay, then, how about $161.00 per month? Neither one? How about $32.20?</p>
             <p>Still no? Still eating ramen noodles for dinner every night? No matter. <strong>You are a Circle Schooler and we want you to be part of this,</strong> so how about $6.44 per month? Parent of a Circle Schooler? You, too, are Circle School! How many noodles can you pledge?</p>
