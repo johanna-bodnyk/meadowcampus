@@ -123,22 +123,19 @@
                     </nav>
                 @endif
 
-                
-
-                <!-- Alert messages - success and error -->
-                @if(Session::get('success_message'))
-                    <div class="alert alert-success alert-dismissible" role="alert">
-                        {{ Session::get('success_message') }}
-                    </div>
-                @endif
-
-                @if(Session::get('error_message'))
-                    <div class="alert alert-danger" role="alert">
-                        {{ Session::get('error_message') }}
-                    </div>
-                @endif
-
                 <div class="content">
+                    <!-- Alert messages - success and error -->
+                    @if(Session::get('success_message'))
+                        <div class="alert alert-success alert-dismissible" role="alert">
+                            {{ Session::get('success_message') }}
+                        </div>
+                    @endif
+
+                    @if(Session::get('error_message'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ Session::get('error_message') }}
+                        </div>
+                    @endif
                     @yield('content') 
                 </div>
 

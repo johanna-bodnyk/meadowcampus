@@ -432,6 +432,29 @@ img, figcaption {
     margin-left: 15px;
 }
 
+p.align-center img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input#save-button,
+input#delete-button,
+a#cancel-button {
+    float:right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: -30px;
+}
+
+div.image-control input[type='text'] {
+    width: 70%;
+}
+
+div.image-control img {
+    margin-bottom: 15px;
+}
+
 /* Scenarios section */
 
 .scenarios p.form-control-static {
