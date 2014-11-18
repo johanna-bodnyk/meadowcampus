@@ -44,7 +44,41 @@ Route::get('scenarios', function()
 });
 
 Route::get('donors', function() {
-    return View::make('donors');
+    $groups = array(
+            'Alumni' => array(),
+            'Alumni Families' => array(),
+            'Current Families' => array(),
+            'Current Students' => array(),
+            'Staff' => array(),
+            'Friends' => array()
+        );
+
+    $total = array(
+            'count' => 0,
+            'amount' => 0
+    );
+
+    foreach ($groups as $group_name => $group_values) {
+        $group = Donor::group($group_name)->orderBy('last_name')->get();
+        $count = $group->count();
+        $amount = $group->sum('pledge_amount');
+        $groups[$group_name] = $group;
+        $total['count'] += $count;
+        $total['amount'] += $amount;
+    }
+
+    // Get monthly amount based on total
+    $i = .05/12;
+    $n = 120;
+    $fv = $total['amount'];
+    $pmt = (($fv*$i) / (1-pow(1+$i, $n))) * -1;
+
+    $total['monthly'] = number_format($pmt);
+    $total['amount'] = number_format($total['amount']);
+
+    return View::make('donors')
+        ->with('groups', $groups)
+        ->with('total', $total);
 });
 
 
