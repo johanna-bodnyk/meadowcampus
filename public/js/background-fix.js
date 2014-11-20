@@ -6,7 +6,7 @@ function backgroundPosition() {
     height = $('#background').height();
     width = $('#background').width();
     ratio = width/height;
-    if (ratio > 1.7) {
+    if (ratio > 1.5) {
         $('#background').attr('style', 'background-position:center top');
     }
     else {
