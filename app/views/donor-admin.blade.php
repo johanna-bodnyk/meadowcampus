@@ -4,11 +4,16 @@
     Donors
 @stop
 
+@section('head')
+        <script type="text/javascript" src="{{ URL::asset('packages/tablesorter/jquery.tablesorter.min.js') }}"></script>
+@stop
+
 @section('content')
 
 <h2>Donors</h2>
 
-<table class="table table-condensed table-bordered" id="donor-table">
+<table class="table table-condensed table-bordered tablesorter" id="donor-table">
+    <thead>
     <tr>
         <th>ID</th>
         <th>Group</th>
@@ -21,6 +26,8 @@
         <th>Display Permission</th>
         <th>Edit</th>
     </tr>
+    </thead>
+    <tbody>
     @foreach($donors as $donor)
     <tr>
         <td>{{ $donor->id }}</td>
@@ -32,9 +39,20 @@
         <td>{{ $donor->pledge_made_flag }}</td>
         <td>@if($donor->pledge_made_flag){{ date("Y-m-d",strtotime($donor->pledge_date)) }}@endif</td>
         <td>@if($donor->pledge_made_flag){{ $donor->display }}@endif</td>
-        <td><a href="donor-admin/edit/{{$donor->id}}">Edit</a>
+        <td><a href="donor-edit/{{$donor->id}}">Edit</a>
     </tr>
     @endforeach
+    </tbody>
 </table>
 @stop
 
+@section('foot')
+    <!--http://tablesorter.com/-->
+    <script type="text/javascript">
+        $(document).ready(function() 
+            { 
+                $("#donor-table").tablesorter(); 
+            } 
+        ); 
+    </script>
+@stop

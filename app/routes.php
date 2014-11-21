@@ -128,12 +128,59 @@ Route::get('logout', function() {
 
 Route::get('dashboard', 'DashboardController@dashboard');
 
-Route::get ('donor-admin', function() {
-        $donors = Donor::get();
+Route::get('donor-admin', 
+    array(
+        'before' => 'auth', 
+        function() {
+            $donors = Donor::get();
 
-        return View::make('donor-admin')
-            ->with('donors', $donors);
-});
+            return View::make('donor-admin')
+                ->with('donors', $donors);
+        })
+);
+
+Route::get('donor-edit/{id}' ,
+    array(
+        'before' => 'auth', 
+        function($id) {
+
+            try {
+                $donor = Donor::findOrFail($id);
+            }
+            catch (Exception $e) {
+                Session::flash('error_message', 'A donor with the id '.$id.' does not exist');
+                return Redirect::to('donor-admin');
+            }
+
+            return View::make('donor-edit')
+                ->with('donor', $donor);
+        })
+);
+
+Route::post('donor-edit/{id}',
+    array(
+        'before' => 'auth', 
+        function($id) {
+            try {
+                $donor = Donor::findOrFail($id);
+            }
+            catch (Exception $e) {
+                Session::flash('error_message', 'A donor with the id '.$id.' does not exist');
+                return Redirect::to('donor-admin');
+            }
+
+            $fields = Input::except('_token');
+
+            foreach($fields as $field => $value) {
+                $donor->$field = $value;
+            }
+
+            $donor->save();
+
+            Session::flash('success_message', 'Donor '.$donor->first_name.' '.$donor->last_name.' has been updated.');
+            return Redirect::to('donor-admin');  
+        })
+);
 
 
 //
