@@ -14,7 +14,10 @@
 
     @foreach ($posts as $post)
 
-        <h3><a href="/updates/{{ $post->id }}">{{ $post->title }}</a></h3>
+        <h3><a href="/updates/{{ $post->id }}">
+            {{ $post->title }} 
+            @if($post->published == false) [UNPUBLISHED] @endif 
+        </a></h3>
         <small>Posted {{ date('F j, Y',strtotime($post->created_at)); }} by {{ $post->user->first_name }} {{ $post->user->last_name }} </small>
         {{ $post->body }}
 

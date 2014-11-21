@@ -105,6 +105,7 @@
             <!-- TODO: Try to get this working: http://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap -->
             <div class="main">
                 
+                {{-- 
                 <!-- Admin nav bar -->
                 @if(Auth::check())
                     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -131,7 +132,7 @@
                       </div><!-- /.container-fluid -->
                     </nav>
                 @endif
-
+                --}}
                 <div class="content">
                     <!-- Alert messages - success and error -->
                     @if(Session::get('success_message'))
