@@ -151,7 +151,8 @@
 
 @section('content')
     <h2>Fundraising Campaign Dashboard</h2>
-    <div class="row">
+    <p class="lead">So far, <span class="callout-number">{{ $total['count'] }}</span> generous <a href="/donors">donors</a> have made pledges totaling <span class="callout-number">${{ $total['amount'] }}</span> (that's <span class="callout-number">${{ $total['monthly']}} </span> per month)!</p>
+    <div class="row dashboard">
         <div class="col-lg-12">
             @include('fragments.thermometer', array('total' => $total['amount']))
         </div>

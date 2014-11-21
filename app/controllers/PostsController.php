@@ -4,10 +4,9 @@ class PostsController extends \BaseController {
 
 	public function __construct() {
 		$this->beforeFilter('auth',
-			array('except' => array('index')));
-
+			array('except' => array('index', 'show')));
 		$this->beforeFilter('csrf',
-			array('on' => 'post'));
+			array('on' => 'store'));
 	}
 
 	/**
@@ -17,8 +16,12 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-        $posts = Post::with('user')->orderBy('created_at', 'desc')->get();
-
+        if(Auth::check()) {
+            $posts = Post::with('user')->orderBy('created_at', 'desc')->get();
+        }
+        else {
+            $posts = Post::where('published', '=', true)->with('user')->orderBy('created_at', 'desc')->get();
+        }
 	    return View::make('posts')
             ->with('posts',$posts);
 	}
@@ -42,9 +45,12 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		$post = new Post();
+
+        $post = new Post();
         $post->title = Input::get('title');
         $post->body = Input::get('body');
+        if(Input::has('published')) $post->published = true;
+        else $post->published = false;
         $post->user()->associate(Auth::user());
         $post->save();
 
@@ -59,7 +65,7 @@ class PostsController extends \BaseController {
         }
 
         Session::flash('success_message', 'Post successfully added!');
-        return Redirect::to('updates');
+        return Redirect::to('updates/'.$post->id);
 	}
 
 
@@ -71,10 +77,20 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-        $posts = Post::whereId($id)->with('user')->get();
-
-        return View::make('posts')
-            ->with('posts',$posts);
+        try {
+            $post = Post::with('user')->findOrFail($id);
+        }
+        catch (Exception $e) {
+            Session::flash('error_message', 'An update with the id '.$id.' does not exist.');
+            return Redirect::to('updates');
+        }
+        if ($post->published || Auth::check())  {
+            return View::make('post')
+                ->with('post',$post);
+        }
+        else {
+            return Redirect::to('login');
+        }
 	}
 
 
@@ -117,6 +133,8 @@ class PostsController extends \BaseController {
 
         $post->title = Input::get('title');
         $post->body = Input::get('body');
+        if(Input::has('published')) $post->published = true;
+        else $post->published = false;
         $post->save();
 
         $images = Input::get('images');

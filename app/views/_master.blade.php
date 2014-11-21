@@ -13,9 +13,10 @@
         <link rel="stylesheet" href="{{ URL::asset('packages/bootstrap/css/bootstrap-theme.min.css') }}">
      
         <link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}">
-
         <!-- JQUERY -->
         <script src="{{ URL::asset('packages/jquery/jquery-1.11.1.min.js') }}"></script>
+
+        <script src="{{ URL::asset('js/background-fix.js') }}"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,27 +33,32 @@
         @if(Auth::check())
             {{ "logged-in" }}
         @endif
-        @yield("body-class")
+        @yield("bodyclass")
         '
     >
-    <div id="background">
+    <div id="header">
         <div class="container">
-            <!-- TODO: Try to get this working: http://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap -->
-            <div class="main">
-
-                <!-- Logo and site name -->
+                <div id="utility-nav">
+                    <a href="/">Home</a> |  
+                    @if(Auth::check())
+                            <a href="/logout">Log out</a>
+                        @else
+                            <a href="/login">Log in</a>
+                        @endif | 
+                    <a href="http://circleschool.org">CircleSchool.org</a>
+                </div>
                 <div class="page-header row">
-                     <div class="col-md-3">
+                     <div class="col-md-2">
                         <a href="/">
-                            <img id="logo" src="{{ URL::asset('images/websitelogo.png') }}">  
+                            <img id="logo" src="{{ URL::asset('images/websitelogo-170px.png') }}">  
                         </a>
                     </div>
-                    <div class="col-md-9">
-                        <h1><span class="sr-only">The Circle School </span>Meadow Campus Project</h1>
+                    <div class="col-md-10">
+                        <h1><a href="/" class="no-link-style"><span class="sr-only">The Circle School </span>Meadow Campus Project</a></h1>
                         <!-- Nav bar -->
                     <nav class="navbar navbar-default nav-justified" role="navigation">
                       <div class="container-fluid">
-                                                <!-- Brand and toggle get grouped for better mobile display -->
+                        <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
@@ -60,47 +66,44 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                           </button>
-<!--                           <a class="navbar-brand" href="/">
-                            <img alt="The Circle School" src="{{ URL::asset('images/websitelogo.png') }}">
-                            <span class="sr-only">The Circle School </span>Meadow Campus Project
-                          </a> -->
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                           <ul class="nav nav-pills nav-justified" role="tablist">
-<!--                             <li class="active"><a href="http://localhost/about">About the <br>Project</a></li>
-                            <li><a href="http://localhost/help">How You <br>Can Help</a></li>
-                            <li class="pledge-button"><a href="http://localhost/pledge">Pledge <br>Now!</a></li>-->
-                            
-                            <li class="dropdown" role="presentation">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                About the <br>Project <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="plans">Plans and Drawings</a></li>
-                                    <li><a href="updates">Updates from the Meadow</a></li>
-                                </ul>
-                            </li>
                             <li class="dropdown" role="presentation">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 Fundraising <br>Campaign <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="help">We Need Your Help!</a></li>
-                                    <li><a href="scenarios">Scenarios &amp; Calculators</a></li>
-                                    <li><a href="donors">Donor List</a></li>
+                                    <li><a href="/help">We Need Your Help!</a></li>
+                                    <li><a href="/scenarios">Scenarios &amp; Calculators</a></li>
+                                    <li><a href="/donors">Progress &amp; Donors</a></li>
                                 </ul>
                             </li>
-                            <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a><!--<a href="http://localhost/pledge">Pledge <br>Now!</a>--></li>
+                            <li class="dropdown" role="presentation">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                About the <br>Project <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+<!--                                <li><a href="/plans">Plans and Drawings</a></li> -->
+                                    <li><a href="/updates">Updates from the Meadow</a></li>
+                                </ul>
+                            </li>
+                            <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" target="_blank" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a></li>
                         </ul>
                         </div><!-- /.navbar-collapse -->
                       </div><!-- /.container-fluid -->
                     </nav>
                     </div> 
 
-                    
+                  </div>  
 
                 </div>
+    </div>
+    <div id="background">
+        <div class="container">
+            <!-- TODO: Try to get this working: http://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap -->
+            <div class="main">
                 
                 <!-- Admin nav bar -->
                 @if(Auth::check())
@@ -129,22 +132,19 @@
                     </nav>
                 @endif
 
-                
-
-                <!-- Alert messages - success and error -->
-                @if(Session::get('success_message'))
-                    <div class="alert alert-success alert-dismissible" role="alert">
-                        {{ Session::get('success_message') }}
-                    </div>
-                @endif
-
-                @if(Session::get('error_message'))
-                    <div class="alert alert-danger" role="alert">
-                        {{ Session::get('error_message') }}
-                    </div>
-                @endif
-
                 <div class="content">
+                    <!-- Alert messages - success and error -->
+                    @if(Session::get('success_message'))
+                        <div class="alert alert-success alert-dismissible" role="alert">
+                            {{ Session::get('success_message') }}
+                        </div>
+                    @endif
+
+                    @if(Session::get('error_message'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ Session::get('error_message') }}
+                        </div>
+                    @endif
                     @yield('content') 
                 </div>
 
@@ -166,18 +166,21 @@
                         <p class="small" id="login">
                             <br>
                             @if(Auth::check())
-                                <a href="logout">Log out</a>
+                                <a href="/logout">Log out</a>
                             @else
-                                <a href="login">Log in</a>
+                                <a href="/login">Log in</a>
                             @endif
                         </p>
                     </div>
                 <div>
             </div>
             
-        <!-- Bootstrap's Latest compiled and minified JavaScript -->
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
         @yield('body')
     </div>
+    <!-- Bootstrap's Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    @yield('foot')
+
     </body>
 </html>

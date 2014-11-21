@@ -1,6 +1,6 @@
             <div id="therm-img">
-                <img src="images/rendering-1-outline-800px.png">
-                <img id="color-img" src="images/rendering-1-cropped-800px.png">
+                <img class="img-responsive" src="/images/rendering-1-outline-1030px.png">
+                <img class="img-responsive" id="color-img" src="/images/rendering-1-color-1030px.png">
             </div>
             <div id="therm">
                 <div id="therm-fill"></div>
