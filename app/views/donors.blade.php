@@ -62,5 +62,6 @@
         </div>
 
     </div>
+    <p class="small"><em>We hope you'll let us share your name on this list, but if you prefer your pledge be anonymous, just let us know!</em></p>
 @stop
 
