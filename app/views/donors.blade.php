@@ -4,23 +4,34 @@
     Donors
 @stop
 
+@section('head')
+    <style>
+        @include('fragments.thermometer-head', array('percent' => $percent))
+    </style>
+@stop
+
+@section('bodyclass')
+    donors
+@stop
+
 @section('content')
 
-    <h2>Thank You to Our Donors!</h2>
+    <h2>Campaign Progress</h2>
 
     <p class="lead">So far, <span class="callout-number">{{ $total['count'] }}</span> generous donors have made pledges totaling <span class="callout-number">${{ $total['amount'] }}</span> (that's <span class="callout-number">${{ $total['monthly']}} </span> per month)!</p>
     
+    @include('fragments.thermometer', array('total' => $total['amount']))
 
-
+    <h3>Thank You to Our Donors!</h3>
     <div class="row donor-lists">
         <div class="col-sm-4">
-            <h3>Current Families</h3>
+            <h4>Current Families</h4>
             <ul>
                 @foreach($groups['Current Families'] as $donor)
                     <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
                 @endforeach
             </ul>
-            <h3>Staff</h3>
+            <h4>Staff</h4>
             <ul>
                 @foreach($groups['Staff'] as $donor)
                     <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
@@ -28,7 +39,7 @@
             </ul>           
         </div>
         <div class="col-sm-4">
-            <h3>Alumni</h3>
+            <h4>Alumni</h4>
             <ul>
                 @foreach($groups['Alumni'] as $donor)
                     <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
@@ -36,13 +47,13 @@
             </ul>
         </div>
         <div class="col-sm-4">
-            <h3>Alumni Families</h3>
+            <h4>Alumni Families</h4>
             <ul>
                 @foreach($groups['Alumni Families'] as $donor)
                     <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
                 @endforeach
             </ul>
-            <h3>Other Friends</h3>
+            <h4>Other Friends</h4>
             <ul>
                 @foreach($groups['Friends'] as $donor)
                     <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>

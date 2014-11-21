@@ -65,7 +65,7 @@ a.no-link-style:hover {
 
 .page-header {
     border:none;
-    margin: 30px 0 0;
+    margin: 40px 0 0;
 }
 
 img#logo {
@@ -144,9 +144,9 @@ address {
     padding-bottom: 15px;
 }
 
-.content p a, .content li a {
+/*.content p a, .content li a {
     color: #88845B;
-}
+}*/
 
 .more-link {
     font-weight: bold;
@@ -266,6 +266,18 @@ address {
 
 .navbar-collapse {
     border: none;
+}
+
+/* Utility Nav */
+
+#utility-nav {
+    float: right;
+    margin-top: 10px;
+    font-size: .85em;
+}
+
+#utility-nav a {
+    color: #0c7344;
 }
 
 /* Homepage Thermometer */
@@ -572,7 +584,8 @@ p.next {
 }
 
 .ask #therm,
-.dashboard #therm {
+.dashboard #therm,
+.donors #therm {
     margin-bottom: 50px;
 }
 
@@ -598,4 +611,11 @@ p.next {
 .ask .btn-group .dropdown-menu>li>a {
     font-weight: normal;
     font-size: 14px;
+}
+
+.ask .dropdown-menu .divider {
+height: 3px;
+margin: 0px 0;
+background-color: #E0DDB7;
+
 }

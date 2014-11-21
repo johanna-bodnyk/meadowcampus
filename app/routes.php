@@ -13,12 +13,14 @@
 
 Route::get('/', function()
 {
-    $total = Donor::sum('pledge_amount');
-    $percent = intval(($total/750000)*100);
-    $total = number_format($total);
-	return View::make('index')
-        ->with('percent', $percent)
-        ->with('total', $total);
+ //    $total = Donor::sum('pledge_amount');
+ //    $percent = intval(($total/750000)*100);
+ //    $total = number_format($total);
+	// return View::make('index')
+ //        ->with('percent', $percent)
+ //        ->with('total', $total);
+
+    return View::make('help1');
 });
 
 Route::get('plans', function() {
@@ -73,12 +75,14 @@ Route::get('donors', function() {
     $fv = $total['amount'];
     $pmt = (($fv*$i) / (1-pow(1+$i, $n))) * -1;
 
+    $percent = intval(($total['amount']/750000)*100);
     $total['monthly'] = number_format($pmt);
     $total['amount'] = number_format($total['amount']);
-
+    
     return View::make('donors')
         ->with('groups', $groups)
-        ->with('total', $total);
+        ->with('total', $total)
+        ->with('percent', $percent);
 });
 
 

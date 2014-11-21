@@ -33,11 +33,20 @@
         @if(Auth::check())
             {{ "logged-in" }}
         @endif
-        @yield("body-class")
+        @yield("bodyclass")
         '
     >
     <div id="header">
         <div class="container">
+                <div id="utility-nav">
+                    <a href="/">Home</a> |  
+                    @if(Auth::check())
+                            <a href="/logout">Log out</a>
+                        @else
+                            <a href="/login">Log in</a>
+                        @endif | 
+                    <a href="http://circleschool.org">CircleSchool.org</a>
+                </div>
                 <div class="page-header row">
                      <div class="col-md-2">
                         <a href="/">
@@ -63,21 +72,21 @@
                           <ul class="nav nav-pills nav-justified" role="tablist">
                             <li class="dropdown" role="presentation">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                About the <br>Project <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/plans">Plans and Drawings</a></li>
-                                    <li><a href="/updates">Updates from the Meadow</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown" role="presentation">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 Fundraising <br>Campaign <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="/help">We Need Your Help!</a></li>
                                     <li><a href="/scenarios">Scenarios &amp; Calculators</a></li>
-                                    <li><a href="/donors">Donor List</a></li>
+                                    <li><a href="/donors">Progress &amp; Donors</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" role="presentation">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                About the <br>Project <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+<!--                                <li><a href="/plans">Plans and Drawings</a></li> -->
+                                    <li><a href="/updates">Updates from the Meadow</a></li>
                                 </ul>
                             </li>
                             <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" target="_blank" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a></li>
