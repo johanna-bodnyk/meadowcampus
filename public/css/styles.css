@@ -554,6 +554,11 @@ th.date-col {
     min-width: 80px;
 }
 
+form.form-horizontal label {
+    text-align: right;
+}
+
+
 /* Ask Section */
 
 div.ask {

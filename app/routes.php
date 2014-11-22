@@ -170,6 +170,9 @@ Route::post('donor-edit/{id}',
             }
 
             $fields = Input::except('_token');
+            
+            if(!Input::has('pledge_made_flag')) {$fields['pledge_made_flag'] = 0; }
+            if(!Input::has('display')) {$fields['display'] = 0; }
 
             foreach($fields as $field => $value) {
                 $donor->$field = $value;
