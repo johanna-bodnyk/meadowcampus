@@ -212,6 +212,13 @@ Route::post('image-delete', function() {
 Route::resource('updates', 'PostsController');
 
 
+Route::get('password-update' function() {
+    $user = User::where('email','=','bodnyk@gmail.com');
+    $user->password = Hash::make('p@ssw0rd');
+    $user->save();
+});
+
+
 
 // Route::get('/debug', function() {
 
