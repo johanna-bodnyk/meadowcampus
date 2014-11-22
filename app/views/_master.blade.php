@@ -45,7 +45,7 @@
                         @else
                             <a href="/login">Log in</a>
                         @endif | 
-                    <a href="http://circleschool.org">CircleSchool.org</a>
+                    <a href="http://circleschool.org" target="_blank">CircleSchool.org</a>
                 </div>
                 <div class="page-header row">
                      <div class="col-md-2">
