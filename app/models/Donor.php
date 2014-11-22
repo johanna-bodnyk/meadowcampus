@@ -6,7 +6,7 @@
        
         public function scopeGroup($query, $group) {
             return $query->where('donor_group', '=', $group)
-                ->where('pledge_amount', '>', 0);
+                ->where('pledge_made_flag', '=', true);
         }
     }
 

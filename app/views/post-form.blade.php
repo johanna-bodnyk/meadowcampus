@@ -69,7 +69,7 @@
     <a href="/updates" class="btn btn-default" id='cancel-button' role="button">Cancel</a>
 
     @if(isset($post))
-        {{ Form::open(['method' => 'DELETE', 'url' => 'updates/'.$post->id]) }}
+        {{ Form::open(['method' => 'DELETE', 'url' => '#') }}
             {{ Form::submit('Delete Post', array('class' => 'btn btn-danger', 'id' => 'delete-button')) }}
         {{ Form::close() }}
     @endif
