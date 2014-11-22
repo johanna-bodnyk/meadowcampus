@@ -280,6 +280,29 @@ address {
     color: #0c7344;
 }
 
+/* Admin nav */
+
+nav.admin-nav {
+    background-color: #E0DDB7;
+    height: 30px;
+    min-height: 30px;
+}
+
+nav.admin-nav a {
+    color: #0c7344;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+nav.admin-nav span.navbar-brand {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: inherit;
+    font-weight: bold;
+}
+
+
+
 /* Homepage Thermometer */
 
 div#therm-img {

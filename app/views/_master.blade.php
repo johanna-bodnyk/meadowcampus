@@ -105,10 +105,10 @@
             <!-- TODO: Try to get this working: http://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap -->
             <div class="main">
                 
-                {{-- 
+                
                 <!-- Admin nav bar -->
                 @if(Auth::check())
-                    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <nav class="navbar navbar-pills navbar-fixed-top admin-nav" role="navigation">
                         <div class="container">
                         <div class="navbar-header">
                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -117,22 +117,21 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                           </button>
-                          <a class="navbar-brand" href="#">Hi {{ Auth::user()->first_name }}!</a>
+                          <span class="navbar-brand">Hi {{ Auth::user()->first_name }}!</span>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                           <ul class="nav navbar-nav">
-                            <li><a href="/progress/edit">Manage Progress</a></li>
-                            <li><a href="/donors/create ">Manage Donors</a></li>
-                            <li><a href="/updates/add">Manage Updates</a></li>
-                            <li><a href="/updates/add">Manage Admin Users</a></li>
-                            <li><a href="/updates/add">Manage Your Account</a></li>
+                            <li><a href="/dashboard">Dashboard</a></li>
+                            <li><a href="/donor-admin">Donors</a></li>
+                            <li><a href="#">Users</a></li>
+                            <li><a href="#">Your Account</a></li>
                           </ul>
                         </div><!-- /.navbar-collapse -->
                       </div><!-- /.container-fluid -->
                     </nav>
                 @endif
-                --}}
+                
                 <div class="content">
                     <!-- Alert messages - success and error -->
                     @if(Session::get('success_message'))
