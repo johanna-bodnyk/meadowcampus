@@ -28,13 +28,17 @@
             <h4>Current Families</h4>
             <ul>
                 @foreach($groups['Current Families'] as $donor)
-                    <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                    @if($donor->display)
+                        <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                    @endif
                 @endforeach
             </ul>
             <h4>Staff</h4>
             <ul>
                 @foreach($groups['Staff'] as $donor)
-                    <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                    @if($donor->display)
+                        <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                    @endif
                 @endforeach
             </ul>           
         </div>
@@ -42,7 +46,9 @@
             <h4>Alumni</h4>
             <ul>
                 @foreach($groups['Alumni'] as $donor)
-                    <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                    @if($donor->display)
+                        <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                    @endif
                 @endforeach
             </ul>
         </div>
@@ -50,13 +56,17 @@
             <h4>Alumni Families</h4>
             <ul>
                 @foreach($groups['Alumni Families'] as $donor)
-                    <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                    @if($donor->display)
+                        <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                    @endif
                 @endforeach
             </ul>
             <h4>Other Friends</h4>
             <ul>
                 @foreach($groups['Friends'] as $donor)
-                    <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                    @if($donor->display)
+                        <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                    @endif
                 @endforeach
             </ul>
         </div>
