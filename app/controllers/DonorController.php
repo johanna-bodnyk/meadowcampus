@@ -3,178 +3,96 @@
 class DonorController extends \BaseController {
 
 	public function __construct() {
+
+        parent::__construct();
+
 		$this->beforeFilter('auth',
-			array('except' => array('index')));
+			array('except' => array('getIndex')));
 
-		$this->beforeFilter('csrf',
-			array('on' => 'post'));
 	}
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-	    $donors = Donor::with('types','user')->orderBy('last_name','asc')->get();
+	
+    public function getIndex() {
+        $groups = array(
+                'Alumni' => array(),
+                'Alumni Families' => array(),
+                'Current Families' => array(),
+                'Current Students' => array(),
+                'Staff' => array(),
+                'Friends' => array()
+            );
 
-	    return View::make('donors')
-	        ->with('donors', $donors);
-	}
+        $total = array(
+                'count' => 0,
+                'amount' => 0
+        );
 
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-        $types = Type::all();
-
-        return View::make('add-donor')
-            ->with('types', $types);
-	}
-
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		$donor = new Donor();
-        $donor->first_name = Input::get('first_name');
-        $donor->last_name = Input::get('last_name');
-        $donor->amount = Input::get('amount');
-        $donor->user()->associate(Auth::user());
-        $donor->save();
-
-        // TODO: Deal with case where no types are selected
-        $types = Input::get('type');
-        foreach($types as $type_id) {
-            $type = Type::find($type_id);
-            $donor->types()->attach($type);
+        foreach ($groups as $group_name => $group_values) {
+            $group = Donor::group($group_name)->orderBy('last_name')->get();
+            $count = $group->count();
+            $amount = $group->sum('pledge_amount');
+            $groups[$group_name] = $group;
+            $total['count'] += $count;
+            $total['amount'] += $amount;
         }
 
-        Session::flash('success_message', 'Donor '.$donor->first_name.' '.$donor->last_name.' has been added.');
-        return Redirect::to('donors');
-	}
+        // Get monthly amount based on total
+        $i = .05/12;
+        $n = 120;
+        $fv = $total['amount'];
+        $pmt = (($fv*$i) / (1-pow(1+$i, $n))) * -1;
 
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		// This functionality is not needed for this application (individual donors are not displayed)
-	}
-
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-        $types = Type::all();
-
-	    try {
-	        $donor = Donor::with('types','user')->findOrFail($id);
-	    }
-	    catch (Exception $e) {
-	        Session::flash('error_message', 'A donor with the id '.$id.' does not exist.');
-	        return Redirect::to('donors');
-	    }
-
-	    $set_types = [];
-	    foreach ($donor->types as $type) {
-	        $set_types[] = $type->id;
-	    }
-
-	    return View::make('edit-donor')
-	        ->with('donor', $donor)
-	        ->with('types', $types)
-	        ->with('set_types', $set_types);
-	}
-
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		try {
-            $donor = Donor::findOrFail($id);
-        }
-        catch (Exception $e) {
-            Session::flash('error_message', 'A donor with the id '.$id.' does not exist.');
-            return Redirect::to('donors');
-        }
-
-        $donor->first_name = Input::get('first_name');
-        $donor->last_name = Input::get('last_name');
-        $donor->amount = Input::get('amount');
-        $donor->save();
-        $donor->types()->detach();
-
-        // TODO: Deal with case where no types are selected
-        $types = Input::get('type');
-        foreach($types as $type_id) {
-            $type = Type::find($type_id);
-            $donor->types()->attach($type);
-        }
-
-        Session::flash('success_message', 'Donor '.$donor->first_name.' '.$donor->last_name.' has been updated.');
-        return Redirect::to('donors');	
+        $percent = intval(($total['amount']/750000)*100);
+        $total['monthly'] = number_format($pmt);
+        $total['amount'] = number_format($total['amount']);
+        
+        return View::make('donors')
+            ->with('groups', $groups)
+            ->with('total', $total)
+            ->with('percent', $percent);
     }
 
-    // TODO: Figure out how to implement deletion confirm page with restful routing
-	// Route::get('donors/delete/{id}', function($id) 
-	// {
-	//     try {
-	//         $donor = Donor::findOrFail($id);
-	//     }
-	//     catch (Exception $e) {
-	//         Session::flash('error_message', 'A donor with the id '.$id.' does not exist.');
-	//         return Redirect::to('donors');
-	//     }
+    public function getAdmin() {
+        $donors = Donor::get();
 
-	//     return View::make('delete-donor')
-	//         ->with('donor', $donor);
-	// });
+        return View::make('donors-admin')
+            ->with('donors', $donors);
+    }
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
+    public function getEdit($id) {
         try {
             $donor = Donor::findOrFail($id);
         }
         catch (Exception $e) {
-            Session::flash('error_message', 'A donor with the id '.Input::get('id').' does not exist.');
-            return Redirect::to('donors');
+            Session::flash('error_message', 'A donor with the id '.$id.' does not exist');
+            return Redirect::to('donors/admin');
+        }
+        return View::make('donors-edit')
+            ->with('donor', $donor);
+    }
+
+    public function postEdit($id) {
+        try {
+            $donor = Donor::findOrFail($id);
+        }
+        catch (Exception $e) {
+            Session::flash('error_message', 'A donor with the id '.$id.' does not exist');
+            return Redirect::to('donor-admin');
         }
 
-        Session::flash('success_message', $donor->first_name." ".$donor->last_name." successfully deleted.");
-        $donor->types()->detach();
-        $donor->delete();
-        return Redirect::to('donors');
-	}
+        $fields = Input::except('_token');
+        
+        if(!Input::has('pledge_made_flag')) { $fields['pledge_made_flag'] = 0; }
+        if(!Input::has('display')) { $fields['display'] = 0; }
 
+        foreach($fields as $field => $value) {
+            $donor->$field = $value;
+        }
+
+        $donor->save();
+
+        Session::flash('success_message', 'Donor '.$donor->first_name.' '.$donor->last_name.' has been updated.');
+        return Redirect::to('donors/admin');  
+    }
 
 }

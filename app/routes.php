@@ -5,11 +5,12 @@
 | Application Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
 |
 */
+
+/**
+ * Homepage
+ */
 
 Route::get('/', function()
 {
@@ -23,21 +24,32 @@ Route::get('/', function()
     return View::make('help1');
 });
 
-Route::get('plans', function() {
-    echo 'Page coming soon. <a href="/">Return to homepage</a>';
-});
+
+/**
+ * Fundraising Section
+ */
 
 Route::get('help/{page?}', function($page = 1) {
-    $total = Donor::sum('pledge_amount');
-    $percent = intval(($total/750000)*100);
-    $remainder = number_format(750000-$total);
-    $total = number_format($total);
-    $number = Donor::where('pledge_made_flag', '=', true)->count();
-    return View::make('help'.$page)
-        ->with('percent', $percent)
-        ->with('total', $total)
-        ->with('remainder', $remainder)
-        ->with('number', $number);
+    if($page == 7) {
+        $total = Donor::sum('pledge_amount');
+        $percent = intval(($total/750000)*100);
+        $remainder = number_format(750000-$total);
+        $total = number_format($total);
+        $number = Donor::where('pledge_made_flag', '=', true)->count();
+        return View::make('help'.$page)
+            ->with('percent', $percent)
+            ->with('total', $total)
+            ->with('remainder', $remainder)
+            ->with('number', $number);
+    }
+    elseif ($page == 9) {
+        $number = Donor::where('pledge_made_flag', '=', true)->count();
+        return View::make('help'.$page)
+            ->with('number', $number);
+    }
+    else {
+        return View::make('help'.$page);
+    }
 });
 
 Route::get('scenarios', function() 
@@ -45,50 +57,24 @@ Route::get('scenarios', function()
     return View::make('scenarios');
 });
 
-Route::get('donors', function() {
-    $groups = array(
-            'Alumni' => array(),
-            'Alumni Families' => array(),
-            'Current Families' => array(),
-            'Current Students' => array(),
-            'Staff' => array(),
-            'Friends' => array()
-        );
-
-    $total = array(
-            'count' => 0,
-            'amount' => 0
-    );
-
-    foreach ($groups as $group_name => $group_values) {
-        $group = Donor::group($group_name)->orderBy('last_name')->get();
-        $count = $group->count();
-        $amount = $group->sum('pledge_amount');
-        $groups[$group_name] = $group;
-        $total['count'] += $count;
-        $total['amount'] += $amount;
-    }
-
-    // Get monthly amount based on total
-    $i = .05/12;
-    $n = 120;
-    $fv = $total['amount'];
-    $pmt = (($fv*$i) / (1-pow(1+$i, $n))) * -1;
-
-    $percent = intval(($total['amount']/750000)*100);
-    $total['monthly'] = number_format($pmt);
-    $total['amount'] = number_format($total['amount']);
-    
-    return View::make('donors')
-        ->with('groups', $groups)
-        ->with('total', $total)
-        ->with('percent', $percent);
-});
+Route::get('donors', 'DonorController@getIndex');
 
 
-//
-// Login and logout
-//
+/**
+ * About the Project Section
+ */
+
+// Route::get('plans', function() {
+//     echo 'Page coming soon. <a href="/">Return to homepage</a>';
+// });
+
+Route::get('updates/confirm-delete/{id}', 'PostsController@confirmDestroy');
+Route::resource('updates', 'PostsController');
+
+
+/**
+ * Login and Logout
+ */
 
 Route::get('login', 
     array(
@@ -122,101 +108,61 @@ Route::get('logout', function() {
 });
 
 
-//
-// Admin pages
-//
+/**
+ * Admin Pages
+ */
 
-Route::get('dashboard', 'DashboardController@dashboard');
+Route::get('dashboard', 'DashboardController@getIndex');
 
-Route::get('donor-admin', 
-    array(
-        'before' => 'auth', 
-        function() {
-            $donors = Donor::get();
+Route::get('donors/admin', 'DonorController@getAdmin');
 
-            return View::make('donor-admin')
-                ->with('donors', $donors);
-        })
-);
+Route::get('donors/edit/{id}', 'DonorController@getEdit');
 
-Route::get('donor-edit/{id}' ,
-    array(
-        'before' => 'auth', 
-        function($id) {
-
-            try {
-                $donor = Donor::findOrFail($id);
-            }
-            catch (Exception $e) {
-                Session::flash('error_message', 'A donor with the id '.$id.' does not exist');
-                return Redirect::to('donor-admin');
-            }
-
-            return View::make('donor-edit')
-                ->with('donor', $donor);
-        })
-);
-
-Route::post('donor-edit/{id}',
-    array(
-        'before' => 'auth', 
-        function($id) {
-            try {
-                $donor = Donor::findOrFail($id);
-            }
-            catch (Exception $e) {
-                Session::flash('error_message', 'A donor with the id '.$id.' does not exist');
-                return Redirect::to('donor-admin');
-            }
-
-            $fields = Input::except('_token');
-            
-            if(!Input::has('pledge_made_flag')) {$fields['pledge_made_flag'] = 0; }
-            if(!Input::has('display')) {$fields['display'] = 0; }
-
-            foreach($fields as $field => $value) {
-                $donor->$field = $value;
-            }
-
-            $donor->save();
-
-            Session::flash('success_message', 'Donor '.$donor->first_name.' '.$donor->last_name.' has been updated.');
-            return Redirect::to('donor-admin');  
-        })
-);
+Route::post('donors/edit/{id}', 'DonorController@postEdit');
 
 
-//
-// Image uploading and deletion used by AJAX calls
-//
+/**
+ * Image uploading and deletion used by AJAX calls
+ */
 
 // Saves image to disk, does not add to database 
 // (handled by post saving controller)
-Route::post('image-upload', function() {
-    $filename = Input::file('file')->getClientOriginalName();
-    Input::file('file')->move(public_path().'/images/posts', $filename);
-    return $filename;
-});
+Route::post('image-upload', 
+    array(
+        'before' => 'auth', 
+        function() {
+            $filename = Input::file('file')->getClientOriginalName();
+            Input::file('file')->move(public_path().'/images/posts', $filename);
+            return $filename;
+        })
+);
 
 // Removes file from disk, deletes from database
-Route::post('image-delete', function() {
-    $filename = Input::get('filename');
-    File::delete(public_path().'/images/posts/'.$filename);
-    Image::where('filename', "=", $filename)->delete();
-    return $filename;
-});
+Route::post('image-delete', 
+    array(
+        'before' => 'auth',
+        function() {
+            $filename = Input::get('filename');
+            File::delete(public_path().'/images/posts/'.$filename);
+            Image::where('filename', "=", $filename)->delete();
+            return $filename;
+        })
+);
 
 
- //Route::resource('donors', 'DonorController');
-
-Route::resource('updates', 'PostsController');
 
 
-Route::get('password-update', function() {
-    $user = User::where('email','=','bodnyk@gmail.com')->firstOrFail();
-    $user->password = Hash::make('p@ssw0rd');
-    $user->save();
-});
+/**
+ * Debugging and development routes
+ * TODO: Delete before deploy
+ */
+
+
+// Route::get('password-update', function() {
+//     $user = User::where('email','=','bodnyk@gmail.com')->firstOrFail();
+//     $user->password = Hash::make('p@ssw0rd');
+//     $user->save();
+// });
 
 
 

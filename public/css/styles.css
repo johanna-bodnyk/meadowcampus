@@ -477,11 +477,16 @@ p.align-center img {
 
 input#save-button,
 input#delete-button,
+a#delete-button,
 a#cancel-button {
     float:right;
     margin-left: 20px;
     margin-bottom: 20px;
     margin-top: -30px;
+}
+
+div.button-group {
+    padding-top: 20px;
 }
 
 div.image-control input[type='text'] {
@@ -558,6 +563,12 @@ th.date-col {
 
 form.form-horizontal label {
     text-align: right;
+}
+
+form .help-block {
+    font-size: .85em;
+    font-style: italic;
+    margin-bottom: 0px;
 }
 
 

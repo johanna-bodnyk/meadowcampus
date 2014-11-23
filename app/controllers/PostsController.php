@@ -6,7 +6,7 @@ class PostsController extends \BaseController {
 		$this->beforeFilter('auth',
 			array('except' => array('index', 'show')));
 		$this->beforeFilter('csrf',
-			array('on' => 'store'));
+			array('on' => ['store','update','delete']));
 	}
 
 	/**
@@ -110,7 +110,7 @@ class PostsController extends \BaseController {
 	        return Redirect::to('updates');
 	    }
 
-	    return View::make('post-form')
+	    return View::make('post-edit')
 	        ->with('post', $post);
 	}
 
@@ -151,28 +151,34 @@ class PostsController extends \BaseController {
         return Redirect::to('updates');	
     }
 
-    // TODO: Figure out how to implement deletion confirm page with restful routing
-	// Route::get('donors/delete/{id}', function($id) 
-	// {
-	//     try {
-	//         $donor = Donor::findOrFail($id);
-	//     }
-	//     catch (Exception $e) {
-	//         Session::flash('error_message', 'A donor with the id '.$id.' does not exist.');
-	//         return Redirect::to('donors');
-	//     }
 
-	//     return View::make('delete-donor')
-	//         ->with('donor', $donor);
-	// });
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function confirmDestroy($id)
+    {
+        try {
+            $post = Post::findOrFail($id);
+        }
+        catch (Exception $e) {
+            Session::flash('error_message', 'An update with the id '.$id.' does not exist.');
+            return Redirect::to('updates');
+        }    
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
+        return View::make('post-delete')
+            ->with('post', $post);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy($id)
 	{
         try {
             $post = Post::with('images')->findOrFail($id);

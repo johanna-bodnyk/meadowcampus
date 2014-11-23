@@ -2,12 +2,14 @@
 
 class DashboardController extends \BaseController {
 
-	// public function __construct() {
-	// 	$this->beforeFilter('auth',
-	// 		array('except' => array('index')));
-	// }
+	public function __construct() {
 
-    public function dashboard() {
+        parent::__construct();
+
+		$this->beforeFilter('auth');
+    }
+
+    public function getIndex() {
         
         ////
         // Graph 1 - The Area chart with donations over time
