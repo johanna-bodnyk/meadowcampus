@@ -18,7 +18,12 @@
             <p class="lead">The new location is a crow's mile from the current campus, tucked beside a retirement community.</p>
             <div id="links">
                 <a href="/images/help/map-between-tcs-and-meadow.jpg" title='Map Between Oakleigh Avenue and Meadow Campus' data-gallery>
-                    <img class="pull-left img-responsive" src="/images/help/map-between-tcs-and-meadow-400px.jpg" alt="Map Between Oakleigh Avenue and Meadow Campus">
+                    <figure class="image pull-left">
+                        <img class="img-responsive" src="/images/help/map-between-tcs-and-meadow-400px.jpg" alt="Map Between Oakleigh Avenue and Meadow Campus">
+                        <figcaption>Click to enlarge and view commute times.</figcaption>
+                    </figure>
+                </a>
+                <a href="/images/help/commute-times.png" title='Comparison of Commute Times Between Oakleigh and Properties Considered' data-gallery class="hide">
                 </a>
             </div>
             <p>It's the first site we saw, in eight years of looking, that meets <strong>all the criteria on the dream checklist.</strong> And it's the first site whose owner offered to donate the land!</p>

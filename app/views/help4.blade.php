@@ -18,7 +18,10 @@
             <p class="lead">In the summer of 2013, Jim and JD met with the George M. Leader Family Corporation to ask for permanent access across their land, to get to another site.</p>
             <div id="links">
                 <a href="/images/help/meadow-campus-site-layout.jpg" title='Site Layout' data-gallery>
-                    <img class="pull-right img-responsive" src="/images/help/meadow-campus-site-layout-400px.jpg" alt="Site Layout">
+                    <figure class="image pull-right">
+                        <img class="img-responsive" src="/images/help/meadow-campus-site-layout-400px.jpg" alt="Site Layout">
+                        <figcaption>Click to enlarge.</figcaption>
+                    </figure>
                 </a>
             </div>
             <p>They went us one better and offered to donate their 4.6 acres instead! It's <strong>the meadow visible in this aerial photo,</strong> plus some of the woods.</p>

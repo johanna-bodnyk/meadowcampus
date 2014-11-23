@@ -17,7 +17,10 @@
             <h2>Searching for a new home</h2>
             <div id="links">
                 <a href="/images/help/relocation-target-area.jpg" title='Relocation Target Area' data-gallery>
-                    <img class="pull-left img-responsive" src="/images/help/relocation-target-area-400px.jpg" alt="Relocation Target Area">
+                    <figure class="image pull-left">
+                        <img class="img-responsive" src="/images/help/relocation-target-area-400px.jpg" alt="Relocation Target Area">
+                        <figcaption>Click to enlarge.</figcaption>
+                    </figure>
                 </a>
             </div>
             <p class="lead">In classic Circle School style, School Meeting appointed two committees: one to search for a location, and another to design a building.</p>

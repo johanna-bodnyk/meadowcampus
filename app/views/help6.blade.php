@@ -18,7 +18,10 @@
             <p class="lead">In summer 2014 the school engaged architect Rich Gribble of By Design Consultants Inc.</p>
             <div id="links">
                 <a href="/images/help/floor-plan.png" title='Schematic design rendering &mdash; "Floor Plan" &mdash; 10/17/2014' data-gallery>
-                    <img class="pull-right img-responsive" src="/images/help/floor-plan-400px.png" alt="Floor plan">
+                    <figure class="pull-right image">
+                        <img class="img-responsive" src="/images/help/floor-plan-400px.png" alt="Floor plan">
+                        <figcaption>Click to enlarge.</figcaption>
+                    </figure>
                 </a>
             </div>
             <p>As of November 2014, an informal Meadow Campus design team has completed the "Schematic Design Phase", resulting in this tentative floor plan that calls for <strong>8,000 square feet of program space,</strong> including a large activity room suitable for <strong>community-wide potlucks, student performances, the Holiday Bazaar, the Spring Gala,</strong> and other grand events.</p>

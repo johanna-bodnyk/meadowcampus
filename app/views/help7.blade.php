@@ -20,7 +20,7 @@
             <p class="lead">I'm so glad you asked! The budget is $2.6 million. Can you cover that?</p>
             <p>Just kidding (or half kidding). The total budget breaks down as follows:</p>
             <ul>
-                <li>$400,000 &mdash; Value of the land donated by the George M. Leader Family Corporation</li>
+                <li>$400,000 &mdash; Value of the land to be donated by the George M. Leader Family Corporation</li>
                 <li>$1,500,000 &mdash; Commitment from a generous alumni family to donate, raise, and lend</li>
                 <li><strong>$750,000 &mdash; To be raised by The Circle School community</strong></li>
             </ul>

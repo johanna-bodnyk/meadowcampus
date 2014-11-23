@@ -17,9 +17,13 @@
             <h2>The Circle School needs your help</h2>
             <p class="lead">The Circle School needs <em>your</em> help to make a once-in-a-lifetime dream come true.</p>
             <div id="links">
-                <a href="/images/help/rendering-2.png" title='Schematic design rendering &mdash; "View at Front Entry" &mdash; 10/17/2014' data-gallery>
-                    <img class="pull-right img-responsive" src="/images/help/rendering-2-500px.png" alt="Design Rendering">
-                </a>
+                    <a href="/images/help/rendering-2.png" title='Schematic design rendering &mdash; "View at Front Entry" &mdash; 10/17/2014' data-gallery>
+                        <figure class="image pull-right">
+                            <img class="img-responsive" src="/images/help/rendering-2-500px.png" alt="Design Rendering">
+                            <figcaption>Click to enlarge and view additional rendering.</figcaption>
+                        </figure>
+                    </a>
+
                 <a href="/images/help/rendering-1.png" title='Schematic design rendering &mdash; "Front Elevation" &mdash; 10/17/2014' data-gallery class="hide">
                 </a>
             </div>

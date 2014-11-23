@@ -441,8 +441,10 @@ figure {
     width: 1px;
     margin-bottom: 10px;
 }
-img, figcaption {
+
+ figure img, figcaption {
     display: table-row;
+    margin-bottom: 5px;
 }
 
 
@@ -575,6 +577,22 @@ div.ask h2 {
 div.ask img {
     border: 1px solid #999;
     margin-bottom: 15px;
+}
+
+div.ask figure {
+    width: auto;
+}
+
+div.ask figure img {
+    margin-bottom: 5px;
+}
+
+div.ask figcaption {
+    text-align: center;
+}
+
+.blueimp-gallery>.title {
+    color: #13C831 !important;
 }
 
 #left-arrow>a {
