@@ -123,7 +123,7 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                           <ul class="nav navbar-nav">
                             <li><a href="/dashboard">Dashboard</a></li>
-                            <li><a href="/donor-admin">Donors</a></li>
+                            <li><a href="/donors/admin">Donors</a></li>
                             <li><a href="#">Users</a></li>
                             <li><a href="#">Your Account</a></li>
                           </ul>
@@ -136,12 +136,14 @@
                     <!-- Alert messages - success and error -->
                     @if(Session::get('success_message'))
                         <div class="alert alert-success alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                             {{ Session::get('success_message') }}
                         </div>
                     @endif
 
                     @if(Session::get('error_message'))
-                        <div class="alert alert-danger" role="alert">
+                        <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                             {{ Session::get('error_message') }}
                         </div>
                     @endif

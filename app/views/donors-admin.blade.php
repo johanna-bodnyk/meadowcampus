@@ -39,7 +39,7 @@
         <td>{{ $donor->pledge_made_flag }}</td>
         <td>@if($donor->pledge_made_flag){{ date("Y-m-d",strtotime($donor->pledge_date)) }}@endif</td>
         <td>@if($donor->pledge_made_flag){{ $donor->display }}@endif</td>
-        <td><a href="donor-edit/{{$donor->id}}">Edit</a>
+        <td><a href="/donors/edit/{{$donor->id}}">Edit</a>
     </tr>
     @endforeach
     </tbody>

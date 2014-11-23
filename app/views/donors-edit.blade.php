@@ -8,7 +8,7 @@
 
     <h2>Editing Donor ID: {{ $donor->id }}</h2>
 
-    {{ Form::model($donor, array('url' => 'donor-edit/'.$donor->id, 'role' => 'form', 'class' => 'form-horizontal')) }}
+    {{ Form::model($donor, array('url' => 'donors/edit/'.$donor->id, 'role' => 'form', 'class' => 'form-horizontal')) }}
 
         <div class="form-group">
             {{ Form::label('first_name', 'First Name', array('class' => 'col-sm-2')) }}
@@ -63,7 +63,8 @@
         <div class="form-group">
             {{ Form::label('pledge_date', 'Pledge Date', array('class' => 'col-sm-2')) }}
             <div class='col-sm-10'>
-                {{ Form::text('pledge_date', null, array('class' => 'form-control')) }}        
+                {{ Form::text('pledge_date', null, array('class' => 'form-control', 'aria-describedBy' => 'pledge_date_help')) }}
+                <span id="pledge_date_help" class="help-block">YYYY-MM-DD HH:MM:SS</span>
             </div>       
         </div>
 
