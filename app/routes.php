@@ -42,6 +42,12 @@ Route::get('help/{page?}', function($page = 1) {
             ->with('remainder', $remainder)
             ->with('number', $number);
     }
+    elseif ($page == 8) {
+        $total = Donor::sum('pledge_amount');
+        $remainder = number_format(750000-$total);
+        return View::make('help'.$page)
+            ->with('remainder', $remainder);
+    }
     elseif ($page == 9) {
         $number = Donor::where('pledge_made_flag', '=', true)->count();
         return View::make('help'.$page)
