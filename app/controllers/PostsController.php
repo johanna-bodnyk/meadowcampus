@@ -110,7 +110,7 @@ class PostsController extends \BaseController {
 	        return Redirect::to('updates');
 	    }
 
-	    return View::make('post-edit')
+	    return View::make('post-form')
 	        ->with('post', $post);
 	}
 
