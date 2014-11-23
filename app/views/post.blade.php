@@ -14,7 +14,7 @@
 
     <h3><a href="/updates/{{ $post->id }}">{{{ $post->title }}}</a></h3>
     <small>Posted {{ date('F j, Y',strtotime($post->created_at)); }} by {{ $post->user->first_name }} {{ $post->user->last_name }} </small>
-    {{{ $post->body }}}
+    {{ $post->body }}
 
     @if(Auth::check())
         <a href="/updates/{{ $post->id }}/edit">Edit</a>
