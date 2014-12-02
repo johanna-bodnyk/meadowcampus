@@ -466,6 +466,10 @@ figure {
     margin-right: 15px;
 }
 
+li > *.pull-left {
+    margin-right: 30px;
+}
+
 *.pull-right {
     margin-left: 15px;
 }
