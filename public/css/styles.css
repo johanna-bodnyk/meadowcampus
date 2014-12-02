@@ -455,7 +455,7 @@ figure {
 .updates small {
     font-style: italic;
     display: block;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
 .updates .content img {

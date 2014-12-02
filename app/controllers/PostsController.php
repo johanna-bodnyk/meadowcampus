@@ -49,6 +49,8 @@ class PostsController extends \BaseController {
         $post = new Post();
         $post->title = Input::get('title');
         $post->body = Input::get('body');
+        $post->author = Input::get('author');
+        $post->post_date = Input::get('post_date');
         if(Input::has('published')) $post->published = true;
         else $post->published = false;
         $post->user()->associate(Auth::user());
@@ -133,6 +135,8 @@ class PostsController extends \BaseController {
 
         $post->title = Input::get('title');
         $post->body = Input::get('body');
+        $post->author = Input::get('author');
+        $post->post_date = Input::get('post_date');
         if(Input::has('published')) $post->published = true;
         else $post->published = false;
         $post->save();

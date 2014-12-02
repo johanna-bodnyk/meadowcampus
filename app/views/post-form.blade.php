@@ -46,7 +46,18 @@
             </div>
 
             <div class="form-group">
-                {{ Form::label('body', 'Body') }}
+                {{ Form::label('author', 'Author') }}
+                {{ Form::text('author', (isset($post) ? $post->author : Auth::user()->first_name. " " . Auth::user()->last_name), array('class' => 'form-control')) }}        
+            </div>
+
+            <div class="form-group">
+                {{ Form::label('post_date', 'Date') }}
+                {{ Form::text('post_date', (isset($post) ? $post->post_date : date('Y-m-d H:i:s')), array('class' => 'form-control', 'aria-describedBy' => 'post_date_help')) }}  
+                <span id="post_date_help" class="help-block">YYYY-MM-DD HH:MM:SS</span>      
+            </div>
+
+            <div class="form-group">
+                {{ Form::label('body', 'Content') }}
                 {{ Form::textarea('body', null, array('class' => 'form-control')) }}        
             </div>
 

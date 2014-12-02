@@ -18,7 +18,7 @@
             {{ $post->title }} 
             @if($post->published == false) [UNPUBLISHED] @endif 
         </a></h3>
-        <small>Posted {{ date('F j, Y',strtotime($post->created_at)); }} by {{ $post->user->first_name }} {{ $post->user->last_name }} </small>
+        <small class="byline">Posted {{ date('F j, Y',strtotime($post->post_date)); }} by {{ $post->author }} </small>
         {{ $post->body }}
 
         @if(Auth::check())
