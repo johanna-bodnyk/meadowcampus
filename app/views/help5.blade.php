@@ -11,8 +11,8 @@
 @section('content')
 
     <div class="ask row">
-        <div class="col-xs-1" id="left-arrow"><a href="/help/4"></a></div>
-        <div class="col-xs-10">
+        <div class="col-sm-1" id="left-arrow"><a href="/help/4"></a></div>
+        <div class="col-sm-10">
             @include('fragments.ask-dropdown')
             <h2>The location</h2>
             <p class="lead">The new location is a crow's mile from the current campus, tucked beside a retirement community.</p>
@@ -29,7 +29,15 @@
             <p>It's the first site we saw, in eight years of looking, that meets <strong>all the criteria on the dream checklist.</strong> And it's the first site whose owner offered to donate the land!</p>
             <p><strong>And the building?</strong> Well...</p>
         </div>
-        <div class="col-xs-1" id="right-arrow"><a href="/help/6"></a></div>
+        <div class="col-sm-1" id="right-arrow"><a href="/help/6"></a></div>
+    </div>
+    <div class="small-ask-pager row">
+        <div class="col-xs-6">
+            <a href="/help/4" class="btn btn-sm btn-success" role="button">&lt; Previous</a>
+        </div>
+        <div class="col-xs-6">
+            <a href="/help/6" class="btn btn-sm btn-success next-btn" role="button">Next &gt;</a>
+        </div>
     </div>
 @stop
 

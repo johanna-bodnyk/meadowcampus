@@ -11,8 +11,8 @@
 @section('content')
 
     <div class="ask row">
-        <div class="col-xs-1" id="left-arrow"><a href="/help/2"></a></div>
-        <div class="col-xs-10">
+        <div class="col-sm-1" id="left-arrow"><a href="/help/2"></a></div>
+        <div class="col-sm-10">
             @include('fragments.ask-dropdown')
             <h2>Searching for a new home</h2>
             <div id="links">
@@ -27,7 +27,15 @@
             <p>"Flying over" every inch of a target location area in Google Earth, the Property Search Committee found sites of five acres or more. And then, talking with real estate agents and traipsing through woods, found that <strong>many present insurmountable development challenges or price tags.</strong></p>
             <p>Until...</p>
         </div>
-        <div class="col-xs-1" id="right-arrow"><a href="/help/4"></a></div>
+        <div class="col-sm-1" id="right-arrow"><a href="/help/4"></a></div>
+    </div>
+    <div class="small-ask-pager row">
+        <div class="col-xs-6">
+            <a href="/help/2" class="btn btn-sm btn-success" role="button">&lt; Previous</a>
+        </div>
+        <div class="col-xs-6">
+            <a href="/help/4" class="btn btn-sm btn-success next-btn" role="button">Next &gt;</a>
+        </div>
     </div>
 
 

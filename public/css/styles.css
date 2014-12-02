@@ -45,6 +45,7 @@ h1 {
     padding-bottom: 10px;
 }
 
+
 /*h1>a {
     color: #0c7344;
 }
@@ -417,7 +418,7 @@ div.homepage-subfeatures h4 {
     margin-top: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     div.neg-left {
         margin-left: -15px;
     }
@@ -630,6 +631,27 @@ div.ask figcaption {
     background-image: url("../images/right-arrow-off.png");
 }
 
+div.small-ask-pager {
+    display: none;
+}
+
+p.next {
+    color: #0c7344;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+p.next-small {
+    color: #0c7344;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+    display: none;
+}
+
 div.pledge-buttons {
     text-align: left;
     margin-bottom: 15px;
@@ -640,12 +662,13 @@ div.pledge-buttons a {
     margin-left: 20px;
 }
 
-p.next {
-    color: #0c7344;
-    font-weight: bold;
-    text-align: center;
-    font-size: 24px;
-    margin-top: 30px;
+div.pledge-buttons-small {
+    margin-bottom: 15px;
+    display: none;
+}
+
+div.pledge-buttons-small a {
+    margin-top: 10px;
 }
 
 .ask #therm,
@@ -683,4 +706,98 @@ height: 3px;
 margin: 0px 0;
 background-color: #E0DDB7;
 
+}
+
+/* Ask Sequence Tweaks For Tablet and Mobile */
+
+@media (max-width: 768px) {
+    div.ask h2 {
+        clear: both;
+    }
+
+    .ask .btn-group {
+        margin-top: 0px;
+    }
+
+    #left-arrow,
+    #right-arrow {
+        display: none;
+    }
+
+    p.next {
+        display: none;
+    }
+
+    p.next-small {
+        display: inherit;
+    }
+
+    div.ask {
+        padding-bottom: 0px;
+    }
+
+    div.small-ask-pager {
+        display: inherit;
+    }
+
+    div.small-ask-pager a.next-btn {
+        float: right;
+    }
+
+    div.pledge-buttons {
+        display: none;
+    }
+
+    div.pledge-buttons-small {
+        display: inherit;
+    }
+
+}
+
+/* Mobile Tweaks (Header, Subheads, etc.) */
+
+@media (max-width: 384px) {
+    
+    .container {
+        padding: 0px 7px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    div#utility-nav {
+        display: none;
+    }
+
+    div.page-header {
+        margin-top: 20px;
+    }
+
+    img#logo {
+        height: 110px; /* Replace with a smaller image */
+        margin-bottom: 10px;
+    }
+
+    nav.navbar {
+        margin-bottom: 0px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    div.ask h2 {
+        font-size: 22px;
+    }
 }

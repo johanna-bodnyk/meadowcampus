@@ -13,8 +13,8 @@
 @section('content')
 
     <div class="ask row">
-        <div class="col-xs-1" id="left-arrow"><a href="/help/6"></a></div>
-        <div class="col-xs-10">
+        <div class="col-sm-1" id="left-arrow"><a href="/help/6"></a></div>
+        <div class="col-sm-10">
             @include('fragments.ask-dropdown')
             <h2>What's the budget?</h2>
             <p class="lead">I'm so glad you asked! The budget is $2.6 million. Can you cover that?</p>
@@ -29,7 +29,15 @@
             <p><a href="/donors" target="_blank">The alumni, staff, and trustees who have launched this fundraising campaign</a> and built this website (about a dozen of us) have already pledged <strong>${{$total}} to be paid over 10 years,</strong> leaving <strong>${{$remainder}}</strong> yet to raise in the next couple of months.
             <p>Wait! <strong>How can our community do that?</strong> Well...</p>
         </div>
-        <div class="col-xs-1" id="right-arrow"><a href="/help/8"></a></div>
+        <div class="col-sm-1" id="right-arrow"><a href="/help/8"></a></div>
+    </div>
+    <div class="small-ask-pager row">
+        <div class="col-xs-6">
+            <a href="/help/6" class="btn btn-sm btn-success" role="button">&lt; Previous</a>
+        </div>
+        <div class="col-xs-6">
+            <a href="/help/8" class="btn btn-sm btn-success next-btn" role="button">Next &gt;</a>
+        </div>
     </div>
 
 
