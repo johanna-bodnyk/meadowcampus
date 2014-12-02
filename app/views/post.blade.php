@@ -4,7 +4,7 @@
     Building Updates
 @stop
 
-@section('body-class')
+@section('bodyclass')
     updates
 @stop
 
