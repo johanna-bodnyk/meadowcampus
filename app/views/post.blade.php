@@ -4,16 +4,22 @@
     Building Updates
 @stop
 
+@section('head')
+    <link rel="stylesheet" href="{{ URL::asset('packages/blueimp/css/blueimp-gallery.min.css') }}">
+@stop
+
 @section('bodyclass')
     updates
 @stop
 
 @section('content')
-    
-    <h2>Updates from the Meadow</h2>
 
-    <h3><a href="/updates/{{ $post->id }}">{{{ $post->title }}}</a></h3>
+    <p class="back"><a href="/updates">&lt; Back to Updates</a></p>
+    
+    <h2>{{{ $post->title }}}</h2>
+
     <small class="byline">Posted {{ date('F j, Y',strtotime($post->post_date)); }} by {{ $post->author }} </small>
+
     {{ $post->body }}
 
     @if(Auth::check())
@@ -22,4 +28,8 @@
 
     <hr class="clear-both">
 
+@stop
+
+@section('foot')
+    @include('fragments.blueimp-gallery')
 @stop

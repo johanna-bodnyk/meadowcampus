@@ -4,6 +4,10 @@
     Building Updates
 @stop
 
+@section('head')
+    <link rel="stylesheet" href="{{ URL::asset('packages/blueimp/css/blueimp-gallery.min.css') }}">
+@stop
+
 @section('bodyclass')
     updates
 @stop
@@ -32,4 +36,8 @@
         <a class="btn btn-success" href="/updates/create" role="button">Add a new update</a>
     @endif
 
+@stop
+
+@section('foot')
+    @include('fragments.blueimp-gallery')
 @stop

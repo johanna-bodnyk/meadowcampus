@@ -284,7 +284,7 @@ address {
 /* Admin nav */
 
 nav.admin-nav {
-    background-color: #E0DDB7;
+    background-color: #DDD;
     height: 30px;
     min-height: 30px;
 }
@@ -458,6 +458,10 @@ figure {
     padding-bottom: 10px;
 }
 
+.updates .back {
+    text-align: right;
+}
+
 .updates .content img {
     border: 1px solid #999;
     margin-bottom: 5px;
@@ -470,7 +474,7 @@ figure {
     margin-right: 15px;
 }
 
-li > *.pull-left {
+li *.pull-left {
     margin-right: 30px;
 }
 
@@ -483,6 +487,12 @@ p.align-center img {
     margin-right: auto;
     margin-left: auto;
 }
+
+div.align-center figure {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 
 input#save-button,
 input#delete-button,

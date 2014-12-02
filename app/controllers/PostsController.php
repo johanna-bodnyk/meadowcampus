@@ -152,7 +152,7 @@ class PostsController extends \BaseController {
         }
 
         Session::flash('success_message', 'Your post has been updated.');
-        return Redirect::to('updates');	
+        return Redirect::to('updates/'.$post->id);
     }
 
 
