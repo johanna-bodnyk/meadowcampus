@@ -176,6 +176,7 @@
                     </div>
                 <div>
             </div>
+        
             
 
         @yield('body')

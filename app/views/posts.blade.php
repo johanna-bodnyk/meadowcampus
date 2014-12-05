@@ -39,5 +39,5 @@
 @stop
 
 @section('foot')
-    @include('fragments.blueimp-gallery')
+    @include('fragments.blueimp-gallery-2')
 @stop

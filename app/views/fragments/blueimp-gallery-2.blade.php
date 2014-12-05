@@ -17,6 +17,17 @@
                 link = target.parentNode.parentNode,
                 options = {index: link, event: event},
                 links = this.getElementsByTagName('a');
+            console.log(link);
+            blueimp.Gallery(links, options);
+        };
+
+        document.getElementById('links2').onclick = function (event) {
+            event = event || window.event;
+            var target = event.target || event.srcElement,
+                link = target.parentNode.parentNode,
+                options = {index: link, event: event},
+                links = this.getElementsByTagName('a');
+            console.log(link);
             blueimp.Gallery(links, options);
         };
     </script>
