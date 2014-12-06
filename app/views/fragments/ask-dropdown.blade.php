@@ -10,8 +10,9 @@
                     <li><a href="/help/5">The location</a></li>
                     <li><a href="/help/6">The building</a></li>
                     <li><a href="/help/7">What's the budget?</a></li>
-                    <li><a href="/help/8">Ramen noodles</a></li>
+                    <li><a href="/help/8">Raising the money</a></li>
                     <li><a href="/help/9">Be a part of it!</a></li>
+                    <li><a href="/help/10">Where will you plug in?</a></li>
                     <li class="divider"></li>
                     <li><a href="/scenarios">Scenarios &amp; Calculators</a></li>
                 </ul>
