@@ -122,9 +122,17 @@ Route::get('dashboard', 'DashboardController@getIndex');
 
 Route::get('donors/admin', 'DonorController@getAdmin');
 
+Route::get('donors/add', 'DonorController@getCreate');
+
+Route::post('donors/add', 'DonorController@postCreate');
+
 Route::get('donors/edit/{id}', 'DonorController@getEdit');
 
 Route::post('donors/edit/{id}', 'DonorController@postEdit');
+
+Route::get('donors/confirm-delete/{id}', 'DonorController@getConfirmDelete');
+
+Route::post('donors/delete/{id}', 'DonorController@postDelete');
 
 
 /**

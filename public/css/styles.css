@@ -500,7 +500,6 @@ a#cancel-button {
     float:right;
     margin-left: 20px;
     margin-bottom: 20px;
-    margin-top: -30px;
 }
 
 div.button-group {
@@ -573,6 +572,11 @@ div.donor-lists li {
 
 #donor-table {
     font-size: .85em;
+}
+
+a#new-donor {
+    float: right;
+    margin-top: 10px;
 }
 
 th.date-col {

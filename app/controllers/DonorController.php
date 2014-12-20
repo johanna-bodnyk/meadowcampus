@@ -59,6 +59,29 @@ class DonorController extends \BaseController {
             ->with('donors', $donors);
     }
 
+    public function getCreate() {
+        return View::make('donors-form');
+    }
+
+    public function postCreate()
+    {
+
+        $donor = new Donor();
+        $fields = Input::except('_token');
+        
+        if(!Input::has('pledge_made_flag')) { $fields['pledge_made_flag'] = 0; }
+        if(!Input::has('display')) { $fields['display'] = 0; }
+
+        foreach($fields as $field => $value) {
+            $donor->$field = $value;
+        }
+
+        $donor->save();
+
+        Session::flash('success_message', 'Donor '.$donor->first_name.' '.$donor->last_name.' has been added.');
+        return Redirect::to('donors/admin');  
+    }
+
     public function getEdit($id) {
         try {
             $donor = Donor::findOrFail($id);
@@ -67,7 +90,7 @@ class DonorController extends \BaseController {
             Session::flash('error_message', 'A donor with the id '.$id.' does not exist');
             return Redirect::to('donors/admin');
         }
-        return View::make('donors-edit')
+        return View::make('donors-form')
             ->with('donor', $donor);
     }
 
@@ -93,6 +116,36 @@ class DonorController extends \BaseController {
 
         Session::flash('success_message', 'Donor '.$donor->first_name.' '.$donor->last_name.' has been updated.');
         return Redirect::to('donors/admin');  
+    }
+
+    public function getConfirmDelete($id)
+    {
+        try {
+            $donor = Donor::findOrFail($id);
+        }
+        catch (Exception $e) {
+            Session::flash('error_message', 'An donor with the id '.$id.' does not exist.');
+            return Redirect::to('donors/admin');
+        }    
+
+        return View::make('donor-delete')
+            ->with('donor', $donor);
+    }
+
+    public function postDelete($id)
+    {
+        try {
+            $donor = Donor::findOrFail($id);
+        }
+        catch (Exception $e) {
+            Session::flash('error_message', 'An donor with the id '.$id.' does not exist.');
+            return Redirect::to('donors/admin');
+        }
+
+        Session::flash('success_message', $donor->first_name.' '.$donor->last_name.' has been successfully deleted.');
+        $donor->delete();
+
+        return Redirect::to('donors/admin');
     }
 
 }

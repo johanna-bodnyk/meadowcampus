@@ -10,6 +10,8 @@
 
 @section('content')
 
+<a href="/donors/add" class="btn btn-success btn-sm" role="button" id="new-donor">Add a Donor</a>
+
 <h2>Donors</h2>
 
 <table class="table table-condensed table-bordered tablesorter" id="donor-table">

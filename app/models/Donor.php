@@ -5,7 +5,7 @@
         protected $guarded = array('id');
         public $timestamps = false;
 
-        public function getGroupNames() {
+        public static function getGroupNames() {
             return array(
                 'Alumni' => 'Alumni',
                 'Alumni Families' => 'Alumni Families',

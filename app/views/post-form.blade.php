@@ -1,7 +1,7 @@
 @extends('_master')
 
 @section('title')
-    Add an Update
+    Add or Edit an Update
 @stop
 
 @section('head')

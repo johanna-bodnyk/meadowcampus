@@ -132,7 +132,7 @@
                     </nav>
                 @endif
                 
-                <div class="content">
+                <div class="content clearfix">
                     <!-- Alert messages - success and error -->
                     @if(Session::get('success_message'))
                         <div class="alert alert-success alert-dismissible" role="alert">

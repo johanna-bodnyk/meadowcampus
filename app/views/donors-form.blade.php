@@ -1,14 +1,18 @@
 @extends('_master')
 
 @section('title')
-    Add a Donor
+    Add or Edit a Donor
 @stop
 
 @section('content')
 
-    <h2>Editing Donor ID: {{ $donor->id }}</h2>
-
-    {{ Form::model($donor, array('url' => 'donors/edit/'.$donor->id, 'role' => 'form', 'class' => 'form-horizontal')) }}
+    @if(isset($donor))
+        <h2>Editing Donor ID: {{ $donor->id }}</h2>
+        {{ Form::model($donor, array('url' => '/donors/edit/'.$donor->id, 'role' => 'form', 'class' => 'form-horizontal')) }}    
+        @else
+        <h2>Add a Donor</h2>
+        {{ Form::open(array('url' => '/donors/add', 'role' => 'form', 'class' => 'form-horizontal')) }}
+    @endif
 
         <div class="form-group">
             {{ Form::label('first_name', 'First Name', array('class' => 'col-sm-2')) }}
@@ -27,7 +31,7 @@
         <div class="form-group">
             {{ Form::label('donor_group', 'Donor Group', array('class' => 'col-sm-2')) }}
             <div class='col-sm-10'>
-                {{ Form::select('donor_group', $donor->getGroupNames()) }}
+                {{ Form::select('donor_group', Donor::getGroupNames()) }}
             </div>       
         </div>
 
@@ -44,7 +48,7 @@
                 <div class="checkbox">
                     <label>
                         <input name="pledge_made_flag" type="checkbox" value=1
-                        @if($donor->pledge_made_flag)
+                        @if(isset($donor) && $donor->pledge_made_flag)
                             checked
                         @endif
                         > <strong>Pledge Made?</strong>
@@ -73,7 +77,7 @@
                 <div class="checkbox">
                     <label>
                         <input name="display" type="checkbox" value=1
-                            @if($donor->display)
+                            @if(isset($donor) && $donor->display)
                                 checked
                             @endif
                         > <strong>Okay to List?</strong>
@@ -82,13 +86,15 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                {{ Form::submit('Update', array('class' => 'btn btn-success')) }}
-            </div>
-        </div>
+        {{ Form::submit('Save', array('class' => 'btn btn-success', 'id' => 'save-button')) }}
 
     {{ Form::close() }}
+
+    <a href="/donors/admin" class="btn btn-default" id='cancel-button' role="button">Cancel</a>
+
+    @if(isset($donor))
+        <a href="/donors/confirm-delete/{{ $donor->id }}" class="btn btn-danger" id='delete-button' role="button">Delete</a>
+    @endif
 
 
 @stop
