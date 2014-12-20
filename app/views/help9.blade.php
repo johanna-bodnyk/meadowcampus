@@ -13,7 +13,7 @@
             <h2>Being part of this is more important than the amount you give</h2>
             <p class="lead">Your gift, at any level, is meaningful.</p>
             <ul>
-                <li><img src="/images/help/sophia-building-fund-400px.jpg" class="pull-left img-responsive" style="margin-left:-40px"><a href="/donors" target="_blank">{{ $number }} donors have pledged so far (click to view a list).</a></li>
+                <li><img src="/images/help/sophia-building-fund-400px_revised.jpg" class="pull-left img-responsive" style="margin-left:-40px"><a href="/donors" target="_blank">{{ $number }} donors have pledged so far (click to view a list).</a></li>
                 <li>100% of staff have already pledged.</li>
                 <li>100% of trustees have already pledged.</li>
                 <li>Beth is determined that <strong>100% of current students will pledge</strong> something.</li>

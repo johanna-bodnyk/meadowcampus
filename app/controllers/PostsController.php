@@ -9,6 +9,7 @@ class PostsController extends \BaseController {
 			array('on' => ['store','update','delete']));
 	}
 
+
 	/**
 	 * Display a listing of the resource.
 	 *

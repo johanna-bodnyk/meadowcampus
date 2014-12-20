@@ -17,7 +17,6 @@
                 link = target.parentNode.parentNode,
                 options = {index: link, event: event},
                 links = this.getElementsByTagName('a');
-            console.log(link);
             blueimp.Gallery(links, options);
         };
 
@@ -27,7 +26,6 @@
                 link = target.parentNode.parentNode,
                 options = {index: link, event: event},
                 links = this.getElementsByTagName('a');
-            console.log(link);
             blueimp.Gallery(links, options);
         };
     </script>
