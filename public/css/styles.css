@@ -579,8 +579,35 @@ a#new-donor {
     margin-top: 10px;
 }
 
+.table>thead>tr>th {
+    vertical-align: middle;
+}
+
 th.date-col {
     min-width: 80px;
+}
+
+th.center,
+td.center {
+    text-align: center;
+}
+
+table.tablesorter thead tr .header {
+    background-image: url('../packages/tablesorter/themes/blue/bg.gif');
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+table.tablesorter thead tr .headerSortUp {
+    background-image: url('../packages/tablesorter/themes/blue/asc.gif');
+    background-color: #dff0d8;
+}
+
+table.tablesorter thead tr .headerSortDown {
+    background-image: url('../packages/tablesorter/themes/blue/desc.gif');
+    background-color: #dff0d8;
 }
 
 form.form-horizontal label {

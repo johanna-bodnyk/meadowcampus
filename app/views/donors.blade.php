@@ -29,7 +29,7 @@
             <ul>
                 @foreach($groups['Current Families'] as $donor)
                     @if($donor->display)
-                        <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                        <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
                     @endif
                 @endforeach
             </ul>
@@ -37,7 +37,7 @@
             <ul>
                 @foreach($groups['Staff'] as $donor)
                     @if($donor->display)
-                        <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                        <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
                     @endif
                 @endforeach
             </ul>           
@@ -47,7 +47,7 @@
             <ul>
                 @foreach($groups['Alumni'] as $donor)
                     @if($donor->display)
-                        <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                        <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
                     @endif
                 @endforeach
             </ul>
@@ -57,7 +57,7 @@
             <ul>
                 @foreach($groups['Alumni Families'] as $donor)
                     @if($donor->display)
-                        <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                        <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
                     @endif
                 @endforeach
             </ul>
@@ -65,13 +65,16 @@
             <ul>
                 @foreach($groups['Friends'] as $donor)
                     @if($donor->display)
-                        <li>{{ $donor->first_name }} {{ $donor->last_name }}</li>
+                        <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
                     @endif
                 @endforeach
             </ul>
         </div>
 
     </div>
+    @if($inaugural)
+        <p>*Denotes inaugural donor.</p>
+    @endif
     <p class="small"><em>We hope you'll let us share your name on this list, but if you prefer your pledge be anonymous, just let us know!</em></p>
 @stop
 

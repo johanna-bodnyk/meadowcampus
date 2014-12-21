@@ -134,6 +134,9 @@ Route::get('donors/confirm-delete/{id}', 'DonorController@getConfirmDelete');
 
 Route::post('donors/delete/{id}', 'DonorController@postDelete');
 
+Route::get('set-display-names', 'DonorController@setDisplayNames');
+
+
 
 /**
  * Image uploading and deletion used by AJAX calls

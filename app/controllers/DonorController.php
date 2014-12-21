@@ -27,6 +27,8 @@ class DonorController extends \BaseController {
                 'amount' => 0
         );
 
+        $inaugural = false;
+
         foreach ($groups as $group_name => $group_values) {
             $group = Donor::group($group_name)->orderBy('last_name')->get();
             $count = $group->count();
@@ -34,6 +36,9 @@ class DonorController extends \BaseController {
             $groups[$group_name] = $group;
             $total['count'] += $count;
             $total['amount'] += $amount;
+            if (in_array(true, $group->lists('inaugural'))) {
+                $inaugural = true;
+            }
         }
 
         // Get monthly amount based on total
@@ -49,11 +54,21 @@ class DonorController extends \BaseController {
         return View::make('donors')
             ->with('groups', $groups)
             ->with('total', $total)
-            ->with('percent', $percent);
+            ->with('percent', $percent)
+            ->with('inaugural', $inaugural);
+    }
+
+    public function setDisplayNames() {
+        $donors = Donor::where('display', true)->get();
+
+        foreach($donors as $donor) {
+            $donor->display_name = $donor->first_name." ".$donor->last_name;
+            $donor->save();
+        }
     }
 
     public function getAdmin() {
-        $donors = Donor::get();
+        $donors = Donor::orderBy('pledge_amount', 'desc')->get();
 
         return View::make('donors-admin')
             ->with('donors', $donors);
@@ -71,6 +86,7 @@ class DonorController extends \BaseController {
         
         if(!Input::has('pledge_made_flag')) { $fields['pledge_made_flag'] = 0; }
         if(!Input::has('display')) { $fields['display'] = 0; }
+        if(!Input::has('inaugural')) { $fields['inaugural'] = 0; }
 
         foreach($fields as $field => $value) {
             $donor->$field = $value;
@@ -107,6 +123,7 @@ class DonorController extends \BaseController {
         
         if(!Input::has('pledge_made_flag')) { $fields['pledge_made_flag'] = 0; }
         if(!Input::has('display')) { $fields['display'] = 0; }
+        if(!Input::has('inaugural')) { $fields['inaugural'] = 0; }
 
         foreach($fields as $field => $value) {
             $donor->$field = $value;

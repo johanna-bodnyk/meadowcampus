@@ -86,6 +86,27 @@
             </div>
         </div>
 
+        <div class="form-group">
+            {{ Form::label('display_name', 'Display Name', array('class' => 'col-sm-2')) }}
+            <div class='col-sm-10'>
+                {{ Form::text('display_name', null, array('class' => 'form-control')) }}        
+            </div>       
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input name="inaugural" type="checkbox" value=1
+                            @if(isset($donor) && $donor->inaugural)
+                                checked
+                            @endif
+                        > <strong>Inaugural Donor?</strong>
+                    </label>     
+                </div>
+            </div>
+        </div>
+
         {{ Form::submit('Save', array('class' => 'btn btn-success', 'id' => 'save-button')) }}
 
     {{ Form::close() }}

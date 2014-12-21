@@ -14,6 +14,8 @@
 
 <h2>Donors</h2>
 
+<p class='small'>Hold SHIFT to sort by multiple columns.</p>
+
 <table class="table table-condensed table-bordered tablesorter" id="donor-table">
     <thead>
     <tr>
@@ -23,9 +25,11 @@
         <th>Last Name</th>
         <th>Target</th>
         <th>Pledge</th>
-        <th>Pledge Made?</th>
+        <th class='center'>Pledge<br>Made?</th>
         <th class="date-col">Pledge Date</th>
-        <th>Display Permission</th>
+        <th class='center'>Okay to<br>Display?</th>
+        <th>Display Name</th>
+        <th class='center'>Inaugural?</th>
         <th>Edit</th>
     </tr>
     </thead>
@@ -38,9 +42,43 @@
         <td>{{ $donor->last_name }}</td>
         <td>${{ number_format($donor->target_donation) }}</td>
         <td>${{ number_format($donor->pledge_amount) }}</td>
-        <td>{{ $donor->pledge_made_flag }}</td>
-        <td>@if($donor->pledge_made_flag){{ date("Y-m-d",strtotime($donor->pledge_date)) }}@endif</td>
-        <td>@if($donor->pledge_made_flag){{ $donor->display }}@endif</td>
+        <td class='center'>
+            @if($donor->pledge_made_flag)
+                yes
+            @else
+                no
+            @endif
+        </td>
+        <td>
+            @if($donor->pledge_made_flag)
+                {{ date("Y-m-d",strtotime($donor->pledge_date)) }}
+            @else
+                &mdash;
+            @endif
+        </td>
+        <td class='center'>
+            @if($donor->pledge_made_flag)
+                @if($donor->display)
+                    yes
+                @else
+                    no
+                @endif
+            @else
+                &mdash;
+            @endif
+        </td>
+        <td>{{ $donor->display_name }}</td>
+        <td class='center'>
+            @if($donor->pledge_made_flag)
+                @if($donor->inaugural)
+                    yes
+                @else
+                    no
+                @endif
+            @else
+                &mdash;
+            @endif
+        </td>        
         <td><a href="/donors/edit/{{$donor->id}}">Edit</a>
     </tr>
     @endforeach
@@ -53,7 +91,9 @@
     <script type="text/javascript">
         $(document).ready(function() 
             { 
-                $("#donor-table").tablesorter(); 
+                $("#donor-table").tablesorter( {
+                    sortList:[[5,1]] // Initial sort: pledge amount, descending
+                }); 
             } 
         ); 
     </script>
