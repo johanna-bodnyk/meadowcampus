@@ -58,14 +58,14 @@ class DonorController extends \BaseController {
             ->with('inaugural', $inaugural);
     }
 
-    public function setDisplayNames() {
-        $donors = Donor::where('display', true)->get();
+    // public function setDisplayNames() {
+    //     $donors = Donor::where('display', true)->get();
 
-        foreach($donors as $donor) {
-            $donor->display_name = $donor->first_name." ".$donor->last_name;
-            $donor->save();
-        }
-    }
+    //     foreach($donors as $donor) {
+    //         $donor->display_name = $donor->first_name." ".$donor->last_name;
+    //         $donor->save();
+    //     }
+    // }
 
     public function getAdmin() {
         $donors = Donor::orderBy('pledge_amount', 'desc')->get();
