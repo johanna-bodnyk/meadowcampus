@@ -25,7 +25,7 @@
             </div>
             <p class="lead">In classic Circle School style, School Meeting appointed two committees: one to search for a location, and another to design a building.</p>
             <p>"Flying over" every inch of a target location area in Google Earth, the Property Search Committee found sites of five acres or more. And then, after talking with real estate agents and traipsing through woods, the committee found problems will all the candidate sites.</p>
-            <p>Except one...</p>
+            <p><strong>Except one...</strong></p>
         </div>
         <div class="col-sm-1" id="right-arrow"><a href="/help/4"></a></div>
     </div>
