@@ -21,7 +21,7 @@
             <p>Just kidding (or half kidding). Most of the budget is covered by a generous alumni family and the George M. Leader Family Corporation's gift of the land, leaving <strong>$750,000 to be raised by The Circle School community.</strong> That's you and me.</p>
             <p>Here's what we've got so far:</p>
             @include('fragments.thermometer', array('total' => $total))
-            <p><a href="/donors" target="_blank">The alumni, staff, and trustees who have launched this fundraising campaign</a> and built this website (about a dozen of us) have already pledged <strong>${{$total}} to be paid over 10 years,</strong> leaving <strong>${{$remainder}}</strong> yet to raise in the next couple of months.
+            <p>The alumni, staff, and trustees who built this website (about a dozen of us) have all pledged. <a href="/donors" target="_blank">Now we have pledges of <strong>${{$total}} to be paid over 10 years,</strong></a> leaving <strong>${{$remainder}}</strong> yet to raise in the next couple of months.
             <p>Wait! <strong>How can our community do that?</strong> Well...</p>
         </div>
         <div class="col-sm-1" id="right-arrow"><a href="/help/8"></a></div>
