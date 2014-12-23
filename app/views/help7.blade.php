@@ -18,12 +18,7 @@
             @include('fragments.ask-dropdown')
             <h2>What's the budget?</h2>
             <p class="lead">I'm so glad you asked! The budget is $2.6 million. Can you cover that?</p>
-            <p>Just kidding (or half kidding). The total budget breaks down as follows:</p>
-            <ul>
-                <li>$400,000 &mdash; Value of the land to be donated by the George M. Leader Family Corporation</li>
-                <li>$1,500,000 &mdash; Commitment from a generous alumni family to donate, raise, and lend</li>
-                <li><strong>$750,000 &mdash; To be raised by The Circle School community</strong></li>
-            </ul>
+            <p>Just kidding (or half kidding). Most of the budget is covered by a generous alumni family and the George M. Leader Family Corporation's gift of the land, leaving <strong>$750,000 to be raised by The Circle School community.</strong> That's you and me.</p>
             <p>Here's what we've got so far:</p>
             @include('fragments.thermometer', array('total' => $total))
             <p><a href="/donors" target="_blank">The alumni, staff, and trustees who have launched this fundraising campaign</a> and built this website (about a dozen of us) have already pledged <strong>${{$total}} to be paid over 10 years,</strong> leaving <strong>${{$remainder}}</strong> yet to raise in the next couple of months.
