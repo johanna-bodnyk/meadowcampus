@@ -23,8 +23,6 @@
                             <figcaption>Click to enlarge and view additional rendering.</figcaption>
                         </figure>
                     </a>
-                <a href="/images/help/commute-times.png" title='Comparison of Commute Times Between Oakleigh and Properties Considered' data-gallery class="hide">
-                </a>
                 <a href="/images/help/rendering-1.png" title='Schematic design rendering &mdash; "Front Elevation" &mdash; 10/17/2014' data-gallery class="hide">
                 </a>
             </div>
