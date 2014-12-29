@@ -26,6 +26,8 @@
 
                 <a href="/images/help/rendering-1.png" title='Schematic design rendering &mdash; "Front Elevation" &mdash; 10/17/2014' data-gallery class="hide">
                 </a>
+                <a href="/images/help/circle-school-front-400px.jpg" title='210 Oakleigh Ave' data-gallery class="pull-left img-responsive">
+                </a>
             </div>
             <p>The dream is a campus with <strong>meadow, woods, and creek,</strong> and a building that truly fits the school's self-directed democratic program.</p>
             <p>The dream is nearly <strong>8 acres and only a mile away.</strong> The property owner will donate the land as soon as the school community raises the funds to build.</p>
