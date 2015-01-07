@@ -40,10 +40,11 @@ div#header>div.container {
 
 h1 {
     text-align: center;
-    font-size: 40px;
-    margin-top: 5px;
-    padding-bottom: 10px;
+    font-size: 45px;
+    margin-top: 10px;
+    padding-bottom: 2px;
     font-family: 'Calligraffitti', cursive;
+    font-weight: bold;
 }
 
 
