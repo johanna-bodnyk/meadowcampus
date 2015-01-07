@@ -4,13 +4,16 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>The Circle School Meadow Campus | @yield('title','Welcome!')</title>
+        <title>The Circle School Meadow Campus Dream Campaign | @yield('title','Welcome!')</title>
         
         <!-- BOOTSTRAP -->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="{{ URL::asset('packages/bootstrap/css/bootstrap.min.css') }}">
         <!-- Optional theme -->
         <link rel="stylesheet" href="{{ URL::asset('packages/bootstrap/css/bootstrap-theme.min.css') }}">
+
+        <!-- Script title font -->
+        <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
      
         <link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}">
         <!-- JQUERY -->
@@ -54,7 +57,7 @@
                         </a>
                     </div>
                     <div class="col-md-10">
-                        <h1><a href="/" class="no-link-style"><span class="sr-only">The Circle School </span>Meadow Campus Project</a></h1>
+                        <h1><a href="/" class="no-link-style"><span class="sr-only">The Circle School </span>Meadow Campus Dream Campaign</a></h1>
                         <!-- Nav bar -->
                     <nav class="navbar navbar-default nav-justified" role="navigation">
                       <div class="container-fluid">
@@ -72,7 +75,7 @@
                           <ul class="nav nav-pills nav-justified" role="tablist">
                             <li class="dropdown" role="presentation">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                Fundraising <br>Campaign <span class="caret"></span>
+                                Fundraising<br>Campaign <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="/help">We Need Your Help!</a></li>
@@ -82,7 +85,7 @@
                             </li>
                             <li class="dropdown" role="presentation">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                About the <br>Project <span class="caret"></span>
+                                About the<br>Project <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
 <!--                                <li><a href="/plans">Plans and Drawings</a></li> -->
