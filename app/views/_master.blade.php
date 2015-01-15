@@ -54,7 +54,7 @@
                 <div class="page-header row">
                      <div class="col-md-2">
                         <a href="/">
-                            <img id="logo" src="{{ URL::asset('images/websitelogo-170px.png') }}">  
+                            <img id="logo" src="{{ URL::asset('images/websitelogo-150px.png') }}">  
                         </a>
                     </div>
                     <div class="col-md-10">

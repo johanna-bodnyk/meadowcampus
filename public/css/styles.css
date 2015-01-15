@@ -75,7 +75,6 @@ img#logo {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    width: 150px;
 }
 
 h1, h2, h3 {
@@ -808,6 +807,13 @@ background-color: #E0DDB7;
 
 /* Mobile Tweaks (Header, Subheads, etc.) */
 
+@media (max-width: 991px) {
+    h1 {
+        margin-top: 25px;
+    }
+}
+
+
 @media (max-width: 384px) {
     
     .container {
@@ -837,7 +843,7 @@ background-color: #E0DDB7;
     }
 
     img#logo {
-        height: 110px; /* Replace with a smaller image */
+        width: 120px; /* TODO: Replace with a smaller image */
         margin-bottom: 10px;
     }
 

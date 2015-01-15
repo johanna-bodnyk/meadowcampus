@@ -25,6 +25,14 @@
     <h3>Thank You to Our Donors!</h3>
     <div class="row donor-lists">
         <div class="col-sm-4">
+            <h4>Students</h4>
+            <ul>
+                @foreach($groups['Current Students'] as $donor)
+                    @if($donor->display)
+                        <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
+                    @endif
+                @endforeach
+            </ul>
             <h4>Current Families</h4>
             <ul>
                 @foreach($groups['Current Families'] as $donor)
