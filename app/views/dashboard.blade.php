@@ -172,20 +172,20 @@
             <table class="table table-condensed table-bordered dashboard-table">
                 <tr>
                     <th>Group</th>
-                    <th class="count-column">Number of Pledges</th>
-                    <th class="total-column">Pledge Total</th>
+                    <th class="text-center">Number of Pledges</th>
+                    <th class="text-center">Pledge Total</th>
                 </tr>
                 @foreach($groups as $groupname => $group)
                     <tr>
                         <td>{{$groupname}}</td>
-                        <td class="count-column">{{$group['count']}}</td>
-                        <td class="total-column">${{$group['amount']}}</td>
+                        <td class="text-center">{{$group['count']}}</td>
+                        <td class="text-center">${{$group['amount']}}</td>
                     </tr>
                 @endforeach
                 <tr class="total-row">
                     <td>Total</td>
-                    <td class="count-column">{{$total['count']}}</td>
-                    <td  class="total-column">${{$total['amount']}}</td>
+                    <td class="text-center">{{$total['count']}}</td>
+                    <td  class="text-center">${{$total['amount']}}</td>
                 </tr>
             </table>
         </div>

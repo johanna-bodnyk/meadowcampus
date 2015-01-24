@@ -13,10 +13,7 @@
         <link rel="stylesheet" href="{{ URL::asset('packages/bootstrap/css/bootstrap-theme.min.css') }}">
 
         <link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}">
-
-        <!-- Script title font -->
-        <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
-        
+       
         <!-- JQUERY -->
         <script src="{{ URL::asset('packages/jquery/jquery-1.11.1.min.js') }}"></script>
 

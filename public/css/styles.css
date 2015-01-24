@@ -1,861 +1,728 @@
+@import url(http://fonts.googleapis.com/css?family=Calligraffitti);
+/* From: http://www.sitepoint.com/sass-mixins-kickstart-project/ */
+#background, #header {
+  box-shadow: inset 0 0 0 1000px rgba(126, 231, 126, 0.21);
+}
+
+#logo, p.align-center img, div.align-center figure {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#therm-img > img, .google-chart > div, .dashboard-table {
+  margin: 0px auto;
+}
+
+/*================================
+    General 
+================================*/
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    height: 100%;
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 16px;
+  height: 100%;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 16px;
 }
 
-div#background {
-    background-image: url("../images/background_7.jpg");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    /*background-size: cover;*/
-    box-shadow: inset 0 0 0 1000px rgba(126, 231, 126, .21);
-    min-height: 80%;
+#background {
+  background-image: url("../images/background_7.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  min-height: 80%;
 }
 
 body.logged-in {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 .container {
-    padding-left: 40px;
-    padding-right: 40px;
-    min-height: 100%;
-}
-
-/* Header */
-
-div#header {
-    box-shadow: inset 0 0 0 1000px rgba(126, 231, 126, .21);
-}
-
-div#header>div.container {
-    min-height: 0;
-}
-
-h1 {
-    text-align: center;
-    font-size: 45px;
-    margin-top: 10px;
-    padding-bottom: 2px;
-    font-family: 'Calligraffitti', cursive;
-    font-weight: bold;
-}
-
-
-/*h1>a {
-    color: #0c7344;
-}
-
-h1>a:hover {
-    text-decoration: none;
-    color: #0c7344;
-}*/
-
-a.no-link-style {
-    color: #0c7344;
-}
-
-a.no-link-style:hover {
-    text-decoration: none;
-    color: #0c7344;
-}
-
-.page-header {
-    border:none;
-    margin: 40px 0 0;
-}
-
-img#logo {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  min-height: 100%;
 }
 
 h1, h2, h3 {
-    color: #0c7344;
+  color: #0C7344;
 }
 
 h2 {
-    font-size: 34px;
-    margin-top: 7px;
+  font-size: 34px;
+  margin-top: 7px;
 }
 
 h3 {
-    text-align: center;
-    font-size: 22px;
+  text-align: center;
+  font-size: 22px;
 }
 
 .main {
-    min-height: 100%;
-    padding-bottom: 40px;
+  min-height: 100%;
+  padding-bottom: 40px;
 }
 
-.footer {
-    color: white;
-    font-weight: bold;
-    text-shadow: 2px 3px 3px rgba(0,0,0,0.5);
-}
-
-.footer a {
-    color: white;
-    text-decoration: underline;
-}
-
-address {
-    margin-bottom: 5px;
-}
-
-#login {
-    text-align: right;
-}
-
-
-/* Animation code from: https://graphicfusiondesign.com/design/creating-fancy-css3-fade-in-animations-on-page-load/ */
-/*@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:.95; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:.95; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:.95; } }*/
- 
 .content {
-    background-color: #FCFCF8;
-    padding: 20px 30px;
-    border-radius: 10px;
-    opacity:.96; 
-
-    /*-webkit-animation:fadeIn ease-in 1; 
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
-     
-    -webkit-animation-fill-mode:forwards;  
-    animation-fill-mode:forwards;
-     
-    -webkit-animation-duration:.5s;
-    -moz-animation-duration:.5s;
-    animation-duration:.5s;
-
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    animation-delay: 1s;*/
+  background-color: #FCFCF8;
+  padding: 20px 30px;
+  border-radius: 10px;
+  opacity: .96;
 }
 
 .content li {
-    padding-bottom: 15px;
+  padding-bottom: 15px;
 }
-
-/*.content p a, .content li a {
-    color: #88845B;
-}*/
-
-.more-link {
-    font-weight: bold;
-}
-
-/*.content a {
-    color: #865E16;
-    font-weight: bold;
-}*/
 
 .clear-both {
-    clear: both;
+  clear: both;
 }
 
-/* Navigation */
+/*================================
+    Header 
+================================*/
+#header > div.container {
+  min-height: 0;
+}
 
+h1 {
+  text-align: center;
+  font-size: 45px;
+  margin-top: 10px;
+  padding-bottom: 2px;
+  font-family: "Calligraffitti", cursive;
+  font-weight: bold;
+}
+
+a.no-link-style {
+  color: #0C7344;
+}
+a.no-link-style:hover {
+  color: #0C7344;
+  text-decoration: none;
+}
+
+.page-header {
+  border: none;
+  margin: 40px 0 0;
+}
+
+#logo {
+  display: block;
+}
+
+/*================================
+    Footer 
+================================*/
+.footer {
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+}
+.footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+address {
+  margin-bottom: 5px;
+}
+
+#login {
+  text-align: right;
+}
+
+/*================================
+    Navigation
+================================*/
 .navbar-default {
-    background: none;
-    border:none;
-    box-shadow: none;
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
-.nav-pills>li>a,
-.nav-pills>li>a:focus  {
-    background-color: #C7F4B1;
-    border-radius: 8px;
-    margin: 0 15px 0 15px;
-    padding: 8px 15px;
-    color: #316431;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 1.15;
+/* Nav buttons */
+.nav-pills > li {
+  /* Pledge Now button */
 }
-
-.nav-pills>li>a:hover {
-    background-color: #E0DDB7;
+.nav-pills > li > a, .nav-pills > li > a:focus {
+  border-radius: 8px;
+  margin: 0 15px;
+  padding: 8px 15px;
+  color: #316431;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.15;
+  background-color: #C7F4B1;
 }
-
-.nav-pills>li.open>a, 
-.nav-pills>li.open>a:hover, 
-.nav-pills>li.open>a:focus {
-    background-color: #E0DDB7;
+.nav-pills > li > a:hover, .nav-pills > li.open > a, .nav-pills > li.open > a:hover, .nav-pills > li.open > a:focus {
+  background-color: #E0DDB7;
 }
-
-.nav-pills>li>a.btn:hover {
-  color: #fff;
+.nav-pills > li.pledge-button > a {
+  color: white;
+}
+.nav-pills > li.pledge-button > a:hover, .nav-pills > li.pledge-button > a:focus {
   background-color: #449d44;
+  /* Bootstrap button colors */
   border-color: #398439;
-  background-position: 0 150px; /* Fixes pledge now button, no clue why */
-}
-
-/*.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
-    background-color: #C7F4B1;
-}*/
-
-.nav-pills>li.pledge-button>a {
-    color: white;
+  /* Bootstrap button colors */
+  background-position: 0 150px;
+  /* Fixes rollover issue, no clue why */
 }
 
 .caret {
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px inherit #fff;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px inherit white;
 }
 
+/* Nav Dropdowns */
 .dropdown-menu {
-    margin: 0 15px;
-    background-color: #F0EEDB;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    border: none;
+  margin: 0 15px;
+  background-color: #F0EEDB;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: none;
+}
+.dropdown-menu > li > a {
+  color: #316431;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #316431;
+  background-color: #E0DDB7;
+  background-image: none;
 }
 
-.dropdown-menu>li>a {
-    color: #316431;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 5px 10px;
-}
-
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
-    color: #316431;
-    font-weight: bold;
-    padding: 5px 10px;
-    background-color: #E0DDB7;
-    background-image: none;
-}
-
+/*================================
+    Mobile (collapsed) Nav
+================================*/
+/* Hamburger */
 .navbar-default button.navbar-toggle {
-    background-color: #0c7344;
-    border-color: #FCFCF8;
+  background-color: #0C7344;
+  border-color: #FCFCF8;
 }
-
-.navbar-default button.navbar-toggle:hover,
-.navbar-default button.navbar-toggle:focus {
-    background-color: #C7F4B1;
+.navbar-default button.navbar-toggle:hover, .navbar-default button.navbar-toggle:focus {
+  background-color: #C7F4B1;
 }
-
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #FCFCF8;
+.navbar-default button.navbar-toggle .icon-bar {
+  background-color: #FCFCF8;
 }
 
 @media (max-width: 768px) {
-    .nav-pills>li>a,
-    .nav-pills>li>a:hover,
-    .nav-pills>li>a:focus {
-        margin-bottom: 10px;
-    }
+  .nav-pills > li > a,
+  .nav-pills > li > a:hover,
+  .nav-pills > li > a:focus {
+    margin-bottom: 10px;
+  }
 
-    .dropdown-menu {
-        margin-top: -10px;
-    }
+  .dropdown-menu {
+    margin-top: -10px;
+  }
 }
-
 .navbar-collapse.in {
   overflow-y: visible;
 }
 
 .navbar-collapse {
-    border: none;
+  border: none;
 }
 
-/* Utility Nav */
-
+/*================================
+    Utility Nav
+================================*/
 #utility-nav {
-    float: right;
-    margin-top: 10px;
-    font-size: .85em;
+  float: right;
+  margin-top: 10px;
+  font-size: .85em;
 }
-
 #utility-nav a {
-    color: #0c7344;
+  color: #0C7344;
 }
 
-/* Admin nav */
-
+/*================================
+    Admin Nav
+================================*/
 nav.admin-nav {
-    background-color: #DDD;
-    height: 30px;
-    min-height: 30px;
+  background-color: #DDD;
+  height: 30px;
+  min-height: 30px;
 }
-
+nav.admin-nav a, nav.admin-nav span.navbar-brand {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 nav.admin-nav a {
-    color: #0c7344;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  color: #0C7344;
 }
-
 nav.admin-nav span.navbar-brand {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: inherit;
-    font-weight: bold;
+  font-size: inherit;
+  font-weight: bold;
 }
 
+/*================================
+    General Mobile Tweaks
+================================*/
+@media (max-width: 991px) {
+  h1 {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 384px) {
+  .container {
+    padding: 0px 7px;
+  }
 
+  .content {
+    padding: 20px;
+  }
 
-/* Homepage Thermometer */
+  body {
+    font-size: 14px;
+  }
 
-div#therm-img {
-    position: relative;
-    margin-top: 15px;
+  h1 {
+    font-size: 36px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  #utility-nav {
+    display: none;
+  }
+
+  .page-header {
+    margin-top: 20px;
+  }
+
+  #logo {
+    width: 120px;
+    /* TODO: Replace with a smaller image */
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    margin-bottom: 0px;
+  }
+}
+/*================================
+    Thermometer
+================================*/
+/* Image */
+#therm-img {
+  position: relative;
+  margin-top: 15px;
+  /* @keyframe rules are in thermometer-head.blade.php so % can be dynamic */
+}
+#therm-img > img {
+  display: block;
+}
+#therm-img > img#color-img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  -webkit-animation: thermometer-image ease-in 1.5s;
+  animation: thermometer-image ease-in 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
-#therm-img>img {
-    display: block;
-    margin: 0px auto 0px;
-}
-
-/* @keyframe rules are in thermometer-head.blade.php so % can be dynamic */
-
-#therm-img>img#color-img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
-    -webkit-animation: thermometer-image ease-in 1.5s;
-    animation: thermometer-image ease-in 1.5s;
-    -webkit-animation-fill-mode:forwards;  
-    animation-fill-mode:forwards;
-    -webkit-animation-delay: .5s;
-    animation-delay: .5s;
-}
-
+/* Thermometer bar */
 #therm {
-    box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    height: 15px;
-    margin: 10px auto 0px;
-    border: solid 3px #0c7344;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 15px;
+  margin: 10px auto 50px;
+  border: solid 3px #0C7344;
 }
-
-/* @keyframe rules are in thermometer-head.blade.php so % can be dynamic */
 
 #therm-fill {
-    height: 15px;
-    background-color: #0c7344;
-    width: 0%;
-    -webkit-animation: thermometer ease-in 1.5s;
-    animation: thermometer ease-in 1.5s;
-    -webkit-animation-fill-mode:forwards;  
-    animation-fill-mode:forwards;
-    -webkit-animation-delay: .5s;
-    animation-delay: .5s;
+  height: 15px;
+  background-color: #0C7344;
+  width: 0%;
+  -webkit-animation: thermometer ease-in 1.5s;
+  animation: thermometer ease-in 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
+/* Dollar amount labels */
 #therm-values {
-    padding-top: 5px;
-    font-size: 16px;
+  padding-top: 5px;
+  font-size: 16px;
+  color: #333;
 }
 
 #start-value {
-    float: left;
-    color: #333;
-}
-
-a:hover#therm-link {
-    text-decoration: none;
+  float: left;
 }
 
 #end-value {
-    float: right;
-    color: #333;
+  float: right;
 }
 
 @keyframes current {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@-webkit-keyframes current {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-#current-value {
-    color: #0c7344;
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: -1px;
-/*    padding-left: 25%;  Set in thermometer-head.blade.php so % can be dynamic */
-    margin-left: -71px; /* Width of $0 + half of current value */
+  from {
     opacity: 0;
-    -webkit-animation: current ease-in .5s;
-    animation: current ease-in .5s;
-    -webkit-animation-fill-mode:forwards;  
-    animation-fill-mode:forwards;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes current {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#current-value {
+  color: #0C7344;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  /*    padding-left: 25%;  Set in thermometer-head.blade.php so % can be dynamic */
+  margin-left: -71px;
+  /* Shift left to align middle of number with thermomenter fill: value is width of "$0" + half of width of #current-value */
+  opacity: 0;
+  -webkit-animation: current ease-in 0.5s;
+  animation: current ease-in 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
 }
 
-div.homepage-subfeatures {
-    padding-bottom: 20px;
-}
-
-div.homepage-subfeatures h3 {
-    padding-top: 30px;
-    margin-top: 0px;
-    margin-bottom: 15px;
-}
-
-div.homepage-subfeatures img {
-    margin-bottom: 10px;
-}
-
-div.homepage-subfeatures h4 {
-    margin-top: 0;
-}
-
-@media (min-width: 769px) {
-    div.neg-left {
-        margin-left: -15px;
-    }
-
-
-}
-/* Images and Captions 
-
-See http://docs.ckeditor.com/#!/guide/dev_captionedimage-section-image-alignment-and-classes
-for more configuration options
-
-*/
-
+/*================================
+    General images and captions
+================================*/
+/* See http://docs.ckeditor.com/#!/guide/dev_captionedimage-section-image-alignment-and-classes
+for more configuration options */
 figcaption {
-    font-style: italic;
-    font-size: .8em;
+  font-style: italic;
+  font-size: .8em;
 }
 
 figure {
-    display: table;
-/*    width: 1px; DOES NOT WORK WITH RESPONSIVE IMG STYLES */
-    width: auto;
-    margin-bottom: 10px;
+  display: table;
+  /*    width: 1px; DOES NOT WORK WITH RESPONSIVE IMG STYLES */
+  width: auto;
+  margin-bottom: 10px;
 }
 
- figure img, figcaption {
-    display: table-row;
-    margin-bottom: 5px;
+figure img, figcaption {
+  display: table-row;
+  margin-bottom: 5px;
 }
 
-/* Updates section */
-
+/*================================
+    Updates Section & Admin
+================================*/
 .updates small {
-    font-style: italic;
-    display: block;
-    padding-bottom: 10px;
+  font-style: italic;
+  display: block;
+  padding-bottom: 10px;
 }
-
 .updates .back {
-    text-align: right;
+  text-align: right;
 }
-
 .updates .content img {
-    border: 1px solid #999;
-    margin-bottom: 5px;
-    display: block;
-    max-width: 100%;
-    height: auto;
+  border: 1px solid #999;
+  margin-bottom: 5px;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-*.pull-left {
-    margin-right: 15px;
+/* Image Spacing */
+.pull-left {
+  margin-right: 15px;
+}
+li .pull-left {
+  margin-right: 30px;
 }
 
-li *.pull-left {
-    margin-right: 30px;
-}
-
-*.pull-right {
-    margin-left: 15px;
+.pull-right {
+  margin-left: 15px;
 }
 
 p.align-center img {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
+  display: block;
 }
 
-div.align-center figure {
-    margin-right: auto;
-    margin-left: auto;
+/* Updates Admin */
+#save-button,
+#delete-button,
+#cancel-button {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-
-input#save-button,
-input#delete-button,
-a#delete-button,
-a#cancel-button {
-    float:right;
-    margin-left: 20px;
-    margin-bottom: 20px;
+.button-group {
+  padding-top: 20px;
 }
 
-div.button-group {
-    padding-top: 20px;
+.image-control input[type='text'] {
+  width: 70%;
+}
+.image-control img {
+  margin-bottom: 15px;
 }
 
-div.image-control input[type='text'] {
-    width: 70%;
-}
-
-div.image-control img {
-    margin-bottom: 15px;
-}
-
-/* Scenarios section */
-
+/*================================
+    Scenarios Page
+================================*/
 .scenarios p.form-control-static {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.gift-table {
-    text-align: center;
-}
-
+.gift-table,
 .gift-table th {
-    text-align: center;
+  text-align: center;
 }
 
-/* Donors section */
-
-span.callout-number {
-    font-weight: bold;
-    font-size: 1.3em;
-    color: #0c7344;
-    letter-spacing: -1px;
+/*================================
+    Donors Page
+================================*/
+.callout-number {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #0C7344;
+  letter-spacing: -1px;
 }
 
-div.donor-lists h3 {
-    text-align: left;
+.donor-lists h3 {
+  text-align: left;
+}
+.donor-lists li {
+  padding-bottom: 6px;
 }
 
-div.donor-lists li {
-    padding-bottom: 6px;
-}
-
-
-/* Dashboard and Donor Admin*/
-
-.google-chart>div {
-    margin: 0px auto;
-}
-
+/*================================
+    Dashboard and Donor Admin
+================================*/
+/* Dashboard table */
 .dashboard-table {
-    font-size: .85em;
-    max-width: 700px;
-    margin: 0px auto;
-}
-
-.count-column {
-    text-align: center;
-}
-
-.total-column {
-    text-align: center;
+  font-size: .85em;
+  max-width: 700px;
 }
 
 .total-row {
-    font-weight: bold;
+  font-weight: bold;
 }
 
+/* Donor admin table */
 #donor-table {
-    font-size: .85em;
+  font-size: .85em;
 }
 
-a#new-donor {
-    float: right;
-    margin-top: 10px;
+#new-donor {
+  float: right;
+  margin-top: 10px;
 }
 
-.table>thead>tr>th {
-    vertical-align: middle;
+.table > thead > tr > th {
+  vertical-align: middle;
 }
 
 th.date-col {
-    min-width: 80px;
-}
-
-th.center,
-td.center {
-    text-align: center;
+  min-width: 80px;
 }
 
 table.tablesorter thead tr .header {
-    background-image: url('../packages/tablesorter/themes/blue/bg.gif');
-    background-repeat: no-repeat;
-    background-position: center right;
-    cursor: pointer;
-    padding-right: 20px;
+  background-image: url("../packages/tablesorter/themes/blue/bg.gif");
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+  padding-right: 20px;
 }
 
 table.tablesorter thead tr .headerSortUp {
-    background-image: url('../packages/tablesorter/themes/blue/asc.gif');
-    background-color: #dff0d8;
+  background-image: url("../packages/tablesorter/themes/blue/asc.gif");
+  background-color: rgba(126, 231, 126, 0.21);
 }
 
 table.tablesorter thead tr .headerSortDown {
-    background-image: url('../packages/tablesorter/themes/blue/desc.gif');
-    background-color: #dff0d8;
+  background-image: url("../packages/tablesorter/themes/blue/desc.gif");
+  background-color: rgba(126, 231, 126, 0.21);
 }
 
+/* Add/edit donor form */
 form.form-horizontal label {
-    text-align: right;
+  text-align: right;
 }
 
 form .help-block {
-    font-size: .85em;
-    font-style: italic;
-    margin-bottom: 0px;
+  font-size: .85em;
+  font-style: italic;
+  margin-bottom: 0px;
 }
 
-
-/* Ask Section */
-
-div.ask {
-    padding-bottom: 40px;
+/*================================
+    Ask Section
+================================*/
+.ask {
+  padding-bottom: 40px;
+  /* "Jump to" dropdown */
+}
+.ask h2 {
+  font-family: "Verdana", sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  margin: 20px 0px;
+}
+.ask img {
+  border: 1px solid #999;
+  margin-bottom: 15px;
+}
+.ask figure {
+  width: auto;
+}
+.ask figure img {
+  margin-bottom: 5px;
+}
+.ask figcaption {
+  text-align: center;
+}
+.ask button.btn {
+  background: none;
+  color: #0C7344;
+  font-weight: bold;
+}
+.ask .btn-group {
+  float: right;
+  margin-top: 20px;
+}
+.ask .btn-group ul {
+  margin: 0px;
+}
+.ask .btn-group li {
+  padding-bottom: 0px;
+}
+.ask .btn-group .dropdown-menu > li > a {
+  font-weight: normal;
+  font-size: 14px;
+}
+.ask .btn-group .dropdown-menu .divider {
+  height: 3px;
+  margin: 0px 0;
+  background-color: #E0DDB7;
 }
 
-div.ask h2 {
-    font-family: "Verdana", sans-serif;
-    font-size: 28px;
-    font-weight: normal;
-    margin: 20px 0 20px;
+/* Image overlay title */
+.blueimp-gallery > .title {
+  color: #13C831 !important;
 }
 
-div.ask img {
-    border: 1px solid #999;
-    margin-bottom: 15px;
+#left-arrow > a {
+  display: block;
+  background-image: url("../images/left-arrow-on.png");
+  width: 30px;
+  height: 112px;
+  margin: 200px auto 0;
+}
+#left-arrow > a:hover, #left-arrow > a:focus {
+  background-image: url("../images/left-arrow-off.png");
 }
 
-div.ask figure {
-    width: auto;
+#right-arrow > a {
+  display: block;
+  background-image: url("../images/right-arrow-on.png");
+  width: 30px;
+  height: 112px;
+  margin: 200px auto 0;
+}
+#right-arrow > a:hover, #right-arrow > a:focus {
+  background-image: url("../images/right-arrow-off.png");
 }
 
-div.ask figure img {
-    margin-bottom: 5px;
+.small-ask-pager {
+  display: none;
+}
+.small-ask-pager a.next-btn {
+  float: right;
 }
 
-div.ask figcaption {
-    text-align: center;
+/* "Click to continue" paragraph on first slide */
+.next, .next-small {
+  color: #0C7344;
+  font-weight: bold;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 30px;
 }
 
-.blueimp-gallery>.title {
-    color: #13C831 !important;
+.next-small {
+  font-size: 18px;
+  margin-top: 15px;
+  display: none;
 }
 
-#left-arrow>a {
-    display: block;
-    background-image: url("../images/left-arrow-on.png");
-    width: 30px;
-    height: 112px;
-    margin: 200px auto 0;
+/* Pledge buttons on last slide */
+.pledge-buttons {
+  text-align: center;
+  margin-bottom: 30px;
 }
-
-#left-arrow>a:hover, #left-arrow>a:focus {
-    background-image: url("../images/left-arrow-off.png");
-}
-
-#right-arrow>a {
-    display: block;
-    background-image: url("../images/right-arrow-on.png");
-    width: 30px;
-    height: 112px;
-    margin: 200px auto 0;
-}
-
-#right-arrow>a:hover, #right-arrow>a:focus {
-    background-image: url("../images/right-arrow-off.png");
-}
-
-div.small-ask-pager {
-    display: none;
-}
-
-p.next {
-    color: #0c7344;
-    font-weight: bold;
-    text-align: center;
-    font-size: 24px;
-    margin-top: 30px;
-}
-
-p.next-small {
-    color: #0c7344;
-    font-weight: bold;
-    text-align: center;
-    font-size: 18px;
-    margin-top: 15px;
-    display: none;
-}
-
-div.pledge-buttons {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-div.pledge-buttons a {
-    margin-top: 15px;
+.pledge-buttons a {
+  margin-top: 15px;
 }
 
 div.pledge-buttons-small {
-    margin-bottom: 15px;
-    text-align: center;
-    display: none;
+  margin-bottom: 15px;
+  text-align: center;
+  display: none;
 }
-
 div.pledge-buttons-small a {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-.ask #therm,
-.dashboard #therm,
-.donors #therm {
-    margin-bottom: 50px;
-}
-
-.ask button.btn {
-    background: none;
-    color: #0c7344;
-    font-weight: bold;
-}
-
-.ask .btn-group {
-    float: right;
-    margin-top: 20px;
-}
-
-.ask .btn-group ul {
-    margin: 0px;
-}
-
-.ask .btn-group li {
-    padding-bottom: 0px;
-}
-
-.ask .btn-group .dropdown-menu>li>a {
-    font-weight: normal;
-    font-size: 14px;
-}
-
-.ask .dropdown-menu .divider {
-height: 3px;
-margin: 0px 0;
-background-color: #E0DDB7;
-
-}
-
-/* Ask Sequence Tweaks For Tablet and Mobile */
-
+/* Ask Tweaks For Tablet and Mobile */
 @media (max-width: 768px) {
-    div.ask h2 {
-        clear: both;
-    }
+  .ask {
+    padding-bottom: 0px;
+  }
+  .ask h2 {
+    clear: both;
+  }
+  .ask .btn-group {
+    margin-top: 0px;
+  }
 
-    .ask .btn-group {
-        margin-top: 0px;
-    }
+  /* Hide desktop controls */
+  #left-arrow,
+  #right-arrow,
+  .next,
+  .next-small,
+  .pledge-buttons {
+    display: none;
+  }
 
-    #left-arrow,
-    #right-arrow {
-        display: none;
-    }
-
-    p.next {
-        display: none;
-    }
-
-    p.next-small {
-        display: inherit;
-    }
-
-    div.ask {
-        padding-bottom: 0px;
-    }
-
-    div.small-ask-pager {
-        display: inherit;
-    }
-
-    div.small-ask-pager a.next-btn {
-        float: right;
-    }
-
-    div.pledge-buttons {
-        display: none;
-    }
-
-    div.pledge-buttons-small {
-        display: inherit;
-    }
-
+  /* Show tablet/mobile controls */
+  .next-small,
+  .small-ask-pager,
+  .pledge-buttons-small {
+    display: inherit;
+  }
 }
-
-/* Mobile Tweaks (Header, Subheads, etc.) */
-
-@media (max-width: 991px) {
-    h1 {
-        margin-top: 25px;
-    }
-}
-
-
 @media (max-width: 384px) {
-    
-    .container {
-        padding: 0px 7px;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    body {
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 36px;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-    }
-
-    div#utility-nav {
-        display: none;
-    }
-
-    div.page-header {
-        margin-top: 20px;
-    }
-
-    img#logo {
-        width: 120px; /* TODO: Replace with a smaller image */
-        margin-bottom: 10px;
-    }
-
-    nav.navbar {
-        margin-bottom: 0px;
-    }
-
-    h2 {
-        font-size: 26px;
-    }
-
-    div.ask h2 {
-        font-size: 22px;
-    }
+  .ask h2 {
+    font-size: 22px;
+  }
 }
+
+/*# sourceMappingURL=styles.css.map */

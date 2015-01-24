@@ -25,11 +25,11 @@
         <th>Last Name</th>
         <th>Target</th>
         <th>Pledge</th>
-        <th class='center'>Pledge<br>Made?</th>
+        <th class="text-center">Pledge<br>Made?</th>
         <th class="date-col">Pledge Date</th>
-        <th class='center'>Okay to<br>Display?</th>
+        <th class="text-center">Okay to<br>Display?</th>
         <th>Display Name</th>
-        <th class='center'>Inaugural?</th>
+        <th class="text-center">Inaugural?</th>
         <th>Edit</th>
     </tr>
     </thead>
@@ -42,7 +42,7 @@
         <td>{{ $donor->last_name }}</td>
         <td>${{ number_format($donor->target_donation) }}</td>
         <td>${{ number_format($donor->pledge_amount) }}</td>
-        <td class='center'>
+        <td class="text-center">
             @if($donor->pledge_made_flag)
                 yes
             @else
@@ -56,7 +56,7 @@
                 &mdash;
             @endif
         </td>
-        <td class='center'>
+        <td class="text-center">
             @if($donor->pledge_made_flag)
                 @if($donor->display)
                     yes
@@ -68,7 +68,7 @@
             @endif
         </td>
         <td>{{ $donor->display_name }}</td>
-        <td class='center'>
+        <td class="text-center">
             @if($donor->pledge_made_flag)
                 @if($donor->inaugural)
                     yes
