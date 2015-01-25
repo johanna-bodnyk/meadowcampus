@@ -26,8 +26,33 @@ body {
   font-size: 16px;
 }
 
+/* Background Image Sizes */
+@media (max-width: 1366px) {
+  #background {
+    background-image: url("../images/background_1366px.jpg");
+  }
+}
+@media (max-width: 991px) {
+  #background {
+    background-image: url("../images/background_991px.jpg");
+  }
+}
+@media (max-width: 768px) {
+  #background {
+    background-image: url("../images/background_768px.jpg");
+  }
+}
+@media (max-width: 384px) {
+  #background {
+    background-image: url("../images/background_384px.jpg");
+  }
+}
+@media (min-width: 1367px) {
+  #background {
+    background-image: url("../images/background_1920px.jpg");
+  }
+}
 #background {
-  background-image: url("../images/background_7.jpg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -97,8 +122,7 @@ h1 {
 a.no-link-style {
   color: #0C7344;
 }
-a.no-link-style:hover {
-  color: #0C7344;
+a.no-link-style:hover, a.no-link-style:focus {
   text-decoration: none;
 }
 
@@ -163,11 +187,8 @@ address {
 }
 .nav-pills > li.pledge-button > a:hover, .nav-pills > li.pledge-button > a:focus {
   background-color: #449d44;
-  /* Bootstrap button colors */
   border-color: #398439;
-  /* Bootstrap button colors */
   background-position: 0 150px;
-  /* Fixes rollover issue, no clue why */
 }
 
 .caret {
@@ -303,7 +324,6 @@ nav.admin-nav span.navbar-brand {
 
   #logo {
     width: 120px;
-    /* TODO: Replace with a smaller image */
     margin-bottom: 10px;
   }
 
@@ -318,7 +338,6 @@ nav.admin-nav span.navbar-brand {
 #therm-img {
   position: relative;
   margin-top: 15px;
-  /* @keyframe rules are in thermometer-head.blade.php so % can be dynamic */
 }
 #therm-img > img {
   display: block;
@@ -393,9 +412,7 @@ nav.admin-nav span.navbar-brand {
   font-size: 22px;
   font-weight: bold;
   letter-spacing: -1px;
-  /*    padding-left: 25%;  Set in thermometer-head.blade.php so % can be dynamic */
   margin-left: -71px;
-  /* Shift left to align middle of number with thermomenter fill: value is width of "$0" + half of width of #current-value */
   opacity: 0;
   -webkit-animation: current ease-in 0.5s;
   animation: current ease-in 0.5s;
@@ -408,8 +425,6 @@ nav.admin-nav span.navbar-brand {
 /*================================
     General images and captions
 ================================*/
-/* See http://docs.ckeditor.com/#!/guide/dev_captionedimage-section-image-alignment-and-classes
-for more configuration options */
 figcaption {
   font-size: 0.8em;
   font-style: italic;
@@ -417,7 +432,6 @@ figcaption {
 
 figure {
   display: table;
-  /*    width: 1px; DOES NOT WORK WITH RESPONSIVE IMG STYLES */
   width: auto;
   margin-bottom: 10px;
 }
