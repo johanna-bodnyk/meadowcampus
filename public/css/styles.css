@@ -87,10 +87,10 @@ h3 {
 
 h1 {
   text-align: center;
-  font-size: 45px;
   margin-top: 10px;
   padding-bottom: 2px;
   font-family: "Calligraffitti", cursive;
+  font-size: 45px;
   font-weight: bold;
 }
 
@@ -150,8 +150,8 @@ address {
   margin: 0 15px;
   padding: 8px 15px;
   color: #316431;
-  font-weight: bold;
   font-size: 16px;
+  font-weight: bold;
   line-height: 1.15;
   background-color: #C7F4B1;
 }
@@ -362,8 +362,6 @@ nav.admin-nav span.navbar-brand {
 /* Dollar amount labels */
 #therm-values {
   padding-top: 5px;
-  font-size: 16px;
-  color: #333;
 }
 
 #start-value {
@@ -413,8 +411,8 @@ nav.admin-nav span.navbar-brand {
 /* See http://docs.ckeditor.com/#!/guide/dev_captionedimage-section-image-alignment-and-classes
 for more configuration options */
 figcaption {
+  font-size: 0.8em;
   font-style: italic;
-  font-size: .8em;
 }
 
 figure {
@@ -500,9 +498,9 @@ p.align-center img {
     Donors Page
 ================================*/
 .callout-number {
-  font-weight: bold;
-  font-size: 1.3em;
   color: #0C7344;
+  font-size: 1.3em;
+  font-weight: bold;
   letter-spacing: -1px;
 }
 
@@ -568,7 +566,7 @@ form.form-horizontal label {
 }
 
 form .help-block {
-  font-size: .85em;
+  font-size: 0.85em;
   font-style: italic;
   margin-bottom: 0px;
 }
@@ -615,8 +613,8 @@ form .help-block {
   padding-bottom: 0px;
 }
 .ask .btn-group .dropdown-menu > li > a {
-  font-weight: normal;
   font-size: 14px;
+  font-weight: normal;
 }
 .ask .btn-group .dropdown-menu .divider {
   height: 3px;
@@ -661,9 +659,9 @@ form .help-block {
 /* "Click to continue" paragraph on first slide */
 .next, .next-small {
   color: #0C7344;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
-  font-size: 24px;
   margin-top: 30px;
 }
 
