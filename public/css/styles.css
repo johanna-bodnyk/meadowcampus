@@ -550,7 +550,7 @@ p.align-center img {
 }
 .donors.display .donor-lists li {
   font-size: 17px;
-  padding-bottom: 4px;
+  padding-bottom: 0px;
 }
 
 /*================================

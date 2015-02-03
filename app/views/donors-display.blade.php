@@ -15,9 +15,6 @@
 @stop
 
 @section('content')
-
-    <h2>Campaign Progress</h2>
-
     <p class="lead">So far, <span class="callout-number">{{ $total['count'] }}</span> generous donors have made pledges and donations totaling <span class="callout-number">${{ $total['amount'] }}</span> (that's <span class="callout-number">${{ $total['monthly']}} </span> per month)!</p>
     
     @include('fragments.thermometer', array('total' => $total['amount']))
