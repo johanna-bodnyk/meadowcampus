@@ -12,7 +12,7 @@ class DonorController extends \BaseController {
 	}
 
 	
-    public function getIndex() {
+    public function getIndex($display = 'standard') {
         $groups = array(
                 'Alumni' => array(),
                 'Alumni Families' => array(),
@@ -51,12 +51,17 @@ class DonorController extends \BaseController {
         $total['monthly'] = number_format($pmt);
         $total['amount'] = number_format($total['amount']);
         
-        return View::make('donors')
+
+        $view = (($display == 'display') ? 'donors-display' : 'donors');
+
+        return View::make($view)
             ->with('groups', $groups)
             ->with('total', $total)
             ->with('percent', $percent)
             ->with('inaugural', $inaugural);
-    }
+
+
+}
 
     // public function setDisplayNames() {
     //     $donors = Donor::where('display', true)->get();

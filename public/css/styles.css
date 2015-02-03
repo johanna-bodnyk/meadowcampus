@@ -67,6 +67,12 @@ body.logged-in {
   padding-left: 40px;
   padding-right: 40px;
   min-height: 100%;
+  /* TV monitor page -- wider container */
+}
+.donors.display .container {
+  width: inherit;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 h1, h2, h3 {
@@ -117,6 +123,9 @@ h1 {
   font-family: "Calligraffitti", cursive;
   font-size: 45px;
   font-weight: bold;
+}
+.donors.display h1 {
+  font-size: 70px;
 }
 
 a.no-link-style {
@@ -338,6 +347,7 @@ nav.admin-nav span.navbar-brand {
 #therm-img {
   position: relative;
   margin-top: 15px;
+  /* TV monitor page -- center thermometer */
 }
 #therm-img > img {
   display: block;
@@ -355,6 +365,11 @@ nav.admin-nav span.navbar-brand {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
+.donors.display #therm-img {
+  width: 1030px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /* Thermometer bar */
 #therm {
@@ -364,6 +379,7 @@ nav.admin-nav span.navbar-brand {
   height: 15px;
   margin: 10px auto 50px;
   border: solid 3px #0C7344;
+  max-width: 1024px;
 }
 
 #therm-fill {
@@ -518,11 +534,23 @@ p.align-center img {
   letter-spacing: -1px;
 }
 
+.donor-lists {
+  /* TV monitor page -- donor list font adjustments */
+}
 .donor-lists h3 {
   text-align: left;
 }
+.donors.display .donor-lists h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
 .donor-lists li {
   padding-bottom: 6px;
+  /* TV monitor page -- donor list font adjustments */
+}
+.donors.display .donor-lists li {
+  font-size: 17px;
+  padding-bottom: 4px;
 }
 
 /*================================

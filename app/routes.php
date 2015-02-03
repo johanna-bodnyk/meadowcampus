@@ -63,7 +63,7 @@ Route::get('scenarios', function()
     return View::make('scenarios');
 });
 
-Route::get('donors', 'DonorController@getIndex');
+Route::get('donors/{display?}', 'DonorController@getIndex');
 
 
 /**
