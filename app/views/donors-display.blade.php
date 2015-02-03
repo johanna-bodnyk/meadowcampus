@@ -21,7 +21,7 @@
 
     <h3>Thank You to Our Donors!</h3>
     <div class="row donor-lists">
-        <div class="col-sm-3">
+        <div class="col-sm-2">
             <h4>Students</h4>
             <ul>
                 @foreach($groups['Current Students'] as $donor)
@@ -30,6 +30,8 @@
                     @endif
                 @endforeach
             </ul>
+        </div>
+        <div class="col-sm-2">
             <h4>Staff</h4>
             <ul>
                 @foreach($groups['Staff'] as $donor)
@@ -39,7 +41,7 @@
                 @endforeach
             </ul>           
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-2">
             <h4>Current Families</h4>
             <ul>
                 @foreach($groups['Current Families'] as $donor)
@@ -49,7 +51,7 @@
                 @endforeach
             </ul>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-2">
             <h4>Alumni</h4>
             <ul>
                 @foreach($groups['Alumni'] as $donor)
@@ -59,7 +61,7 @@
                 @endforeach
             </ul>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-2">
             <h4>Alumni Families</h4>
             <ul>
                 @foreach($groups['Alumni Families'] as $donor)
@@ -68,6 +70,8 @@
                     @endif
                 @endforeach
             </ul>
+        </div>
+        <div class="col-sm-2">
             <h4>Other Friends</h4>
             <ul>
                 @foreach($groups['Friends'] as $donor)
@@ -76,7 +80,9 @@
                     @endif
                 @endforeach
             </ul>
+
         </div>
+
 
     </div>
     @if($inaugural)
