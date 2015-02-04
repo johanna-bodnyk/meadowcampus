@@ -28,9 +28,9 @@
             </div>
             <p>The dream is a campus with <strong>meadow, woods, and creek,</strong> and a building that truly fits the school's self-directed democratic program.</p>
             <p>The dream is nearly <strong>8 acres and only a mile away.</strong> The property owner will donate the land as soon as the school community raises the funds to build.</p>
-            <p>Alumni are leading the charge, inviting you and all to join in, aiming for a hundred percent participation. Read on to hear the story, see the plans, and find out how <strong>everybody, even our youngest students at school, will be part of it.</strong></p>
-            <p class="next">Click the green arrow at the right to continue.</p>
-            <p class="next-small">Click "Next" to continue.</p>
+            <p>Alumni are leading the charge, inviting you and all to join in, aiming for a hundred percent participation. Read on to hear the story, see the plans, and find out how <strong>everybody, even our youngest students at school, will be part of it.</strong> <span class="next">(Click the green arrow, above right, to continue&hellip;)</span><span class="next-small">(Click the next button below to continue&hellip;)</span></p>
+<!--             <p class="next">Click the green arrow at the right to continue.</p>
+            <p class="next-small">Click "Next" to continue.</p> -->
 
         </div>
         <div class="col-sm-1" id="right-arrow"><a href="/help/2"></a></div>

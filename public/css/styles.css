@@ -703,17 +703,7 @@ form .help-block {
 }
 
 /* "Click to continue" paragraph on first slide */
-.next, .next-small {
-  color: #0C7344;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 30px;
-}
-
 .next-small {
-  font-size: 18px;
-  margin-top: 15px;
   display: none;
 }
 
@@ -751,16 +741,18 @@ div.pledge-buttons-small a {
   #left-arrow,
   #right-arrow,
   .next,
-  .next-small,
   .pledge-buttons {
     display: none;
   }
 
   /* Show tablet/mobile controls */
-  .next-small,
   .small-ask-pager,
   .pledge-buttons-small {
     display: inherit;
+  }
+
+  .next-small {
+    display: inline;
   }
 }
 @media (max-width: 384px) {
