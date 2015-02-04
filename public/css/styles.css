@@ -534,6 +534,10 @@ p.align-center img {
   letter-spacing: -1px;
 }
 
+.donors.display .lead {
+  text-align: center;
+}
+
 .donor-lists {
   /* TV monitor page -- donor list font adjustments */
 }

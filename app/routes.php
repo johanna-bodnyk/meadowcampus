@@ -63,9 +63,6 @@ Route::get('scenarios', function()
     return View::make('scenarios');
 });
 
-Route::get('donors/{display?}', 'DonorController@getIndex');
-
-
 /**
  * About the Project Section
  */
@@ -133,6 +130,9 @@ Route::post('donors/edit/{id}', 'DonorController@postEdit');
 Route::get('donors/confirm-delete/{id}', 'DonorController@getConfirmDelete');
 
 Route::post('donors/delete/{id}', 'DonorController@postDelete');
+
+Route::get('donors/{display?}', 'DonorController@getIndex');
+
 
 
 /**

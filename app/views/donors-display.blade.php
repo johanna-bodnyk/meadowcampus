@@ -14,12 +14,10 @@
     donors display
 @stop
 
-@section('content')
-    <p class="lead">So far, <span class="callout-number">{{ $total['count'] }}</span> generous donors have made pledges and donations totaling <span class="callout-number">${{ $total['amount'] }}</span> (that's <span class="callout-number">${{ $total['monthly']}} </span> per month)!</p>
-    
+@section('content')   
     @include('fragments.thermometer', array('total' => $total['amount']))
 
-    <h3>Thank You to Our Donors!</h3>
+    <p class="lead">So far, <span class="callout-number">{{ $total['count'] }}</span> generous donors have made pledges and donations totaling <span class="callout-number">${{ $total['amount'] }}</span> (that's <span class="callout-number">${{ $total['monthly']}} </span> per month)! Thank you!</p>
     <div class="row donor-lists">
         <div class="col-sm-2">
             <h4>Students</h4>
