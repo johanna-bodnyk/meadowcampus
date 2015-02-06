@@ -621,7 +621,7 @@ form .help-block {
     Ask Section
 ================================*/
 .ask {
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   /* "Jump to" dropdown */
 }
 .ask h2 {
@@ -702,7 +702,21 @@ form .help-block {
   float: right;
 }
 
-/* "Click to continue" paragraph on first slide */
+.slide-number {
+  clear: both;
+  margin-top: 20px;
+  color: #0C7344;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* "Click to continue" sentence on first slide */
+.next, .next-small {
+  background-color: #C7F4B1;
+  font-style: italic;
+}
+
 .next-small {
   display: none;
 }
@@ -741,7 +755,9 @@ div.pledge-buttons-small a {
   #left-arrow,
   #right-arrow,
   .next,
-  .pledge-buttons {
+  .next-small,
+  .pledge-buttons,
+  .slide-number {
     display: none;
   }
 

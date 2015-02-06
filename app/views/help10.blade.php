@@ -25,6 +25,7 @@
                 </div>
 
             <p><strong>Want to see more options?</strong> Click the next arrow to <a href="/scenarios" target="_blank">check out the calculators and make up your own scenario.</a></p>
+            <p class="slide-number">10 of 10</p>
         </div>
         <div class="col-sm-1" id="right-arrow"><a href="/scenarios" target="_blank"></a></div>
     </div>

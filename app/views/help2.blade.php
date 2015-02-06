@@ -14,6 +14,7 @@
             <p class="lead"><img src="/images/help/circle-school-front-400px.jpg" class="pull-left img-responsive">We love our "cottage" at 210 Oakleigh Avenue, where we've been nestled for 21 of our 30 years, with its 5,000 square feet of student space and 1.5 acres of yard.</p>
 
             <p>But especially <strong>after tripling enrollment</strong> in the last 15 years, we have longed for more woods and a creek and a room large enough for potluck suppers. <strong>So, years ago, we started a search...</strong></p>
+            <p class="slide-number">2 of 10</p>
         </div>
         <div class="col-sm-1" id="right-arrow"><a href="/help/3"></a></div>
     </div>

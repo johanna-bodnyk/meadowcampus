@@ -19,6 +19,7 @@
                 <li>Beth is determined that <strong>100% of current students will pledge</strong> something.</li>
             </ul>
             <p>And you? <strong>Where will you plug in?</strong></p>
+            <p class="slide-number">9 of 10</p>
         </div>
         <div class="col-sm-1" id="right-arrow"><a href="/help/10"></a></div>
     </div>

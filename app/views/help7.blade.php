@@ -23,6 +23,7 @@
             @include('fragments.thermometer', array('total' => $total))
             <p>The alumni, staff, and trustees who built this website have all pledged. <a href="/donors" target="_blank">Now we have many generous donors</a> who have together pledged <strong>${{$total}} to be paid over 10 years,</strong> leaving <strong>${{$remainder}}</strong> yet to raise in about the next month.
             <p>Wait! <strong>How can our community do that?</strong> Well...</p>
+            <p class="slide-number">7 of 10</p>
         </div>
         <div class="col-sm-1" id="right-arrow"><a href="/help/8"></a></div>
     </div>

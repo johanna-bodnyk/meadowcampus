@@ -15,6 +15,7 @@
             <p>Money's really tight? You are still and always a Circle Schooler, and we want every one of us to own the place. If you can chip in just $6.44 a month, you can secure <strong>a thousand dollars</strong> for the new campus. Here's how:</p>
             <p>If you make a monthly pledge, the school can borrow money (at low or no interest from an angel lender) and use your monthly gift to pay back the loan. <strong>If you give $64.40 per month, and if you continue for 10 years (compounded at 5%), the school will gain $10,000.</strong></p>
             <p>You should know...</p>
+            <p class="slide-number">8 of 10</p>
         </div>
         <div class="col-sm-1" id="right-arrow"><a href="/help/9"></a></div>
     </div>

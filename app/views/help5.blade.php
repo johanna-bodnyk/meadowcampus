@@ -28,6 +28,7 @@
             </div>
             <p>It's the first site we saw, in eight years of looking, that meets <strong>all the criteria on the dream checklist.</strong> It's in the heart of the target area, and <strong>reduces commuting time</strong> by a minute or two for almost everyone (<a id="links2" href="/images/help/commute-times.png" title='Comparison of Commute Times Between Oakleigh and Properties Considered'>click here to see commute times</a>). And it's the first site whose owner offered to donate the land!</p>
             <p><strong>And the building?</strong> Well...</p>
+            <p class="slide-number">5 of 10</p>
         </div>
         <div class="col-sm-1" id="right-arrow"><a href="/help/6"></a></div>
     </div>
