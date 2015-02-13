@@ -23,6 +23,8 @@
                         <figcaption>Click to enlarge.</figcaption>
                     </figure>
                 </a>
+                <a href="/images/help/rendering-2.png" title='Schematic design rendering &mdash; "View at Front Entry" &mdash; 10/17/2014' data-gallery class="hide"></a>
+                <a href="/images/help/rendering-1.png" title='Schematic design rendering &mdash; "Front Elevation" &mdash; 10/17/2014' data-gallery class="hide"></a>
             </div>
             <p>As of November 2014, an informal Meadow Campus design team has completed the "Schematic Design Phase", resulting in this tentative floor plan that calls for <strong>8,000 square feet of program space,</strong> including a large activity room suitable for <strong>community-wide potlucks, student performances, the Holiday Bazaar, the Spring Gala,</strong> and other grand events.</p>
             <p>That's awesome, you say, but...</p>
