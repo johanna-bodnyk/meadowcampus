@@ -541,20 +541,28 @@ p.align-center img {
 .donor-lists {
   /* TV monitor page -- donor list font adjustments */
 }
-.donor-lists h3 {
-  text-align: left;
+.donor-lists h4 {
+  font-size: 16px;
+  font-weight: bold;
 }
 .donors.display .donor-lists h4 {
   font-size: 20px;
   font-weight: bold;
 }
 .donor-lists li {
-  padding-bottom: 6px;
+  padding-bottom: 2px;
+  font-size: 14px;
   /* TV monitor page -- donor list font adjustments */
 }
 .donors.display .donor-lists li {
   font-size: 17px;
   padding-bottom: 0px;
+}
+.donor-lists ul {
+  padding-left: 30px;
+}
+.donors.display .donor-lists ul {
+  padding-left: 40px;
 }
 
 /*================================

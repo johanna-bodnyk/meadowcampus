@@ -14,12 +14,13 @@ class DonorController extends \BaseController {
 	
     public function getIndex($display = 'standard') {
         $groups = array(
+                'School Meeting' => array(),
                 'Alumni' => array(),
                 'Alumni Families' => array(),
                 'Current Families' => array(),
+                'Friends' => array(),
                 'Current Students' => array(),
-                'Staff' => array(),
-                'Friends' => array()
+                'Staff' => array()
             );
 
         $total = array(
@@ -30,12 +31,19 @@ class DonorController extends \BaseController {
         $inaugural = false;
 
         foreach ($groups as $group_name => $group_values) {
-            $group = Donor::group($group_name)->orderBy('last_name')->get();
-            $count = $group->count();
-            $amount = $group->sum('pledge_amount');
+            if ($group_name == "School Meeting") {
+                $group = Donor::schoolMeeting()->orderBy('last_name')->get();
+            }
+            else {
+                $group = Donor::group($group_name)->orderBy('last_name')->get();
+                $count = $group->count();
+                $amount = $group->sum('pledge_amount');
+                $total['count'] += $count;
+                $total['amount'] += $amount;
+            }
+
             $groups[$group_name] = $group;
-            $total['count'] += $count;
-            $total['amount'] += $amount;
+
             if (in_array(true, $group->lists('inaugural'))) {
                 $inaugural = true;
             }

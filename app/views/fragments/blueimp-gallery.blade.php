@@ -11,12 +11,18 @@
     <script src="{{ URL::asset('packages/blueimp/js/blueimp-gallery.min.js') }}"></script>
 
     <script>
+
         document.getElementById('links').onclick = function (event) {
             event = event || window.event;
             var target = event.target || event.srcElement,
                 link = target.parentNode.parentNode,
-                options = {index: link, event: event},
+                options = {index: link, 
+                            event: event},
                 links = this.getElementsByTagName('a');
             blueimp.Gallery(links, options);
+            var slideImages = document.getElementsByClassName('slide-content');
+            for (var i = 0; i < slideImages.length; i++) {
+                slideImages[i].style.maxWidth = '50%';
+            }
         };
     </script>

@@ -23,16 +23,19 @@
     @include('fragments.thermometer', array('total' => $total['amount']))
 
     <h3>Thank You to Our Donors!</h3>
+    <p>Over 90% of students (and 100% of staff!) have made gifts, ranging from a few cents to over $100. The School Meeting members listed below have made particularly noteworthy contributions.</p>
     <div class="row donor-lists">
-        <div class="col-sm-4">
-            <h4>Students</h4>
+        <div class="col-sm-6 col-md-3">
+            <h4>School Meeting</h4>
             <ul>
-                @foreach($groups['Current Students'] as $donor)
+                @foreach($groups['School Meeting'] as $donor)
                     @if($donor->display)
                         <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
                     @endif
                 @endforeach
-            </ul>
+            </ul>         
+        </div>
+        <div class="col-sm-6 col-md-3">
             <h4>Current Families</h4>
             <ul>
                 @foreach($groups['Current Families'] as $donor)
@@ -40,17 +43,9 @@
                         <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
                     @endif
                 @endforeach
-            </ul>
-            <h4>Staff</h4>
-            <ul>
-                @foreach($groups['Staff'] as $donor)
-                    @if($donor->display)
-                        <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
-                    @endif
-                @endforeach
-            </ul>           
+            </ul>        
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6 col-md-3">
             <h4>Alumni</h4>
             <ul>
                 @foreach($groups['Alumni'] as $donor)
@@ -59,9 +54,7 @@
                     @endif
                 @endforeach
             </ul>
-        </div>
-        <div class="col-sm-4">
-            <h4>Alumni Families</h4>
+             <h4>Alumni Families</h4>
             <ul>
                 @foreach($groups['Alumni Families'] as $donor)
                     @if($donor->display)
@@ -69,6 +62,8 @@
                     @endif
                 @endforeach
             </ul>
+        </div>
+        <div class="col-sm-6 col-md-3">
             <h4>Other Friends</h4>
             <ul>
                 @foreach($groups['Friends'] as $donor)

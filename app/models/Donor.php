@@ -20,6 +20,11 @@
             return $query->where('donor_group', '=', $group)
                 ->where('pledge_made_flag', '=', true);
         }
+
+        public function scopeSchoolMeeting($query) {
+            return $query->whereIn('donor_group', array('Current Students', 'Staff'))
+                ->where('pledge_made_flag', '=', true);
+        }
     }
 
 ?>
