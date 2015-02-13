@@ -20,7 +20,7 @@
                 <a href="/images/help/floor-plan.png" title='Schematic design rendering &mdash; "Floor Plan" &mdash; 10/17/2014' data-gallery>
                     <figure class="pull-right image">
                         <img class="img-responsive" src="/images/help/floor-plan-400px.png" alt="Floor plan">
-                        <figcaption>Click to enlarge.</figcaption>
+                        <figcaption>Click to enlarge and view architect's renderings.</figcaption>
                     </figure>
                 </a>
                 <a href="/images/help/rendering-2.png" title='Schematic design rendering &mdash; "View at Front Entry" &mdash; 10/17/2014' data-gallery class="hide"></a>
