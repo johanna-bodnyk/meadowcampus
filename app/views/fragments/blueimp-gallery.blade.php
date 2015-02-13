@@ -22,7 +22,8 @@
             blueimp.Gallery(links, options);
             var slideImages = document.getElementsByClassName('slide-content');
             for (var i = 0; i < slideImages.length; i++) {
-                slideImages[i].style.maxWidth = '50%';
+                slideImages[i].style.maxWidth = window.innerWidth+"px";
             }
+            console.log(window.innerWidth);
         };
     </script>
