@@ -16,21 +16,10 @@
             @include('fragments.ask-dropdown')
             <h2>The Circle School needs your help</h2>
             <p class="lead">The Circle School needs <em>your</em> help to make a once-in-a-lifetime dream come true.</p>
-            <div id="links">
-                    <a href="/images/help/rendering-2.png" title='Schematic design rendering &mdash; "View at Front Entry" &mdash; 10/17/2014' data-gallery>
-                        <figure class="image pull-right">
-                            <img class="img-responsive" src="/images/help/rendering-2-500px.png" alt="Design Rendering">
-                            <figcaption>Click to enlarge and view additional rendering.</figcaption>
-                        </figure>
-                    </a>
-                <a href="/images/help/rendering-1.png" title='Schematic design rendering &mdash; "Front Elevation" &mdash; 10/17/2014' data-gallery class="hide">
-                </a>
+            <p>The dream is a campus with <strong>meadow, woods, and creek</strong>&mdash;nearly <strong>8 acres and only a mile away</strong>&mdash;and a building that truly fits the school's self-directed democratic program. The property owner will <strong>donate the land</strong> as soon as the school community raises the funds to build. Check out the video below to find out more and learn how you can help, or click the <span class="next">green arrow at the right</span><span class="next-small">"Next" button at the bottom of the page</span> to explore on your own.</p>
+            <div class="video-container">
+                <iframe width="640" height="390" src="https://www.youtube.com/embed/vxNoFpg_J2c" frameborder="0" allowfullscreen></iframe>
             </div>
-            <p>The dream is a campus with <strong>meadow, woods, and creek,</strong> and a building that truly fits the school's self-directed democratic program.</p>
-            <p>The dream is nearly <strong>8 acres and only a mile away.</strong> The property owner will donate the land as soon as the school community raises the funds to build.</p>
-            <p>Alumni are leading the charge, inviting you and all to join in, aiming for a hundred percent participation. Read on to hear the story, see the plans, and find out how <strong>everybody, even our youngest students at school, will be part of it.</strong> <span class="next">Click the green arrow at the right to continue&hellip;</span><span class="next-small">Click the "Next" button below to continue&hellip;</span></p>
-<!--             <p class="next">Click the green arrow at the right to continue.</p>
-            <p class="next-small">Click "Next" to continue.</p> -->
             <p class="slide-number">1 of 10</p>
         </div>
         <div class="col-sm-1" id="right-arrow"><a href="/help/2"></a></div>
