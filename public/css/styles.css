@@ -540,6 +540,7 @@ p.align-center img {
 
 .donor-lists {
   /* TV monitor page -- donor list font adjustments */
+  /* Pad top of second column of families for display version */
 }
 .donor-lists h4 {
   font-size: 16px;
@@ -563,6 +564,9 @@ p.align-center img {
 }
 .donors.display .donor-lists ul {
   padding-left: 40px;
+}
+.donor-lists div ul:first-child {
+  margin-top: 42px;
 }
 
 /*================================

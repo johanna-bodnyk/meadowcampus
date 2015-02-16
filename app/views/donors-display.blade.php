@@ -20,33 +20,32 @@
     <p class="lead">So far, <span class="callout-number">{{ $total['count'] }}</span> generous donors have made pledges and donations totaling <span class="callout-number">${{ $total['amount'] }}</span> (that's <span class="callout-number">${{ $total['monthly']}} </span> per month)! Thank you!</p>
     <div class="row donor-lists">
         <div class="col-sm-2">
-            <h4>Students</h4>
+            <h4>School Meeting</h4>
             <ul>
-                @foreach($groups['Current Students'] as $donor)
+                @foreach($groups['School Meeting'] as $donor)
                     @if($donor->display)
                         <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
                     @endif
                 @endforeach
-            </ul>
-        </div>
-        <div class="col-sm-2">
-            <h4>Staff</h4>
-            <ul>
-                @foreach($groups['Staff'] as $donor)
-                    @if($donor->display)
-                        <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
-                    @endif
-                @endforeach
-            </ul>           
+            </ul>         
         </div>
         <div class="col-sm-2">
             <h4>Current Families</h4>
             <ul>
-                @foreach($groups['Current Families'] as $donor)
-                    @if($donor->display)
-                        <li>{{ $donor->display_name }}@if($donor->inaugural)*@endif</li>
+                @for($i = 0; $i < (int)(((count($groups['Current Families']))/2)+.5); $i++)
+                    @if($groups['Current Families'][$i]->display)
+                        <li>{{ $groups['Current Families'][$i]->display_name }}@if($groups['Current Families'][$i]->inaugural)*@endif</li>
                     @endif
-                @endforeach
+                @endfor
+            </ul>
+        </div>
+        <div class="col-sm-2">
+            <ul>
+                @for($i = (int)(((count($groups['Current Families']))/2)+.5); $i < (count($groups['Current Families'])); $i++)
+                    @if($groups['Current Families'][$i]->display)
+                        <li>{{ $groups['Current Families'][$i]->display_name }}@if($groups['Current Families'][$i]->inaugural)*@endif</li>
+                    @endif
+                @endfor
             </ul>
         </div>
         <div class="col-sm-2">
