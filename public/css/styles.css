@@ -698,7 +698,8 @@ form .help-block {
 
 /* Image overlay title */
 .blueimp-gallery > .title {
-  color: #13C831 !important;
+  text-shadow: 1px 1px 8px #000 !important;
+  opacity: 1 !important;
 }
 
 #left-arrow > a {
