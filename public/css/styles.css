@@ -460,6 +460,9 @@ figure img, figcaption {
 /*================================
     Updates Section & Admin
 ================================*/
+.updates h3 {
+  text-align: left;
+}
 .updates small {
   font-style: italic;
   display: block;
@@ -474,6 +477,25 @@ figure img, figcaption {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+/* Archive Menu */
+.archive-menu {
+  background-color: #F0EEDB;
+  border-radius: 10px;
+}
+.archive-menu h3 {
+  font-size: 19px;
+  text-align: left;
+  margin-top: 0px;
+  padding-top: 20px;
+}
+.archive-menu ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+.archive-menu li {
+  font-size: 14px;
 }
 
 /* Image Spacing */
