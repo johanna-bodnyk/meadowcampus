@@ -11,21 +11,34 @@
     <script src="{{ URL::asset('packages/blueimp/js/blueimp-gallery.min.js') }}"></script>
 
     <script>
-        document.getElementById('links').onclick = function (event) {
-            event = event || window.event;
-            var target = event.target || event.srcElement,
-                link = target.parentNode.parentNode,
-                options = {index: link, event: event},
-                links = this.getElementsByTagName('a');
-            blueimp.Gallery(links, options);
-        };
+        var linkies = document.getElementsByClassName('linkies');
 
-        document.getElementById('links2').onclick = function (event) {
-            event = event || window.event;
-            var target = event.target || event.srcElement,
-                link = target.parentNode.parentNode,
-                options = {index: link, event: event},
-                links = this.getElementsByTagName('a');
-            blueimp.Gallery(links, options);
-        };
+        for (var i = 0; i < linkies.length; i++) {
+            linkies[i].onclick = function (event) {
+                event = event || window.event;
+                var target = event.target || event.srcElement,
+                    link = target.parentNode.parentNode,
+                    options = {index: link, event: event},
+                    links = this.getElementsByTagName('a');
+                blueimp.Gallery(links, options);
+            };
+        }
+
+        // document.getElementById('links').onclick = function (event) {
+        //     event = event || window.event;
+        //     var target = event.target || event.srcElement,
+        //         link = target.parentNode.parentNode,
+        //         options = {index: link, event: event},
+        //         links = this.getElementsByTagName('a');
+        //     blueimp.Gallery(links, options);
+        // };
+
+        // document.getElementById('links2').onclick = function (event) {
+        //     event = event || window.event;
+        //     var target = event.target || event.srcElement,
+        //         link = target.parentNode.parentNode,
+        //         options = {index: link, event: event},
+        //         links = this.getElementsByTagName('a');
+        //     blueimp.Gallery(links, options);
+        // };
     </script>
