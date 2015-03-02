@@ -23,7 +23,7 @@
     @include('fragments.thermometer', array('total' => $total['amount']))
 
     <h3>Thank You to Our Donors!</h3>
-    <p>Over 90% of students (and 100% of staff!) have made gifts, ranging from a few cents to over $100. The School Meeting members listed below have made particularly noteworthy contributions.</p>
+    <p>How about 100% of School Meeting members (that's students and staff) have made gifts, ranging from a few cents to over $100. The School Meeting members listed below have made particularly noteworthy contributions.</p>
     <div class="row donor-lists">
         <div class="col-sm-6 col-md-3">
             <h4>School Meeting</h4>
