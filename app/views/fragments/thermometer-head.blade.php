@@ -12,12 +12,14 @@
             padding-left: {{$percent}}%;
         }
 
-        @keyframes thermometer-image {
-            from {clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);}
-            to {clip-path: polygon(0% 0%, {{$percent}}% 0%, {{$percent}}% 100%, 0% 100%);}
-        }
+
 
         @-webkit-keyframes thermometer-image {
             from {-webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);}
             to {-webkit-clip-path: polygon(0% 0%, {{$percent}}% 0%, {{$percent}}% 100%, 0% 100%);}
         }
+
+        {{--@keyframes thermometer-image {--}}
+            {{--from {clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);}--}}
+            {{--to {clip-path: polygon(0% 0%, {{$percent}}% 0%, {{$percent}}% 100%, 0% 100%);}--}}
+        {{--}--}}

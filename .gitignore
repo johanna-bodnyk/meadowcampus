@@ -9,3 +9,4 @@ environment.php
 /public/images/posts
 /sass
 /public/.htaccess
+.idea/
