@@ -6,4 +6,6 @@ View the live site at [http://meadowcampus.org]([http://meadowcampus.org)
 
 Built with [Laravel 4.2](http://laravel.com/) and [Twitter Bootstrap](http://getbootstrap.com/2.3.2/).
 
+<br>
+
 &copy; 2015 Johanna Bodnyk, all rights reserved.
