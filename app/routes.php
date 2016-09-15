@@ -67,6 +67,10 @@ Route::get('scenarios', function()
  * About the Project Section
  */
 
+Route::get('meadowcam', function() {
+    return View::make('meadowcam');
+});
+
 // Route::get('plans', function() {
 //     echo 'Page coming soon. <a href="/">Return to homepage</a>';
 // });
