@@ -18,10 +18,11 @@
             @include('fragments.ask-dropdown')
             <h2>What's the budget?</h2>
             <p class="lead">I'm so glad you asked! The budget is $2.6 million. Can you cover that?</p>
-            <p>Just kidding (or half kidding). Most of the budget is covered by a generous alumni family and the George M. Leader Family Corporation's gift of the land, leaving <strong>$750,000 to be raised by The Circle School community.</strong> That's you and me.</p>
+            <p>With decades of School Meeting's thrifty savings, and a very generous donation from alumni parents Richard &amp; Barbara Schiffrin, the school has $1.1 million to put towards construction. Fulton Bank is financing the rest with a mortgage loan of $1.5 million at 4% interest.</p>
+            <p>How will the school meet its new monthly mortgage payments? We expect increased enrollment enabled by the new campus to cover roughly half. The rest? That's you and me! <strong>Together we will pledge and meet the need of $750,000 over 10 years.</strong></p>
             <p>Here's what we've got so far:</p>
             @include('fragments.thermometer', array('total' => $total))
-            <p>The alumni, staff, and trustees who built this website have all pledged. <a href="/donors" target="_blank">Now we have many generous donors</a> who have together pledged <strong>${{$total}} to be paid over 10 years,</strong> leaving <strong>${{$remainder}}</strong> yet to raise in about the next month.
+            <p><a href="/donors" target="_blank">Over 100 generous donors,</a> including students, staff, alumni, and trustees, have together pledged <strong>${{$total}} to be paid over 10 years,</strong> leaving <strong>${{$remainder}}</strong> yet to raise.
             <p>Wait! <strong>How can our community do that?</strong> Well...</p>
             <p class="slide-number">7 of 10</p>
         </div>

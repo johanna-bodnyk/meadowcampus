@@ -14,9 +14,8 @@
             <p class="lead">Your gift, at any level, is meaningful.</p>
             <ul>
                 <li><img src="/images/help/sophia-building-fund-400px_revised.jpg" class="pull-left img-responsive" style="margin-left:-40px"><a href="/donors" target="_blank">{{ $number }} donors have pledged so far (click to view a list).</a></li>
-                <li>100% of staff have already pledged.</li>
                 <li>100% of trustees have already pledged.</li>
-                <li>Beth is determined that <strong>100% of current students will pledge</strong> something.</li>
+                <li>In a campaign at school, 100% of staff and <strong>nearly 100% of students (including the youngest) pledged or contributed.</strong></li>
             </ul>
             <p>And you? <strong>Where will you plug in?</strong></p>
             <p class="slide-number">9 of 10</p>

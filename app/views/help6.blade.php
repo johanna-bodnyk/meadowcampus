@@ -27,8 +27,7 @@
                 <a href="/images/help/rendering-1.png" title='Schematic design rendering &mdash; "Front Elevation" &mdash; 10/17/2014' data-gallery class="hide"></a>
                 <a href="/images/help/commons-2.png" title='Schematic design rendering &mdash; "Interior View of Commons Area" &mdash; 2/19/2014' data-gallery class="hide"></a>
             </div>
-            <p>As of November 2014, an informal Meadow Campus design team has completed the "Schematic Design Phase", resulting in this tentative floor plan that calls for <strong>8,000 square feet of program space,</strong> including a large activity room suitable for <strong>community-wide potlucks, student performances, the Holiday Bazaar, the Spring Gala,</strong> and other grand events.</p>
-            <p>That's awesome, you say, but...</p>
+            <p>In 2015 the Meadow Campus team completed the design, which includes a large activity room suitable for <strong>community-wide potlucks, student performances, the Holiday Bazaar, the Spring Gala,</strong> and other grand events. By mid-2016, with the design/build contractor Pyramid Construction Services on board, the team had established final budgets, secured bank financing, and engaged local subcontractors. {{--With a host of public officials and other dignitaries assembled, a Groundbreaking Ceremony on September 27, 2016, launched the construction phase.--}}</p>
             <p class="slide-number">6 of 10</p>
         </div>
         <div class="col-sm-1" id="right-arrow"><a href="/help/7"></a></div>

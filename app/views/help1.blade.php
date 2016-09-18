@@ -16,7 +16,7 @@
             @include('fragments.ask-dropdown')
             <h2>The Circle School needs your help</h2>
             <p class="lead">The Circle School needs <em>your</em> help to make a once-in-a-lifetime dream come true.</p>
-            <p>The dream is a campus with <strong>meadow, woods, and creek</strong>&mdash;nearly <strong>8 acres and only a mile away</strong>&mdash;and a building that truly fits the school's self-directed democratic program. The property owner will <strong>donate the land</strong> as soon as the school community raises the funds to build. Check out the video below to find out more and learn how you can help, or click the <span class="next">green arrow at the right</span><span class="next-small">"Next" button at the bottom of the page</span> to explore on your own.</p>
+            <p>The dream is a campus with <strong>meadow, woods, and creek</strong>&mdash;nearly <strong>8 acres and only a mile away</strong>&mdash;and a building that truly fits the school's self-directed democratic program. The George M. Leader Family Corporation has generously <strong>donated the land</strong>. Now the school community is raising the funds for construction. Check out the video below to find out more and learn how you can help, or click the <span class="next">green arrow at the right</span><span class="next-small">"Next" button at the bottom of the page</span> to explore on your own.</p>
             <div class="video-container">
                 <iframe width="640" height="390" src="https://www.youtube.com/embed/vxNoFpg_J2c" frameborder="0" allowfullscreen></iframe>
             </div>
