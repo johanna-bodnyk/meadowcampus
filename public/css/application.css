@@ -1,0 +1,700 @@
+@import url(http://fonts.googleapis.com/css?family=Calligraffitti);
+/* From: http://www.sitepoint.com/sass-mixins-kickstart-project/ */
+#background, #header {
+  box-shadow: inset 0 0 0 1000px rgba(126, 231, 126, 0.21); }
+
+#logo, p.align-center img, div.align-center figure {
+  margin-right: auto;
+  margin-left: auto; }
+
+#therm-img > img, .google-chart > div, .dashboard-table {
+  margin: 0px auto; }
+
+/*================================
+    General 
+================================*/
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 16px; }
+
+/* Background Image Sizes */
+@media (max-width: 1366px) {
+  #background {
+    background-image: url("../images/background_1366px.jpg"); } }
+@media (max-width: 991px) {
+  #background {
+    background-image: url("../images/background_991px.jpg"); } }
+@media (max-width: 768px) {
+  #background {
+    background-image: url("../images/background_768px.jpg"); } }
+@media (max-width: 384px) {
+  #background {
+    background-image: url("../images/background_384px.jpg"); } }
+@media (min-width: 1367px) {
+  #background {
+    background-image: url("../images/background_1920px.jpg"); } }
+#background {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  min-height: 80%; }
+
+body.logged-in {
+  padding-top: 30px; }
+
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+  min-height: 100%;
+  /* TV monitor page -- wider container */ }
+  .donors.display .container {
+    width: inherit;
+    padding-left: 100px;
+    padding-right: 100px; }
+
+h1, h2, h3 {
+  color: #0C7344; }
+
+h2 {
+  font-size: 34px;
+  margin-top: 7px; }
+
+h3 {
+  text-align: center;
+  font-size: 22px; }
+
+.main {
+  min-height: 100%;
+  padding-bottom: 40px; }
+
+.content {
+  background-color: rgba(252, 252, 248, 0.96);
+  padding: 20px 30px;
+  border-radius: 10px; }
+
+.content li {
+  padding-bottom: 15px; }
+
+.clear-both {
+  clear: both; }
+
+/*================================
+    Header 
+================================*/
+#header > div.container {
+  min-height: 0; }
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 2px;
+  font-family: "Calligraffitti", cursive;
+  font-size: 45px;
+  font-weight: bold; }
+  .donors.display h1 {
+    font-size: 70px; }
+
+a.no-link-style {
+  color: #0C7344; }
+  a.no-link-style:hover, a.no-link-style:focus {
+    text-decoration: none; }
+
+.page-header {
+  border: none;
+  margin: 40px 0 0; }
+
+#logo {
+  display: block; }
+
+/*================================
+    Footer 
+================================*/
+.footer {
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5); }
+  .footer a {
+    color: white;
+    text-decoration: underline; }
+
+address {
+  margin-bottom: 5px; }
+
+#login {
+  text-align: right; }
+
+/*================================
+    Navigation
+================================*/
+.navbar-default {
+  background: none;
+  border: none;
+  box-shadow: none; }
+
+/* Nav buttons */
+.nav-pills > li {
+  /* Pledge Now button */ }
+  .nav-pills > li > a, .nav-pills > li > a:focus {
+    border-radius: 8px;
+    margin: 0 15px;
+    padding: 8px 15px;
+    color: #316431;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.15;
+    background-color: #C7F4B1; }
+  .nav-pills > li > a:hover, .nav-pills > li.open > a, .nav-pills > li.open > a:hover, .nav-pills > li.open > a:focus {
+    background-color: #E0DDB7; }
+  .nav-pills > li.pledge-button > a {
+    color: white; }
+    .nav-pills > li.pledge-button > a:hover, .nav-pills > li.pledge-button > a:focus {
+      background-color: #449d44;
+      border-color: #398439;
+      background-position: 0 150px; }
+
+.caret {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px inherit white; }
+
+/* Nav Dropdowns */
+.dropdown-menu {
+  margin: 0 15px;
+  background-color: #F0EEDB;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: none; }
+  .dropdown-menu > li > a {
+    color: #316431;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 10px; }
+    .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+      color: #316431;
+      background-color: #E0DDB7;
+      background-image: none; }
+
+/*================================
+    Mobile (collapsed) Nav
+================================*/
+/* Hamburger */
+.navbar-default button.navbar-toggle {
+  background-color: #0C7344;
+  border-color: #FCFCF8; }
+  .navbar-default button.navbar-toggle:hover, .navbar-default button.navbar-toggle:focus {
+    background-color: #C7F4B1; }
+  .navbar-default button.navbar-toggle .icon-bar {
+    background-color: #FCFCF8; }
+
+@media (max-width: 768px) {
+  .nav-pills > li > a,
+  .nav-pills > li > a:hover,
+  .nav-pills > li > a:focus {
+    margin-bottom: 10px; }
+
+  .dropdown-menu {
+    margin-top: -10px; } }
+.navbar-collapse.in {
+  overflow-y: visible; }
+
+.navbar-collapse {
+  border: none; }
+
+/*================================
+    Utility Nav
+================================*/
+#utility-nav {
+  float: right;
+  margin-top: 10px;
+  font-size: .85em; }
+  #utility-nav a {
+    color: #0C7344; }
+
+/*================================
+    Admin Nav
+================================*/
+nav.admin-nav {
+  background-color: #DDD;
+  height: 30px;
+  min-height: 30px; }
+  nav.admin-nav a, nav.admin-nav span.navbar-brand {
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  nav.admin-nav a {
+    color: #0C7344; }
+  nav.admin-nav span.navbar-brand {
+    font-size: inherit;
+    font-weight: bold; }
+
+/*================================
+    General Mobile Tweaks
+================================*/
+@media (max-width: 991px) {
+  h1 {
+    margin-top: 25px; } }
+@media (max-width: 384px) {
+  .container {
+    padding: 0px 7px; }
+
+  .content {
+    padding: 20px; }
+
+  body {
+    font-size: 14px; }
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 0px;
+    padding-bottom: 0px; }
+
+  h2 {
+    font-size: 26px; }
+
+  #utility-nav {
+    display: none; }
+
+  .page-header {
+    margin-top: 20px; }
+
+  #logo {
+    width: 120px;
+    margin-bottom: 10px; }
+
+  .navbar {
+    margin-bottom: 0px; } }
+/*================================
+    Homepage
+================================*/
+.index h3 {
+  text-align: left; }
+.index #updates img {
+  width: 40%;
+  margin: 0 10px 10px 0;
+  float: left; }
+.index #updates h4 {
+  clear: both;
+  margin-bottom: 2px; }
+.index #updates p {
+  font-size: 14px;
+  margin-bottom: 5px; }
+.index #updates .date {
+  font-style: italic;
+  font-size: 13px; }
+.index #updates .link {
+  text-align: right; }
+.index #updates hr {
+  clear: both; }
+
+/*================================
+    Thermometer
+================================*/
+/* Image */
+#therm-img {
+  position: relative;
+  margin-top: 15px;
+  /* TV monitor page -- center thermometer */ }
+  #therm-img > img {
+    display: block; }
+  #therm-img > img#color-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    -webkit-animation: thermometer-image ease-in 1.5s;
+    animation: thermometer-image ease-in 1.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s; }
+  .donors.display #therm-img {
+    width: 1030px;
+    margin-right: auto;
+    margin-left: auto; }
+
+/* Thermometer bar */
+#therm {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 15px;
+  margin: 10px auto 50px;
+  border: solid 3px #0C7344;
+  max-width: 1024px; }
+
+#therm-fill {
+  height: 15px;
+  background-color: #0C7344;
+  width: 0%;
+  -webkit-animation: thermometer ease-in 1.5s;
+  animation: thermometer ease-in 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+
+/* Dollar amount labels */
+#therm-values {
+  padding-top: 5px; }
+
+#start-value {
+  float: left; }
+
+#end-value {
+  float: right; }
+
+@keyframes current {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes current {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+#current-value {
+  color: #0C7344;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin-left: -71px;
+  opacity: 0;
+  -webkit-animation: current ease-in 0.5s;
+  animation: current ease-in 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
+
+/*================================
+    General images and captions
+================================*/
+figcaption {
+  font-size: 0.8em;
+  font-style: italic; }
+
+figure {
+  display: table;
+  width: auto;
+  margin-bottom: 10px; }
+
+figure img, figcaption {
+  display: table-row;
+  margin-bottom: 5px; }
+
+/*================================
+    Meadowcam
+================================*/
+.meadowcam .gallery img {
+  width: 45%;
+  margin-left: 10px;
+  margin-top: 10px; }
+
+/*================================
+    Updates Section & Admin
+================================*/
+.updates h3 {
+  text-align: left; }
+.updates small {
+  font-style: italic;
+  display: block;
+  padding-bottom: 10px; }
+.updates .back {
+  text-align: right; }
+.updates .content img {
+  border: 1px solid #999;
+  margin-bottom: 5px;
+  display: block;
+  max-width: 100%;
+  height: auto; }
+.updates .alignright {
+  clear: right;
+  float: right;
+  margin: 10px 0 10px 10px; }
+.updates .alignleft {
+  clear: left;
+  float: left;
+  margin: 10px 10px 10px 0; }
+.updates .wp-caption .wp-caption-text {
+  font-size: 14px;
+  font-style: italic; }
+
+/* Archive Menu */
+.archive-menu {
+  background-color: #F0EEDB;
+  border-radius: 10px; }
+  .archive-menu h3 {
+    font-size: 19px;
+    text-align: left;
+    margin-top: 0px;
+    padding-top: 20px; }
+  .archive-menu ul {
+    list-style-type: none;
+    padding-left: 0px; }
+  .archive-menu li {
+    font-size: 14px; }
+
+/* Image Spacing */
+.pull-left {
+  margin-right: 15px; }
+  li .pull-left {
+    margin-right: 30px; }
+
+.pull-right {
+  margin-left: 15px; }
+
+p.align-center img {
+  display: block; }
+
+/* Updates Admin */
+#save-button,
+#delete-button,
+#cancel-button {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px; }
+
+.button-group {
+  padding-top: 20px; }
+
+.image-control input[type='text'] {
+  width: 70%; }
+.image-control img {
+  margin-bottom: 15px; }
+
+/*================================
+    Scenarios Page
+================================*/
+.scenarios p.form-control-static {
+  font-weight: bold; }
+
+.gift-table,
+.gift-table th {
+  text-align: center; }
+
+/*================================
+    Donors Page
+================================*/
+.callout-number {
+  color: #0C7344;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: -1px; }
+
+.donors.display .lead {
+  text-align: center; }
+
+.donor-lists {
+  /* TV monitor page -- donor list font adjustments */
+  /* Pad top of second column of families for display version */ }
+  .donor-lists h4 {
+    font-size: 16px;
+    font-weight: bold; }
+  .donors.display .donor-lists h4 {
+    font-size: 20px;
+    font-weight: bold; }
+  .donor-lists li {
+    padding-bottom: 2px;
+    font-size: 14px;
+    /* TV monitor page -- donor list font adjustments */ }
+    .donors.display .donor-lists li {
+      font-size: 17px;
+      padding-bottom: 0px; }
+  .donor-lists ul {
+    padding-left: 30px; }
+    .donors.display .donor-lists ul {
+      padding-left: 40px; }
+  .donor-lists div ul:first-child {
+    margin-top: 42px; }
+
+/*================================
+    Dashboard and Donor Admin
+================================*/
+/* Dashboard table */
+.dashboard-table {
+  font-size: .85em;
+  max-width: 700px; }
+
+.total-row {
+  font-weight: bold; }
+
+/* Donor admin table */
+#donor-table {
+  font-size: .85em; }
+
+#new-donor {
+  float: right;
+  margin-top: 10px; }
+
+.table > thead > tr > th {
+  vertical-align: middle; }
+
+th.date-col {
+  min-width: 80px; }
+
+table.tablesorter thead tr .header {
+  background-image: url("../packages/tablesorter/themes/blue/bg.gif");
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+  padding-right: 20px; }
+
+table.tablesorter thead tr .headerSortUp {
+  background-image: url("../packages/tablesorter/themes/blue/asc.gif");
+  background-color: rgba(126, 231, 126, 0.21); }
+
+table.tablesorter thead tr .headerSortDown {
+  background-image: url("../packages/tablesorter/themes/blue/desc.gif");
+  background-color: rgba(126, 231, 126, 0.21); }
+
+/* Add/edit donor form */
+form.form-horizontal label {
+  text-align: right; }
+
+form .help-block {
+  font-size: 0.85em;
+  font-style: italic;
+  margin-bottom: 0px; }
+
+/*================================
+    Ask Section
+================================*/
+.ask {
+  padding-bottom: 10px;
+  /* "Jump to" dropdown */ }
+  .ask h2 {
+    font-family: "Verdana", sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 20px 0px; }
+  .ask img {
+    border: 1px solid #999;
+    margin-bottom: 15px; }
+  .ask figure {
+    width: auto; }
+    .ask figure img {
+      margin-bottom: 5px; }
+  .ask figcaption {
+    text-align: center; }
+  .ask button.btn {
+    background: none;
+    color: #0C7344;
+    font-weight: bold; }
+  .ask .btn-group {
+    float: right;
+    margin-top: 20px; }
+    .ask .btn-group ul {
+      margin: 0px; }
+    .ask .btn-group li {
+      padding-bottom: 0px; }
+    .ask .btn-group .dropdown-menu > li > a {
+      font-size: 14px;
+      font-weight: normal; }
+    .ask .btn-group .dropdown-menu .divider {
+      height: 3px;
+      margin: 0px 0;
+      background-color: #E0DDB7; }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-top: 20px; }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/* Image overlay title */
+.blueimp-gallery > .title {
+  text-shadow: 1px 1px 8px #000 !important;
+  opacity: 1 !important; }
+
+#left-arrow > a {
+  display: block;
+  background-image: url("../images/left-arrow-on.png");
+  width: 30px;
+  height: 112px;
+  margin: 200px auto 0; }
+  #left-arrow > a:hover, #left-arrow > a:focus {
+    background-image: url("../images/left-arrow-off.png"); }
+
+#right-arrow > a {
+  display: block;
+  background-image: url("../images/right-arrow-on.png");
+  width: 30px;
+  height: 112px;
+  margin: 200px auto 0; }
+  #right-arrow > a:hover, #right-arrow > a:focus {
+    background-image: url("../images/right-arrow-off.png"); }
+
+.small-ask-pager {
+  display: none;
+  margin-top: 20px; }
+  .small-ask-pager a.next-btn {
+    float: right; }
+
+.slide-number {
+  clear: both;
+  margin-top: 20px;
+  color: #0C7344;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-align: right; }
+
+/* "Click to continue" sentence on first slide */
+.next-small {
+  display: none; }
+
+/* Pledge buttons on last slide */
+.pledge-buttons {
+  text-align: center;
+  margin-bottom: 30px; }
+  .pledge-buttons a {
+    margin-top: 15px; }
+
+div.pledge-buttons-small {
+  margin-bottom: 15px;
+  text-align: center;
+  display: none; }
+  div.pledge-buttons-small a {
+    margin-top: 10px; }
+
+/* Ask Tweaks For Tablet and Mobile */
+@media (max-width: 768px) {
+  .ask {
+    padding-bottom: 0px; }
+    .ask h2 {
+      clear: both; }
+    .ask .btn-group {
+      margin-top: 0px; }
+
+  /* Hide desktop controls */
+  #left-arrow,
+  #right-arrow,
+  .next,
+  .pledge-buttons,
+  .slide-number {
+    display: none; }
+
+  /* Show tablet/mobile controls */
+  .small-ask-pager,
+  .pledge-buttons-small {
+    display: inherit; }
+
+  .next-small {
+    display: inline; } }
+@media (max-width: 384px) {
+  .ask h2 {
+    font-size: 22px; } }
+
+/*# sourceMappingURL=application.css.map */

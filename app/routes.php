@@ -14,14 +14,50 @@
 
 Route::get('/', function()
 {
- //    $total = Donor::sum('pledge_amount');
- //    $percent = intval(($total/750000)*100);
- //    $total = number_format($total);
-	// return View::make('index')
- //        ->with('percent', $percent)
- //        ->with('total', $total);
+    $feed = new SimplePie();
+    $feed->set_feed_url('http://circleschool.org/resources/blog/feed/');
+    $feed->set_cache_location('./simplepie_cache');
+    $feed->init();
+    $feed->handle_content_type();
+    // TODO: Set cache duration?
 
-    return View::make('help1');
+    $posts = [];
+    for ($i = 0; $i < 3; $i++) {
+        $item = $feed->get_item($i);
+
+        // Get the first image from the content
+        $content = new DOMDocument('1.0');
+        $content->loadHTML($item->get_content());
+        $images = $content->getElementsByTagName('img');
+        $image = '';
+        if ($images->length > 0) {
+            $image = $images->item(0)->getAttribute('src');
+        }
+
+        // Get a teaser that breaks on a space
+        $text_content = strip_tags($item->get_description());
+        $breakpoint = strpos($text_content, " ", 100);
+        $teaser = substr($text_content, 0, $breakpoint);
+
+        // Get a link to the full post
+        $guid = urlencode($item->get_id()); // guid is a url
+        $link = "/updates/show?index=".$i."&guid=".$guid;
+
+        // TODO
+        //  -- Format date
+        //  -- Crop and resize image thumbnails server-side
+
+        $posts[] = [
+            'title' => $item->get_title(),
+            'date' => $item->get_gmdate('F j, Y'),
+            'teaser' => $teaser,
+            'image' => $image,
+            'link' => $link
+        ];
+    }
+
+    return View::make('index')
+        ->with('posts', $posts);
 });
 
 
@@ -68,15 +104,50 @@ Route::get('scenarios', function()
  */
 
 Route::get('meadowcam', function() {
-    return View::make('meadowcam');
+    $images = [
+        "http://tunnel.boran.name/meadowcam_2016-09-16_13-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-16_14-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-16_15-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-16_16-00-02.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-16_17-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-16_18-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-16_19-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-17_07-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-17_08-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-17_09-00-02.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-17_10-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-17_11-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-17_12-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-17_13-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-17_14-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-17_15-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-17_16-00-01.jpeg",
+        "http://tunnel.boran.name/meadowcam_2016-09-17_17-00-01.jpeg"
+    ];
+    $gallery = [];
+
+    for ($i = 0; $i < count($images); $i++) {
+        $gallery[] = [
+            'thumbnail' => $images[$i],
+            'image' => $images[$i],
+            'title' => 'GET MODIFIED DATE'
+        ];
+    }
+
+    $video = "http://tunnel.boran.name/testtimelapse.mp4";
+    $latest = "http://tunnel.boran.name/meadowcam_latest.jpeg";
+
+    return View::make('meadowcam')
+        ->with('latest', $latest)
+        ->with('video', $video)
+        ->with('gallery', $gallery);
 });
 
-// Route::get('plans', function() {
-//     echo 'Page coming soon. <a href="/">Return to homepage</a>';
-// });
+Route::get('updates/show', 'NewPostsController@show');
+Route::get('updates', 'NewPostsController@index');
 
-Route::get('updates/confirm-delete/{id}', 'PostsController@confirmDestroy');
-Route::resource('updates', 'PostsController');
+// Route::get('updates/confirm-delete/{id}', 'PostsController@confirmDestroy');
+// Route::resource('updates', 'PostsController');
 
 
 /**

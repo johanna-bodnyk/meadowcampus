@@ -10,3 +10,5 @@ environment.php
 /sass
 /public/.htaccess
 .idea/
+.sass-cache/
+public/simplepie_cache/
