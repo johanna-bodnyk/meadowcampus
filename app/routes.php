@@ -15,7 +15,7 @@
 Route::get('/', function()
 {
     $feed = new SimplePie();
-    $feed->set_feed_url('http://circleschool.org/resources/blog/feed/');
+    $feed->set_feed_url('http://circleschool.org/blog/meadow-campus/feed/');
     $feed->set_cache_location('./simplepie_cache');
     $feed->init();
     $feed->handle_content_type();

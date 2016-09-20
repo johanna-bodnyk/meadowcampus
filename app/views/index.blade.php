@@ -32,7 +32,12 @@
                 @foreach ($posts as $post)
                     <h4><a href="{{ $post['link']}}">{{ $post['title'] }}</a></h4>
                     <p class="date">{{ $post['date'] }}</p>
-                    <p><a href="{{ $post['link']}}"><img src="{{ $post['image'] }}"></a>{{ $post['teaser'] }}...</p>
+                    <p>
+                        @if($post['image'])
+                            <a href="{{ $post['link']}}"><img src="{{ $post['image'] }}"></a>
+                        @endif
+                        {{ $post['teaser'] }}...
+                    </p>
                     <p class="link"><a href="{{ $post['link']}}">&raquo; Read more</a></p>
                 @endforeach
                 <hr>

@@ -13,7 +13,7 @@
             <h2>Raising the money</h2>
             <p class="lead">We still need ${{$remainder}}. Can you pledge $161 per month? Yes? Great! If that's a stretch, then how about $64.40 per month? Still a stretch? Would $32.20 fit into your budget?</p>
             <p>Money's really tight? You are still and always a Circle Schooler, and we want every one of us to own the place. If you can chip in just $6.44 a month, you can secure <strong>a thousand dollars</strong> for the new campus. Here's how:</p>
-            <p>If you make a monthly pledge, the school can borrow money (at low or no interest from an angel lender) and use your monthly gift to pay back the loan. <strong>If you give $64.40 per month, and if you continue for 10 years (compounded at 5%), the school will gain $10,000.</strong></p>
+            <p>If you make a monthly pledge, the school can borrow money (at low or no interest from an angel lender) and use your monthly gift to pay back the loan. <strong>If you give $64.40 per month, and if you continue for 10 years (compounded at 5%), it's worth $10k for the school.</strong></p>
             <p>You should know...</p>
             <p class="slide-number">8 of 10</p>
         </div>

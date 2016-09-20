@@ -6,7 +6,7 @@ class NewPostsController extends \BaseController {
         parent::__construct();
 
         $this->feed = new SimplePie();
-        $this->feed->set_feed_url('http://circleschool.org/resources/blog/feed/');
+        $this->feed->set_feed_url('http://circleschool.org/blog/meadow-campus/feed/');
         $this->feed->set_cache_location('./simplepie_cache');
         $this->feed->init();
         $this->feed->handle_content_type();
