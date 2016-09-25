@@ -28,7 +28,14 @@ class NewPostsController extends \BaseController {
     public function show()
     {
         $index = $_GET['index'];
-        $guid = $_GET['guid'];
+        
+        // Feed item guid is something like http://circleschool.org/?p=4069
+        // but Hostgator does not allow URLs in a query string, so only the numerical id
+        // is passed in here. This will break if Wordpress changes their GUID format 
+        // or if the school's domain changes. Alternative is to ask Hostgator to whitelist
+        // the TCS domain. 
+        // See http://stackoverflow.com/questions/10992219/http-in-query-string-does-not-work
+        $guid = "http://circleschool.org/?p=" . $_GET['post_id'];
 
         $post_found = false;
         $post = "";
@@ -85,8 +92,13 @@ class NewPostsController extends \BaseController {
     private function getPostDataForView($item, $index = 0) {
         $author = $item->get_item_tags(SIMPLEPIE_NAMESPACE_DC_11, 'creator')[0]['data'];
 
-        $guid = urlencode($item->get_id()); // guid is a url
-        $link = "/updates/show?index=".$index."&guid=".$guid;
+        // Get a link to the full post
+        // Feed item guid is something like http://circleschool.org/?p=4069
+        // but Hostgator does not allow URLs in a query string, so get just the id portion
+        $guid = $item->get_id();
+        $post_id = substr($guid, strpos($guid, "=") + 1);
+        $link = "/updates/show?index=".$index."&post_id=".$post_id;
+
         $post = [
             'title' => $item->get_title(),
             'date' => $item->get_gmdate('F j, Y'),
