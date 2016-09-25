@@ -39,9 +39,13 @@
 //         $breakpoint = strpos($text_content, " ", 100);
 //         $teaser = substr($text_content, 0, $breakpoint);
 
-//         // Get a link to the full post
-//         $guid = urlencode($item->get_id()); // guid is a url
-//         $link = "/updates/show?index=".$i."&guid=".$guid;
+        // // Get a link to the full post
+        // // Feed item guid is something like http://circleschool.org/?p=4069
+        // // but Hostgator does not allow URLs in a query string, so get just the id portion
+        // // (this is fragile, see NewPostsController for additional notes )
+        // $guid = $item->get_id();
+        // $post_id = substr($guid, strpos($guid, "=") + 1);
+        // $link = "/updates/show?index=".$i."&post_id=".$post_id;
 
 //         // TODO
 //         //  -- Format date
