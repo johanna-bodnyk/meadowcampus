@@ -30,7 +30,7 @@
             @for ($i = 0; $i < $limit; $i++)
                 <h3>{{ $posts[$i]['title'] }}</h3>
                 <small class="byline">By {{ $posts[$i]['author'] }} on {{ $posts[$i]['date'] }} </small>
-                {{ $posts[$i]['content'] }}
+                <div>{{ $posts[$i]['content'] }}</div>
                 <hr class="clear-both">
             @endfor
         </div>

@@ -21,7 +21,7 @@
 
         <small class="byline">By {{ $post['author'] }} on {{ $post['date'] }} </small>
 
-        {{ $post['content'] }}
+        <div>{{ $post['content'] }}</div>
 
         <hr class="clear-both">
 
