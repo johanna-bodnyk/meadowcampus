@@ -23,8 +23,6 @@
 
         <div>{{ $post['content'] }}</div>
 
-        <hr class="clear-both">
-
     @else
         <p>Sorry, we couldn't find the the post you're looking for. Visit the main <a href="/updates">Updates</a> page to read other posts.</p>
     @endif

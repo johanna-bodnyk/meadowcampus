@@ -31,7 +31,9 @@
                 <h3>{{ $posts[$i]['title'] }}</h3>
                 <small class="byline">By {{ $posts[$i]['author'] }} on {{ $posts[$i]['date'] }} </small>
                 <div>{{ $posts[$i]['content'] }}</div>
-                <hr class="clear-both">
+                @if ($i+1 < $limit)
+                    <hr class="clear-both">
+                @endif
             @endfor
         </div>
     </div>
