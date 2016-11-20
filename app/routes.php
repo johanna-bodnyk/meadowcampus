@@ -111,45 +111,31 @@ Route::get('scenarios', function()
  * About the Project Section
  */
 
-// Route::get('meadowcam', function() {
-//     $images = [
-//         "http://tunnel.boran.name/meadowcam_2016-09-16_13-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-16_14-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-16_15-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-16_16-00-02.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-16_17-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-16_18-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-16_19-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-17_07-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-17_08-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-17_09-00-02.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-17_10-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-17_11-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-17_12-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-17_13-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-17_14-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-17_15-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-17_16-00-01.jpeg",
-//         "http://tunnel.boran.name/meadowcam_2016-09-17_17-00-01.jpeg"
-//     ];
-//     $gallery = [];
+Route::get('meadowcam', function() {
 
-//     for ($i = 0; $i < count($images); $i++) {
-//         $gallery[] = [
-//             'thumbnail' => $images[$i],
-//             'image' => $images[$i],
-//             'title' => 'GET MODIFIED DATE'
-//         ];
-//     }
+    $ch = curl_init();
+    $timeout = 5;
+    curl_setopt($ch, CURLOPT_URL, "http://tunnel.boran.name");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+    $page = curl_exec($ch);
+    curl_close($ch);
 
-//     $video = "http://tunnel.boran.name/testtimelapse.mp4";
-//     $latest = "http://tunnel.boran.name/meadowcam_latest.jpeg";
+    // h/t Evan Mallory
+    $lines = explode("\n", $page);
+    $regex = "/meadowcam_[0-9a-z_-]+.jpeg/";
+    $sample = "meadowcam_2016-11-12_08-00-01.jpeg";
 
-//     return View::make('meadowcam')
-//         ->with('latest', $latest)
-//         ->with('video', $video)
-//         ->with('gallery', $gallery);
-// });
+    $files = [];
+    foreach ($lines as $index => $line) {
+        if (preg_match($regex, $line, $matches) && strlen($matches[0]) == strlen($sample)) {
+            $files[] = $matches[0];
+        }
+    }
+
+    return View::make('meadowcam')
+        ->with('files', json_encode($files));
+});
 
 Route::get('updates/show', 'NewPostsController@show');
 Route::get('updates', 'NewPostsController@index');
