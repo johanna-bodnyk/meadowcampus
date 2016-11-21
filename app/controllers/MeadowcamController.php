@@ -4,8 +4,12 @@ class MeadowcamController extends \BaseController {
 
     public function index()
     {
+        $files = $this->getFileList();
+        $latest = $files[sizeof($files)-1];
+
         return View::make('meadowcam')
-            ->with('files', json_encode($this->getFileList()));
+            ->with('files', json_encode($files))
+            ->with('latest', $latest);
     }
 
     public function latest()

@@ -34,9 +34,8 @@
                     Forward >></a>
                 </td>
             </tr>
-            <tr><td colspan=3><img id='main-image' width='100%'></td></tr>
+            <tr><td colspan=3><img id='main-image' width='100%' src='http://tunnel.boran.name/{{$latest}}'></td></tr>
         </table>
-
     </div>
 @stop
 
@@ -46,9 +45,7 @@
         var files = {{$files}};
         var cur_image = files.length - 1;
 
-        window.onload = function() {
-            updateImageSrc();
-        }
+        updateDateLabel("{{$latest}}");
 
         function updateImageSrc() {
             var filename = files[cur_image];
@@ -59,6 +56,13 @@
                 image.src = new_src;
             }, 1);
 
+            updateDateLabel(filename);
+
+            var fullSizeLink = document.getElementById("fullSizeLink");
+            fullSizeLink.href = new_src;
+        }
+
+        function updateDateLabel(filename) {
             var date = new Date(filename.substr(10, 10) + " EST");
             date.setHours(filename.substr(21,2));
             date.setMinutes(filename.substr(24,2));
@@ -70,9 +74,6 @@
 
             var dateLabel = document.getElementById("dateLabel");
             dateLabel.innerText = formattedDate;
-
-            var fullSizeLink = document.getElementById("fullSizeLink");
-            fullSizeLink.href = new_src;
         }
 
         function adjust(delta) {
