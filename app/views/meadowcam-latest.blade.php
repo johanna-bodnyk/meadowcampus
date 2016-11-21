@@ -21,7 +21,7 @@
                 } else {
                     $("#latest").attr("height", windowHeight + "px");
                 }
-                window.setTimeout(getLatestImage, 300000);
+                window.setTimeout(getLatestImage, getTimeoutForFiveAfterTheQuarterHour());
             }
 
             function getLatestImage() {
@@ -33,8 +33,14 @@
                     }
                 })
                 .always(function() {
-                    window.setTimeout(getLatestImage, 300000);
+                    window.setTimeout(getLatestImage, getTimeoutForFiveAfterTheQuarterHour());
                 });
+            }
+            
+            function getTimeoutForFiveAfterTheQuarterHour() {
+                var now = new Date();
+                var min = now.getMinutes();
+                return (20 - min%15) * 1000 * 60;
             }
 
         </script>
