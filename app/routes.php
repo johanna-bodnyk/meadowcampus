@@ -111,31 +111,9 @@ Route::get('scenarios', function()
  * About the Project Section
  */
 
-Route::get('meadowcam', function() {
-
-    $ch = curl_init();
-    $timeout = 5;
-    curl_setopt($ch, CURLOPT_URL, "http://tunnel.boran.name");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-    $page = curl_exec($ch);
-    curl_close($ch);
-
-    // h/t Evan Mallory
-    $lines = explode("\n", $page);
-    $regex = "/meadowcam_[0-9a-z_-]+.jpeg/";
-    $sample = "meadowcam_2016-11-12_08-00-01.jpeg";
-
-    $files = [];
-    foreach ($lines as $index => $line) {
-        if (preg_match($regex, $line, $matches) && strlen($matches[0]) == strlen($sample)) {
-            $files[] = $matches[0];
-        }
-    }
-
-    return View::make('meadowcam')
-        ->with('files', json_encode($files));
-});
+Route::get('meadowcam/latest', 'MeadowcamController@latest');
+Route::get('meadowcam/get-latest-image', 'MeadowcamController@getLatestImage'); // Used by AJAX call
+Route::get('meadowcam', 'MeadowcamController@index');
 
 Route::get('updates/show', 'NewPostsController@show');
 Route::get('updates', 'NewPostsController@index');
