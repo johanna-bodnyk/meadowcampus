@@ -15,27 +15,46 @@
 @section('content')
     <div class="row">
         <h2>Live from the Meadow</h2>
-        <table>
-            <tr>
+        
+        <div>
+
+            <div id="back-buttons">
+                <a href="javascript:adjust(-260)" class="btn btn-xs btn-success" role="button">&laquo; 5d</a>
+                <a href="javascript:adjust(-4)" class="btn btn-xs btn-success" role="button">&laquo; 1hr</a>
+                <a href="javascript:adjust(-52)" class="btn btn-xs btn-success" role="button">&laquo; 1d</a>
+                <a href="javascript:adjust(-1)" class="btn btn-xs btn-success" role="button">&laquo; 15m</a>
+            </div>
+
+            <div><span id="dateLabel"></span> <a href="" target="_blank" id="fullSizeLink">(view larger)</a></div>
+
+            <div id="next-buttons">
+                <a href="javascript:adjust(1)" class="btn btn-xs btn-success" role="button">15m &raquo;</a>
+                <a href="javascript:adjust(4)" class="btn btn-xs btn-success" role="button">1hr &raquo;</a>
+                <a href="javascript:adjust(52)" class="btn btn-xs btn-success" role="button">1d &raquo;</a>
+                <a href="javascript:adjust(260)" class="btn btn-xs btn-success" role="button">5d &raquo;</a>
+            </div>
+        </div>
+
+        <img id='main-image' width='100%' src='http://tunnel.boran.name/{{$latest}}'>
+
+<!--         <table>
+            <tr style="margin-bottom: 10px">
                 <td>
-                    <!-- TODO: make links into buttons -->
-                    << Back
-                    <a href="javascript:adjust(-1)">15mins</a>
-                    <a href="javascript:adjust(-4)">1hr</a>
-                    <a href="javascript:adjust(-52)">1d</a>
-                    <a href="javascript:adjust(-260)">5d</a>
+                    <a href="javascript:adjust(-260)" class="btn btn-xs btn-success" role="button">&laquo; 5d</a>
+                    <a href="javascript:adjust(-4)" class="btn btn-xs btn-success" role="button">&laquo; 1hr</a>
+                    <a href="javascript:adjust(-52)" class="btn btn-xs btn-success" role="button">&laquo; 1d</a>
+                    <a href="javascript:adjust(-1)" class="btn btn-xs btn-success" role="button">&laquo; 15m</a>
                 </td>
                 <td align=center><span id="dateLabel"></span> <a href="" target="_blank" id="fullSizeLink">(view larger)</a></td>
                 <td align=right>
-                    <a href="javascript:adjust(260)">5d</a>
-                    <a href="javascript:adjust(52)">1d</a>
-                    <a href="javascript:adjust(4)">1hr</a>
-                    <a href="javascript:adjust(1)">15mins</a>
-                    Forward >></a>
+                    <a href="javascript:adjust(1)" class="btn btn-xs btn-success" role="button">15m &raquo;</a>
+                    <a href="javascript:adjust(4)" class="btn btn-xs btn-success" role="button">1hr &raquo;</a>
+                    <a href="javascript:adjust(52)" class="btn btn-xs btn-success" role="button">1d &raquo;</a>
+                    <a href="javascript:adjust(260)" class="btn btn-xs btn-success" role="button">5d &raquo;</a>
                 </td>
             </tr>
             <tr><td colspan=3><img id='main-image' width='100%' src='http://tunnel.boran.name/{{$latest}}'></td></tr>
-        </table>
+        </table> -->
     </div>
 @stop
 
@@ -57,6 +76,7 @@
             }, 1);
 
             updateDateLabel(filename);
+            // TODO: Update url so people can copy permalinks            
 
             var fullSizeLink = document.getElementById("fullSizeLink");
             fullSizeLink.href = new_src;

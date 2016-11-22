@@ -6,8 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>The Circle School Meadow Campus Dream Campaign | Meadowcam Latest</title>
         <script src="{{ URL::asset('packages/jquery/jquery-1.11.1.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ URL::asset('css/application.css') }}">
     </head>
-    <body style="text-align: center">
+    <body class="meadowcam-latest">
         <img id="latest" src="http://tunnel.boran.name/{{$latest}}">
         <script>
             var current = "{{$latest}}";

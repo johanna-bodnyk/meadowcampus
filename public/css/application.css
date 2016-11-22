@@ -395,6 +395,9 @@ figure img, figcaption {
   margin-left: 10px;
   margin-top: 10px; }
 
+body.meadowcam-latest {
+  text-align: center; }
+
 /*================================
     Updates Section & Admin
 ================================*/
