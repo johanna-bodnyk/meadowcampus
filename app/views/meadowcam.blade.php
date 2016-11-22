@@ -35,8 +35,6 @@
             </tr>
             <tr><td colspan=3><img id='main-image' width='100%' src='http://tunnel.boran.name/{{$latest}}'></td></tr>
         </table>
-        <img id='main-image' width='100%' src='http://tunnel.boran.name/{{$latest}}'>
-
     </div>
 @stop
 
@@ -88,7 +86,7 @@
             }
 
             // TODO: Disable buttons if they won't do anything
-            
+
             cur_image = new_image;
             updateImageSrc();
         }
