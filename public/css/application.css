@@ -390,13 +390,27 @@ figure img, figcaption {
 /*================================
     Meadowcam
 ================================*/
+.meadowcam a.btn {
+  margin-bottom: 5px; }
 .meadowcam .gallery img {
   width: 45%;
   margin-left: 10px;
   margin-top: 10px; }
 
-body.meadowcam-latest {
+.meadowcam-latest {
   text-align: center; }
+  .meadowcam-latest img {
+    margin-top: -40px;
+    position: relative;
+    z-index: 1; }
+  .meadowcam-latest #dateLabel {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    height: 20px;
+    width: 150px;
+    position: relative;
+    z-index: 2;
+    margin: 10px auto 0; }
 
 /*================================
     Updates Section & Admin

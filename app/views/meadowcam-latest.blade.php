@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="{{ URL::asset('css/application.css') }}">
     </head>
     <body class="meadowcam-latest">
+        <div id="dateLabel"></div>
         <img id="latest" src="http://tunnel.boran.name/{{$latest}}">
         <script>
             var current = "{{$latest}}";
@@ -22,6 +23,7 @@
                 } else {
                     $("#latest").attr("height", windowHeight + "px");
                 }
+                updateDateLabel(current);
                 window.setTimeout(getLatestImage, getTimeoutForFiveAfterTheQuarterHour());
             }
 
@@ -33,6 +35,7 @@
                         newImageSource += "?cacheBust=" + Date.now();
                     } else {
                         current = result;
+                        updateDateLabel(result);
                     }
                     $("#latest").attr("src", newImageSource);
                 })
@@ -45,6 +48,20 @@
                 var now = new Date();
                 var min = now.getMinutes();
                 return (20 - min%15) * 1000 * 60;
+            }
+
+            function updateDateLabel(filename) {
+                var date = new Date(filename.substr(10, 10) + " EST");
+                date.setHours(filename.substr(21,2));
+                date.setMinutes(filename.substr(24,2));
+                var options = {
+                    year: "2-digit", month: "numeric",
+                    day: "numeric", hour: "2-digit", minute: "2-digit"
+                };
+                var formattedDate = date.toLocaleDateString("en-US", options);
+
+                var dateLabel = document.getElementById("dateLabel");
+                dateLabel.innerText = formattedDate;
             }
 
         </script>
