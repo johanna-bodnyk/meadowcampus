@@ -22,20 +22,29 @@
                 } else {
                     $("#latest").attr("height", windowHeight + "px");
                 }
-                window.setTimeout(getLatestImage, 300000);
+                window.setTimeout(getLatestImage, getTimeoutForFiveAfterTheQuarterHour());
             }
 
             function getLatestImage() {
                 $.get("/meadowcam/get-latest-image", function(result) {
                     console.log("Retrieved latest image: " + result);
-                    if (result != current) {
+                    var newImageSource = "http://tunnel.boran.name/" + result;
+                    if (result == current) {
+                        newImageSource += "?cacheBust=" + Date.now();
+                    } else {
                         current = result;
-                        $("#latest").attr("src", "http://tunnel.boran.name/" + result);
                     }
+                    $("#latest").attr("src", newImageSource);
                 })
                 .always(function() {
-                    window.setTimeout(getLatestImage, 300000);
+                    window.setTimeout(getLatestImage, getTimeoutForFiveAfterTheQuarterHour());
                 });
+            }
+            
+            function getTimeoutForFiveAfterTheQuarterHour() {
+                var now = new Date();
+                var min = now.getMinutes();
+                return (20 - min%15) * 1000 * 60;
             }
 
         </script>
