@@ -87,7 +87,7 @@
                                 Fundraising<br>Campaign <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/help">We Need Your Help!</a></li>
+                                    <li><a href="/campaign">About the Campaign</a></li>
                                     <li><a href="/scenarios">Scenarios &amp; Calculators</a></li>
                                     <li><a href="/donors">Progress &amp; Donors</a></li>
                                 </ul>
@@ -97,8 +97,10 @@
                                 About the<br>Project <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    {{-- <li><a href="/meadowcam">Meadowcam</a></li> --}}
-                                    <li><a href="/updates">Updates from the Meadow</a></li>
+                                    <li><a href="/project">About the Project</a></li>
+                                    <li><a href="/meadowcam">Meadowcam</a></li>
+                                    <li><a href="/video">Aerial Video</a></li>
+                                    <!-- <li><a href="/updates">Updates from the Meadow</a></li> -->
                                 </ul>
                             </li>
                             <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" target="_blank" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a></li>

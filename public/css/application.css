@@ -390,6 +390,9 @@ figure img, figcaption {
 /*================================
     Meadowcam
 ================================*/
+.meadowcam-iframe iframe {
+  border: none; }
+
 .meadowcam a.btn {
   margin-bottom: 5px; }
 .meadowcam .gallery img {

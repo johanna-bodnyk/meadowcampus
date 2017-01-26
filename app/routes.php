@@ -12,94 +12,19 @@
  * Homepage
  */
 
-// Route::get('/', function()
-// {
-//     $feed = new SimplePie();
-//     $feed->set_feed_url('http://circleschool.org/blog/meadow-campus/feed/');
-//     $feed->set_cache_location('./simplepie_cache');
-//     $feed->init();
-//     $feed->handle_content_type();
-//     // TODO: Set cache duration?
-
-//     $posts = [];
-//     for ($i = 0; $i < 3; $i++) {
-//         $item = $feed->get_item($i);
-
-//         // Get the first image from the content
-//         $content = new DOMDocument('1.0');
-//         $content->loadHTML($item->get_content());
-//         $images = $content->getElementsByTagName('img');
-//         $image = '';
-//         if ($images->length > 0) {
-//             $image = $images->item(0)->getAttribute('src');
-//         }
-
-//         // Get a teaser that breaks on a space
-//         $text_content = strip_tags($item->get_description());
-//         $breakpoint = strpos($text_content, " ", 100);
-//         $teaser = substr($text_content, 0, $breakpoint);
-
-        // // Get a link to the full post
-        // // Feed item guid is something like http://circleschool.org/?p=4069
-        // // but Hostgator does not allow URLs in a query string, so get just the id portion
-        // // (this is fragile, see NewPostsController for additional notes )
-        // $guid = $item->get_id();
-        // $post_id = substr($guid, strpos($guid, "=") + 1);
-        // $link = "/updates/show?index=".$i."&post_id=".$post_id;
-
-//         // TODO
-//         //  -- Format date
-//         //  -- Crop and resize image thumbnails server-side
-
-//         $posts[] = [
-//             'title' => $item->get_title(),
-//             'date' => $item->get_gmdate('F j, Y'),
-//             'teaser' => $teaser,
-//             'image' => $image,
-//             'link' => $link
-//         ];
-//     }
-
-//     return View::make('index')
-//         ->with('posts', $posts);
-// });
-
-
-Route::get('/', function() {
-    return View::make('help1');
+Route::get('/', function()
+{
+    return View::make('index');
 });
+
 
 /**
  * Fundraising Section
  */
 
-Route::get('help/{page?}', function($page = 1) {
-    if($page == 7) {
-        $total = Donor::sum('pledge_amount');
-        $percent = intval(($total/750000)*100);
-        $remainder = number_format(750000-$total);
-        $total = number_format($total);
-        $number = Donor::where('pledge_made_flag', '=', true)->count();
-        return View::make('help'.$page)
-            ->with('percent', $percent)
-            ->with('total', $total)
-            ->with('remainder', $remainder)
-            ->with('number', $number);
-    }
-    elseif ($page == 8) {
-        $total = Donor::sum('pledge_amount');
-        $remainder = number_format(750000-$total);
-        return View::make('help'.$page)
-            ->with('remainder', $remainder);
-    }
-    elseif ($page == 9) {
-        $number = Donor::where('pledge_made_flag', '=', true)->count();
-        return View::make('help'.$page)
-            ->with('number', $number);
-    }
-    else {
-        return View::make('help'.$page);
-    }
+Route::get('campaign', function() 
+{
+    return View::make('campaign');
 });
 
 Route::get('scenarios', function() 
@@ -111,12 +36,28 @@ Route::get('scenarios', function()
  * About the Project Section
  */
 
-Route::get('meadowcam/latest', 'MeadowcamController@latest');
-Route::get('meadowcam/get-latest-image', 'MeadowcamController@getLatestImage'); // Used by AJAX call
-Route::get('meadowcam', 'MeadowcamController@index');
+Route::get('project', function() 
+{
+    return View::make('project');
+});
 
-Route::get('updates/show', 'NewPostsController@show');
-Route::get('updates', 'NewPostsController@index');
+
+Route::get('meadowcam', function() 
+{
+    return View::make('meadowcam-iframe');
+});
+
+Route::get('video', function() 
+{
+    return View::make('video');
+});
+
+// Route::get('meadowcam/latest', 'MeadowcamController@latest');
+// Route::get('meadowcam/get-latest-image', 'MeadowcamController@getLatestImage'); // Used by AJAX call
+// Route::get('meadowcam', 'MeadowcamController@index');
+
+// Route::get('updates/show', 'NewPostsController@show');
+// Route::get('updates', 'NewPostsController@index');
 
 // Route::get('updates/confirm-delete/{id}', 'PostsController@confirmDestroy');
 // Route::resource('updates', 'PostsController');

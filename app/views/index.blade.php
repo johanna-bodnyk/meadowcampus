@@ -13,38 +13,20 @@
 @stop
 
 @section('content')
-    <h2>We're building a new school!</h2>
     <div class="row">
-        <div class="col-md-8">
-            <h3>Meadowcam</h3>
-            <small style="font-style: italic">Last updated <span id="updated">GET IMAGE MODIFIED TIME</span></small>
-            <img style="width:100%; margin-bottom: 10px" src="http://tunnel.boran.name/meadowcam_latest.jpeg">
-            <p>About the Meadowcam: Alumnus Kyle Boran ('05) drove down to Harrisburg from Massachusetts in early September 2016 to erect a camera rig in the meadow so we can bring these images to you. Kyle's setup, over a year in the making, involves a solar-powered cell phone attached to a portable basketball hoop, pointed at the construction area and ready to capture and relay images of the entire project from start to finish. Thanks Kyle!</p>
+        <div class="col-sm-12">
+            <h2>We're building a new school...</h2>
+            <p class="lead">In September 2016 The Circle School broke ground on a new XXX square foot building on a brand new XXX acre campus in Harrisburg. We hope to move into our new building in the fall of 2017. A sentence about how this supports increased enrollment and the long-term viability of the school or something. Fundraising efforts to support the project are ongoing, and <a href="/campaign">we need your help!</a></p>
         </div>
-        <div class="col-md-4 sidebar">
-            <h3>We Need Your Help!</h3>
-            <p>We need YOU to be a part of making The Circle School's dream of a new campus come true...</p>
-            <p><a href="/help">&raquo; Learn more</a></p>
-            <p><a href="https://secure.jotform.us/form/42086602993157">&raquo; Pledge now</a></p>
-            <hr>
-            <div id="updates">
-                <h3>Updates from the Meadow</h3>
-                @foreach ($posts as $post)
-                    <h4><a href="{{ $post['link']}}">{{ $post['title'] }}</a></h4>
-                    <p class="date">{{ $post['date'] }}</p>
-                    <p>
-                        @if($post['image'])
-                            <a href="{{ $post['link']}}"><img src="{{ $post['image'] }}"></a>
-                        @endif
-                        {{ $post['teaser'] }}...
-                    </p>
-                    <p class="link"><a href="{{ $post['link']}}">&raquo; Read more</a></p>
-                @endforeach
-                <hr>
-                <p><a href="/updates">Older posts...</a></p>
-            </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>The steel is up!</h3>
+            <small style="font-style: italic">Aerial video shot January 1, 2017</small>
+            <iframe width="1000" height="562" src="https://www.youtube.com/embed/HYlZrJ4dmIs" frameborder="0" allowfullscreen></iframe>            
+            <p>Video provided by alumni parent Bruce Bodnyk</p>
         </div>
-        
     </div>
 
 @stop
