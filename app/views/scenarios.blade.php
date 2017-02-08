@@ -14,7 +14,7 @@
 
 @section('content')
     <h2>Monthly Donation Scenarios &amp; Calculators</h2>
-    <p class="lead">A monthly pledge of $64.40, continued for 10 years (with 5% interest), will net the school $10,000. <a href="/help">Learn more about the project and the campaign.</a></p>
+    <p class="lead">A monthly pledge of $64.40, continued for 10 years (with 5% interest), will net the school $10,000.</p>
     <div class="row">
         <div class="col-md-6">
             <h3>Monthly Amounts by Target Gift</h3>
