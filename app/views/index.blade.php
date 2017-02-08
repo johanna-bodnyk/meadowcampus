@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-sm-12">
             <h2>We're building a new school...</h2>
-            <p class="lead">On September 27, 2016 The Circle School broke ground on a XXX square foot building on a new XXX acre campus in Harrisburg. The project is slated to be completed in late spring, and we hope to move into the new building by the fall of 2017. The school's new home, which includes woods, a creek, and a gorgeous building that truly fits the school's self-directed democratic program, will give us the space to offer that program to more Central Pennsylvania families, both now and into the future. Fundraising efforts to support the 2.6 million dollar project are ongoing, and we need your help!/p>
+            <p class="lead">On September 27, 2016 The Circle School broke ground on a XXX square foot building on a new XXX acre campus in Harrisburg. The project is slated to be completed in late spring, and we hope to move into the new building by the fall of 2017. The school's new home, which includes woods, a creek, and a gorgeous building that truly fits the school's self-directed democratic program, will give us the space to offer that program to more Central Pennsylvania families, both now and into the future. Fundraising efforts to support the 2.6 million dollar project are ongoing, and we need your help!</p>
         </div>
     </div>
 
