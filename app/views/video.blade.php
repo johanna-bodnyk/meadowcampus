@@ -19,11 +19,11 @@
 
     <div class="row">
         <div class="col-md-6">
-            <h3>January 4, 2016</h3>
+            <h3>January 4, 2017</h3>
             <iframe width="500" height="280" src="https://www.youtube.com/embed/LSID5aucfgA?rel=0" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="col-md-6">
-            <h3>January 1, 2016</h3>
+            <h3>January 1, 2017</h3>
             <iframe width="500" height="280" src="https://www.youtube.com/embed/HYlZrJ4dmIs?rel=0" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
