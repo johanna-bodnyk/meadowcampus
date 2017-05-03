@@ -12,7 +12,7 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="{{ URL::asset('packages/bootstrap/css/bootstrap-theme.min.css') }}">
 
-        <link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/application.css') }}">
        
         <!-- JQUERY -->
         <script src="{{ URL::asset('packages/jquery/jquery-1.11.1.min.js') }}"></script>
