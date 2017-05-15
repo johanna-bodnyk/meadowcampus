@@ -103,7 +103,7 @@
                                     <!-- <li><a href="/updates">Updates from the Meadow</a></li> -->
                                 </ul>
                             </li>
-                            <li class="pledge-button"><a href="https://secure.jotform.us/form/42086602993157" target="_blank" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a></li>
+                            <li class="pledge-button"><a href="https://circleschool.org/meadowpledge" target="_blank" class="btn btn-lg btn-success navbar-btn" role="button">Pledge<br>Now</a></li>
                         </ul>
                         </div><!-- /.navbar-collapse -->
                       </div><!-- /.container-fluid -->
