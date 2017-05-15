@@ -29,43 +29,43 @@
                 <td>$1,000</td>
                 <td>$6.44</td>
                 <td>$773</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=6.44" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=6.44" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$2,015</td>
                 <td>$12.98</td>
                 <td>$1,557</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=12.98" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=12.98" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$5,000</td>
                 <td>$32.20</td>
                 <td>$3,864</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=32.20" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=32.20" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$10,000</td>
                 <td>$64.40</td>
                 <td>$7,728</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=64.40" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=64.40" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$25,000</td>
                 <td>$161.00</td>
                 <td>$19,320</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=161.00" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=161.00" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$50,000</td>
                 <td>$321.99</td>
                 <td>$38,639</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=321.99" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=321.99" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$100,000</td>
                 <td>$643.99</td>
                 <td>$77,279</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=643.99" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=643.99" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
 
               </tr>
             </table>
@@ -82,49 +82,49 @@
                 <td>$5</td>
                 <td>$776</td>
                 <td>$600</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=5" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=5" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$10</td>
                 <td>$1,553</td>
                 <td>$1,200</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=10" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=10" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$25</td>
                 <td>$3,882</td>
                 <td>$3,000</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=25" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=25" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$50</td>
                 <td>$7,764</td>
                 <td>$6,000</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=50" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=50" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$100</td>
                 <td>$15,528</td>
                 <td>$12,000</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=100" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=100" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$150</td>
                 <td>$23,292</td>
                 <td>$18,000</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=150" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=150" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$200</td>
                 <td>$31,056</td>
                 <td>$24,000</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=200" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=200" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
               <tr>
                 <td>$300</td>
                 <td>$46,585</td>
                 <td>$36,000</td>
-                <td><a href="https://secure.jotform.us/form/42086602993157?inThe=300" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
+                <td><a href="https://circleschool.org/meadowpledge?inThe=300" target="_blank" class="btn btn-xs btn-success" role="button">Pledge now</a></td>
               </tr>
             </table>
             <p>*Totals and out of pocket totals based on a monthly pledge continuing for 10 years.</p>
@@ -157,7 +157,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <a id="calc-button1" href="https://secure.jotform.us/form/42086602993157?inThe=64.40" target="_blank" class="btn btn-success" role="button">Pledge $<span id="button-label1">64.40</span>/month</a>
+                    <a id="calc-button1" href="https://circleschool.org/meadowpledge?inThe=64.40" target="_blank" class="btn btn-success" role="button">Pledge $<span id="button-label1">64.40</span>/month</a>
                 </div>
 
             </form>
@@ -191,7 +191,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <a id="calc-button2" href="https://secure.jotform.us/form/42086602993157?inThe=50.00" target="_blank" class="btn btn-success" role="button">Pledge $<span id="button-label2">50.00</span>/month</a>
+                    <a id="calc-button2" href="https://circleschool.org/meadowpledge?inThe=50.00" target="_blank" class="btn btn-success" role="button">Pledge $<span id="button-label2">50.00</span>/month</a>
                 </div>
 
             </form>
