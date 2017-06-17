@@ -12,23 +12,15 @@
             @include('fragments.ask-dropdown')
             <h2>Where will you plug in?</h2>
                 <div class="pledge-buttons">
-<!--                    <a href="https://circleschool.org/meadowpledge?inThe=161.00" target="_blank" class="btn btn-lg btn-success" role="button">Pledge $161.00/month ($25,000 value)</a><br>-->
-<!--                    <a href="https://circleschool.org/meadowpledge?inThe=64.40" target="_blank" class="btn btn-lg btn-success" role="button">Pledge $64.40/month ($10,000 value)</a><br>-->
-<!--                    <a href="https://circleschool.org/meadowpledge?inThe=32.20" target="_blank" class="btn btn-lg btn-success" role="button">Pledge $32.20/month ($5,000 value)</a><br>-->
-<!--                    <a href="https://circleschool.org/meadowpledge" target="_blank" class="btn btn-lg btn-success" role="button">Pledge another monthly amount</a>-->
-                    <a href="https://circleschool.org/meadowpledge" target="_blank" class="btn btn-lg btn-success" role="button">Pledge $161.00/month ($25,000 value)</a><br>
-                    <a href="https://circleschool.org/meadowpledge" target="_blank" class="btn btn-lg btn-success" role="button">Pledge $64.40/month ($10,000 value)</a><br>
-                    <a href="https://circleschool.org/meadowpledge" target="_blank" class="btn btn-lg btn-success" role="button">Pledge $32.20/month ($5,000 value)</a><br>
+                    <a href='https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"161"}}' target="_blank" class="btn btn-lg btn-success" role="button">Pledge $161.00/month ($25,000 value)</a><br>
+                    <a href='https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"64.40"}}' target="_blank" class="btn btn-lg btn-success" role="button">Pledge $64.40/month ($10,000 value)</a><br>
+                    <a href='https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"32.30"}}' target="_blank" class="btn btn-lg btn-success" role="button">Pledge $32.20/month ($5,000 value)</a><br>
                     <a href="https://circleschool.org/meadowpledge" target="_blank" class="btn btn-lg btn-success" role="button">Pledge another monthly amount</a>
                 </div>
                 <div class="pledge-buttons-small">
-<!--                    <a href="https://circleschool.org/meadowpledge?inThe=161.00" target="_blank" class="btn btn-sm btn-success" role="button">Pledge $161.00/month ($25,000 value)</a><br>-->
-<!--                    <a href="https://circleschool.org/meadowpledge?inThe=64.40" target="_blank" class="btn btn-sm btn-success" role="button">Pledge $64.40/month ($10,000 value)</a><br>-->
-<!--                    <a href="https://circleschool.org/meadowpledge?inThe=32.20" target="_blank" class="btn btn-sm btn-success" role="button">Pledge $32.20/month ($5,000 value)</a><br>-->
-<!--                    <a href="https://circleschool.org/meadowpledge" target="_blank" class="btn btn-sm btn-success" role="button">Pledge another monthly amount</a>-->
-                    <a href="https://circleschool.org/meadowpledge" target="_blank" class="btn btn-sm btn-success" role="button">Pledge $161.00/month ($25,000 value)</a><br>
-                    <a href="https://circleschool.org/meadowpledge" target="_blank" class="btn btn-sm btn-success" role="button">Pledge $64.40/month ($10,000 value)</a><br>
-                    <a href="https://circleschool.org/meadowpledge" target="_blank" class="btn btn-sm btn-success" role="button">Pledge $32.20/month ($5,000 value)</a><br>
+                    <a href='https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"161"}}' target="_blank" class="btn btn-sm btn-success" role="button">Pledge $161.00/month ($25,000 value)</a><br>
+                    <a href='https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"64.40"}}' target="_blank" class="btn btn-sm btn-success" role="button">Pledge $64.40/month ($10,000 value)</a><br>
+                    <a href='https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"32.30"}}' target="_blank" class="btn btn-sm btn-success" role="button">Pledge $32.20/month ($5,000 value)</a><br>
                     <a href="https://circleschool.org/meadowpledge" target="_blank" class="btn btn-sm btn-success" role="button">Pledge another monthly amount</a>
                 </div>
 

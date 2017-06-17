@@ -14,8 +14,9 @@ $(document).ready(function() {
         pocket = numberWithCommas(pocket);
         $("#pocket1").html("$"+pocket);
         $("#button-label1").html(monthly);
+        $("#calc-button1").attr("href",'https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"'+monthly+'"}}'); 
 //        $("#calc-button1").attr("href","https://circleschool.org/meadowpledge?inThe="+monthly+"&continuingFor="+years+" years");   
-        $("#calc-button1").attr("href","https://circleschool.org/meadowpledge");   
+        // $("#calc-button1").attr("href","https://circleschool.org/meadowpledge");   
     }
 
     function calc2() {
@@ -29,8 +30,9 @@ $(document).ready(function() {
         pocket = numberWithCommas(pocket);
         $("#pocket2").html("$"+pocket);
         $("#button-label2").html(monthly);
+        $("#calc-button2").attr("href",'https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"'+monthly+'"}}'); 
 //        $("#calc-button2").attr("href","https://circleschool.org/meadowpledge?inThe="+monthly+"&continuingFor="+years+" years");   
-        $("#calc-button2").attr("href","https://circleschool.org/meadowpledge");   
+        // $("#calc-button2").attr("href","https://circleschool.org/meadowpledge");   
     }  
 
     function pmt(years, total) {
