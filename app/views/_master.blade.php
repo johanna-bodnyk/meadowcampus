@@ -87,7 +87,7 @@
                                 Fundraising<br>Campaign <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/campaign">About the Campaign</a></li>
+                                    <!--<li><a href="/campaign">About the Campaign</a></li>-->
                                     <li><a href="/scenarios">Scenarios &amp; Calculators</a></li>
                                     <li><a href="/donors">Progress &amp; Donors</a></li>
                                 </ul>
@@ -97,7 +97,7 @@
                                 About the<br>Project <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/project">About the Project</a></li>
+                                    <!--<li><a href="/project">About the Project</a></li>-->
                                     <li><a href="/meadowcam">Meadowcam</a></li>
                                     <li><a href="/video">Aerial Video</a></li>
                                     <!-- <li><a href="/updates">Updates from the Meadow</a></li> -->
