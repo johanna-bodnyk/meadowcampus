@@ -22,10 +22,10 @@ Route::get('/', function()
  * Fundraising Section
  */
 
-Route::get('campaign', function() 
-{
-    return View::make('campaign');
-});
+// Route::get('campaign', function() 
+// {
+//     return View::make('campaign');
+// });
 
 Route::get('scenarios', function() 
 {
@@ -36,10 +36,10 @@ Route::get('scenarios', function()
  * About the Project Section
  */
 
-Route::get('project', function() 
-{
-    return View::make('project');
-});
+// Route::get('project', function() 
+// {
+//     return View::make('project');
+// });
 
 
 Route::get('meadowcam', function() 
