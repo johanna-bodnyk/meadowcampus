@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <a id="calc-button1" href='https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"64.40"}}' target="_blank" class="btn btn-success" role="button">Pledge $<span id="button-label1">64.40</span>/month</a>
+                    <a id="calc-button1" href='https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"64.40","ContinuingFor":"10 years"}}' target="_blank" class="btn btn-success" role="button">Pledge $<span id="button-label1">64.40</span>/month</a>
                 </div>
 
             </form>
@@ -193,7 +193,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <a id="calc-button2" href='https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"50"}}' target="_blank" class="btn btn-success" role="button">Pledge $<span id="button-label2">50.00</span>/month</a>
+                    <a id="calc-button2" href='https://www.cognitoforms.com/TheCircleSchool1/MeadowCampusFundMonthlyPledgeSignup?entry={"DonationInformation":{"Amount":"50","ContinuingFor":"10 years"}}' target="_blank" class="btn btn-success" role="button">Pledge $<span id="button-label2">50.00</span>/month</a>
                 </div>
 
             </form>
