@@ -22,9 +22,9 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <h3>The steel is up!</h3>
-            <small style="font-style: italic">Aerial video shot January 1, 2017</small>
-            <iframe width="1000" height="562" src="https://www.youtube.com/embed/HYlZrJ4dmIs?rel=0" frameborder="0" allowfullscreen></iframe>            
+            <h3>The story so far...</h3>
+            <small style="font-style: italic">June 24, 2017</small>
+            <iframe width="1000" height="562" src="https://www.youtube.com/embed/w9cVrPI7hhE?rel=0" frameborder="0" allowfullscreen></iframe>            
             <p>Video provided by alumni parent Bruce Bodnyk</p>
         </div>
     </div>

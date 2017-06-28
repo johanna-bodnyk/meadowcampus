@@ -19,6 +19,16 @@
 
     <div class="row">
         <div class="col-md-6">
+            <h3>February 24, 2017</h3>
+            <iframe width="500" height="280" src="https://www.youtube.com/embed/DWhtAoS7k-w?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6">
+            <h3>January 15, 2017</h3>
+            <iframe width="500" height="280" src="https://www.youtube.com/embed/BgHZQRQ4_R4?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-md-6">
             <h3>January 4, 2017</h3>
             <iframe width="500" height="280" src="https://www.youtube.com/embed/LSID5aucfgA?rel=0" frameborder="0" allowfullscreen></iframe>
         </div>
