@@ -173,7 +173,7 @@
                     <!-- Contact info -->
                     <div class="col-md-6">
                         <address class="text-center small">
-                            The Circle School &nbsp;|&nbsp; 210 Oakleigh Avenue, Harrisburg, PA 17111<br>
+                            The Circle School &nbsp;|&nbsp; 727 Wilhelm Road, Harrisburg, PA 17111<br>
                             717-564-6700 &nbsp;|&nbsp; <a href="mailto:hello@circleschool.org">hello@circleschool.org</a> &nbsp;|&nbsp; <a href="http://circleschool.org/">http://circleschool.org</a>
                         </address>
                     </div>

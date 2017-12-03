@@ -22,10 +22,8 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <h3>From concept to building</h3>
-            <small style="font-style: italic">June 24, 2017</small>
-            <iframe width="1000" height="562" src="https://www.youtube.com/embed/w9cVrPI7hhE?rel=0" frameborder="0" allowfullscreen></iframe>            
-            <p>Video provided by alumni parent Bruce Bodnyk</p>
+            <img src="/images/after-1030px.jpg" style="max-width:100%; margin-bottom: 5px">
+            <p class="small" style="text-align: right">Students arrive at the new building, August 30, 2017.</p>
         </div>
     </div>
 
